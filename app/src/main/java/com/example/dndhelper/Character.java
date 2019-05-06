@@ -9,17 +9,11 @@ public class Character {
 
     private int _gold;
 
-    private List<Spell> _activeSpells;
-
-    private List<Spell> _learnedSpells;
-
-    private Spell _specialSpell;
-
+    private Spellbook _spellbook;
     public Character(int maxHealth) {
         _health = new Health(maxHealth);
         _gold = 0;
-        _activeSpells = new ArrayList<>();
-        _learnedSpells = new ArrayList<>();
+        _spellbook = new Spellbook();
     }
 
     private class Health {

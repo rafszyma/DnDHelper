@@ -11,32 +11,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="104dp"
         android:text="@string/damage"
-        app:layout_constraintStart_toEndOf="@+id/healthModificationsText"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/healthModificationsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintStart_toEndOf="@+id/hpTextView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/moneyModificationsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintStart_toEndOf="@+id/moneyTextView"
-        app:layout_constraintTop_toBottomOf="@+id/healthModificationsText" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moneyTextView" />
 
     <TextView
         android:id="@+id/hpTextView"
@@ -52,68 +52,78 @@
         android:id="@+id/healthStatusTextView"
         android:layout_width="82dp"
         android:layout_height="22dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hpTextView" />
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toEndOf="@+id/hpTextView"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/dealContusionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
         android:text="@string/contusion"
         app:layout_constraintStart_toEndOf="@+id/dealDamageButton"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/healthModificationsText" />
 
     <Button
         android:id="@+id/healButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
         android:text="@string/heal"
         app:layout_constraintStart_toEndOf="@+id/dealContusionButton"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/healthModificationsText" />
 
     <TextView
         android:id="@+id/moneyTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
         android:text="@string/money"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hpTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/dealDamageButton" />
 
     <TextView
         android:id="@+id/moneyStatusTextView"
         android:layout_width="61dp"
-        android:layout_height="16dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/moneyTextView" />
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toEndOf="@+id/moneyTextView"
+        app:layout_constraintTop_toBottomOf="@+id/dealContusionButton" />
 
     <Button
         android:id="@+id/addMoneyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:text="@string/add"
-        app:layout_constraintStart_toEndOf="@+id/moneyModificationsText"
-        app:layout_constraintTop_toBottomOf="@+id/dealDamageButton" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moneyModificationsText" />
 
     <Button
         android:id="@+id/subMoneyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
         android:text="@string/sub"
         app:layout_constraintStart_toEndOf="@+id/addMoneyButton"
-        app:layout_constraintTop_toBottomOf="@+id/dealContusionButton" />
+        app:layout_constraintTop_toBottomOf="@+id/moneyModificationsText" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.example.dndhelper.SpellbookFragment"
+        android:layout_width="489dp"
+        android:layout_height="335dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/healButton"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
