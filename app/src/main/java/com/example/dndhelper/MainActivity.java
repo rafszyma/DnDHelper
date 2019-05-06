@@ -21,10 +21,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        LoadCharacter();
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        SaveCharacter();
+    }
+
+    public boolean fileExists(Context context, String filename) {
+        File file = context.getFileStreamPath(filename);
+        return file != null && file.exists();
+    }
+
+    private void LoadCharacter() {
         try {
             if (fileExists(this, _filename)) {
-                //Read text from file
                 StringBuilder text = new StringBuilder();
 
                 BufferedReader reader = new BufferedReader(new FileReader(this.getFileStreamPath(_filename)));
@@ -39,16 +52,14 @@ public class MainActivity extends AppCompatActivity {
                 _character = new Gson().fromJson(text.toString(), Character.class);
             }
             else {
-                _character = new Character(10);
+                _character = new Character(20);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
+    private void SaveCharacter() {
         FileOutputStream outputStream;
         try {
             if(_character != null) {
@@ -59,14 +70,5 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-    }
-
-    public boolean fileExists(Context context, String filename) {
-        File file = context.getFileStreamPath(filename);
-        if(file == null || !file.exists()) {
-            return false;
-        }
-        return true;
     }
 }

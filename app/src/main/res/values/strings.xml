@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">DnDHelper</string>
+    <string name="add">Dodaj</string>
+    <string name="sub">Odejmij</string>
+
+    <string name="hit_points">Punkty Trafień</string>
+    <string name="contusion">Stłuczenia</string>
+    <string name="damage">Obrażenia</string>
+    <string name="heal">Leczenie</string>
+
+    <string name="money">Pieniądze</string>
+    <string name="gold">Złoto</string>
+    <string name="silver">Srebro</string>
+    <string name="copper">Miedź</string>
+
+    <string name="spells">Czary</string>
+    <string name="abjuration_school">Odrzucanie</string>
+    <string name="conjuration_school">Przywoływanie</string>
+    <string name="divination_school">Poznanie</string>
+    <string name="enchantment_school">Oczarowanie</string>
+    <string name="evocation_school">Wywoływanie</string>
+    <string name="illusion_school">Iluzje</string>
+    <string name="necromancy_school">Nekromancja</string>
+    <string name="transmutation_school">Przemiany</string>
+    <string name="universal_school">Czary Uniwersalne</string>
 </resources>
