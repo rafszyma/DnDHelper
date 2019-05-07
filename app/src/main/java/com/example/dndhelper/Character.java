@@ -1,32 +1,43 @@
 package com.example.dndhelper;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
 public class Character {
     private Health _health;
 
     private int _gold;
 
     private Spellbook _spellbook;
+
     public Character(int maxHealth) {
         _health = new Health(maxHealth);
         _gold = 0;
         _spellbook = new Spellbook();
     }
 
+    public CharacterState GetState(int hp) {
+        if (hp < -10) {
+            return CharacterState.Dead;
+        }
+
+        if (hp < 0) {
+            return CharacterState.Unconscious;
+        }
+
+        if (hp == 0) {
+            return CharacterState.Semiconscious;
+        }
+
+        return CharacterState.Healthy;
+    }
+
     private class Health {
+
+        private int _currentHitPoints;
+        private int _contusionDamage;
+        private int _maxHitPoints;
 
         public Health(int _maxHitPoints) {
             this._maxHitPoints = _maxHitPoints;
         }
-
-        private int _currentHitPoints;
-
-        private int _contusionDamage;
-
-        private int _maxHitPoints;
 
         public int GetHitPoints() {
             return _currentHitPoints;
@@ -62,22 +73,5 @@ public class Character {
 
             return GetState(_currentHitPoints);
         }
-    }
-
-
-    public CharacterState GetState(int hp) {
-        if (hp < -10) {
-            return CharacterState.Dead;
-        }
-
-        if (hp < 0) {
-            return CharacterState.Unconscious;
-        }
-
-        if (hp == 0) {
-            return CharacterState.Semiconscious;
-        }
-
-        return CharacterState.Healthy;
     }
 }

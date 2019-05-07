@@ -1,18 +1,13 @@
 package com.example.dndhelper;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.HorizontalScrollView;
+import android.support.v7.app.AppCompatActivity;
 
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 
@@ -55,8 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 reader.close();
 
                 _character = new Gson().fromJson(text.toString(), Character.class);
-            }
-            else {
+            } else {
                 _character = new Character(20);
             }
         } catch (Exception e) {
@@ -67,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     private void SaveCharacter() {
         FileOutputStream outputStream;
         try {
-            if(_character != null) {
+            if (_character != null) {
                 outputStream = openFileOutput(_filename, Context.MODE_PRIVATE);
                 outputStream.write(new Gson().toJson(_character).getBytes());
                 outputStream.close();
