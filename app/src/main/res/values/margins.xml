@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="horizontal_margin">20</string>
+    <string name="vertical_margin">20</string>
+    <string name="between_button_space">20</string>
+    <string name="new_line">20</string>
+</resources>
