@@ -23,4 +23,7 @@
     <string name="necromancy_school">Nekromancja</string>
     <string name="transmutation_school">Przemiany</string>
     <string name="universal_school">Czary Uniwersalne</string>
+
+    <string name="cast_spell">Rzuć Czar</string>
+    <string name="change_spell">Zmień Czar</string>
 </resources>

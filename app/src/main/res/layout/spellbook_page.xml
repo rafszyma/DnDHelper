@@ -5,10 +5,8 @@
     android:layout_height="match_parent">
 
     <ListView
-        android:layout_width="784dp"
-        android:layout_height="1264dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
