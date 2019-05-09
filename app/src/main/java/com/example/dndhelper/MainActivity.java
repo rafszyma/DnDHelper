@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
                 _character = new Gson().fromJson(text.toString(), Character.class);
             } else {
-                _character = new Character(20);
+                _character = Character.CreateQurrito();
             }
         } catch (Exception e) {
             e.printStackTrace();

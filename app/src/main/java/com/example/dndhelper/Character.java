@@ -74,4 +74,13 @@ public class Character {
             return GetState(_currentHitPoints);
         }
     }
+
+    public static Character CreateQurrito() {
+        Character qurrito = new Character(20);
+        qurrito._gold = 39409;
+        qurrito._health._currentHitPoints = 8;
+        qurrito._spellbook.SetCharges(new int[] {4,3});
+
+        return qurrito;
+    }
 }
