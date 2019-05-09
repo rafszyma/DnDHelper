@@ -26,4 +26,9 @@
 
     <string name="cast_spell">Rzuć Czar</string>
     <string name="change_spell">Zmień Czar</string>
+
+    <string name="spell0">0</string>
+    <string name="spell1">1</string>
+    <string name="spell2">2</string>
+    <string name="spell3">3</string>
 </resources>

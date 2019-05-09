@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="@string/vertical_margin"
+        android:layout_marginTop="@dimen/vertical_margin"
         android:text="@string/hit_points"
         app:layout_constraintStart_toStartOf="@+id/healthModificationsText"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,7 +20,7 @@
         android:id="@+id/healthStatusTextView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="@string/between_button_space"
+        android:layout_marginStart="@dimen/between_button_space"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/hpTextView"
@@ -32,8 +32,8 @@
         android:id="@+id/healthModificationsText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@string/new_line"
-        android:layout_marginTop="@string/horizontal_margin"
+        android:layout_marginStart="@dimen/new_line"
+        android:layout_marginTop="@dimen/horizontal_margin"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/divider"
@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="@string/new_line"
+        android:layout_marginTop="@dimen/new_line"
         android:text="@string/damage"
         app:layout_constraintStart_toStartOf="@+id/healthModificationsText"
         app:layout_constraintTop_toBottomOf="@+id/healthModificationsText" />
@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="@string/new_line"
+        android:layout_marginTop="@dimen/new_line"
         android:text="@string/contusion"
         app:layout_constraintStart_toEndOf="@+id/dealDamageButton"
         app:layout_constraintTop_toBottomOf="@+id/healthModificationsText" />
@@ -65,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="@string/new_line"
+        android:layout_marginTop="@dimen/new_line"
         android:text="@string/heal"
         app:layout_constraintStart_toEndOf="@+id/dealContusionButton"
         app:layout_constraintTop_toBottomOf="@+id/healthModificationsText" />
@@ -75,7 +75,7 @@
         android:id="@+id/moneyTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@string/vertical_margin"
+        android:layout_marginTop="@dimen/vertical_margin"
         android:text="@string/money"
         app:layout_constraintStart_toStartOf="@+id/moneyModificationsText"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
@@ -94,8 +94,8 @@
         android:id="@+id/moneyModificationsText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@string/new_line"
-        android:layout_marginTop="@string/new_line"
+        android:layout_marginStart="@dimen/new_line"
+        android:layout_marginTop="@dimen/new_line"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/divider"
@@ -107,7 +107,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="@string/new_line"
+        android:layout_marginTop="@dimen/new_line"
         android:text="@string/add"
         app:layout_constraintStart_toStartOf="@+id/moneyModificationsText"
         app:layout_constraintTop_toBottomOf="@+id/moneyModificationsText" />
@@ -117,24 +117,51 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="@string/new_line"
+        android:layout_marginTop="@dimen/new_line"
         android:layout_marginEnd="0dp"
         android:text="@string/sub"
         app:layout_constraintEnd_toEndOf="@+id/moneyModificationsText"
         app:layout_constraintStart_toEndOf="@+id/addMoneyButton"
         app:layout_constraintTop_toBottomOf="@+id/moneyModificationsText" />
 
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/new_row"
+        android:layout_marginTop="@dimen/vertical_margin"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spell0" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spell1" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spell2" />
+    </android.support.design.widget.TabLayout>
+
     <fragment
         android:id="@+id/fragment"
         android:name="com.example.dndhelper.SpellbookFragment"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="@string/vertical_margin"
-        android:layout_marginEnd="@string/horizontal_margin"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/new_row"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        app:layout_constraintEnd_toEndOf="@+id/tabLayout"
         app:layout_constraintStart_toEndOf="@+id/healButton"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
 
     <View
         android:id="@+id/divider"
