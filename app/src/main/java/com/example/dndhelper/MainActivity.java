@@ -4,6 +4,8 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
@@ -65,9 +67,12 @@ public class MainActivity extends AppCompatActivity {
                 reader.close();
 
                 character = new Gson().fromJson(text.toString(), Character.class);
-            } else {
-                character = QurritoCreator.createQurrito();
+                if (character.getHealth() != null || character.getMoney() != null || character.getSpellbook() != null) {
+                    return;
+                }
             }
+
+            character = QurritoCreator.createQurrito();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -92,5 +97,10 @@ public class MainActivity extends AppCompatActivity {
             CharSequence cs = String.format("Spells %s", Integer.toString(i));
             spellbook.addTab(spellbook.newTab().setText(cs));
         }
+
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        Fragment fragment = SpellbookFragment.newInstance(this.character.getSpellbook().getLearnedSpells(0));
+        ft.replace(R.id.fragment, fragment);
+        ft.commit();
     }
 }

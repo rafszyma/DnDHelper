@@ -9,11 +9,21 @@ public class SpellLevel {
 
     private int maxDailyCharges;
 
+    public HashSet<Spell> getLearnedSpells() {
+        return learnedSpells;
+    }
+
+    public ArrayList<Spell> getActiveSpells() {
+        return activeSpells;
+    }
+
     private int currentCharges;
 
     private HashSet<Spell> learnedSpells;
 
     private ArrayList<Spell> activeSpells;
+
+
 
     public SpellLevel(int tierNumber) {
         this.tierNumber = tierNumber;

@@ -67,4 +67,20 @@ public class Spellbook {
 
         return -1;
     }
+
+    public ArrayList<Spell> getActiveSpells(int level) {
+        if (level > MAX_SPELL_LEVELS -1 ) {
+            return new ArrayList<>();
+        }
+
+        return this.spellLevels[level].getActiveSpells();
+    }
+
+    public ArrayList<Spell> getLearnedSpells(int level) {
+        if (level > MAX_SPELL_LEVELS -1 ) {
+            return new ArrayList<>();
+        }
+
+        return new ArrayList<>(this.spellLevels[level].getLearnedSpells());
+    }
 }
