@@ -93,8 +93,28 @@ public class MainActivity extends AppCompatActivity {
 
     private void createSpellbook() {
         TabLayout spellbook = findViewById(R.id.spellLayout);
+        spellbook.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                int level = Integer.parseInt(tab.getText().toString());
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                Fragment fragment = SpellbookFragment.newInstance(character.getSpellbook().getLearnedSpells(level));
+                ft.replace(R.id.fragment, fragment);
+                ft.commit();
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
         for (int i = 0; i <= this.character.getSpellbook().getMaxSpellLevel(); i++) {
-            CharSequence cs = String.format("Spells %s", Integer.toString(i));
+            CharSequence cs = String.format("%s", Integer.toString(i));
             spellbook.addTab(spellbook.newTab().setText(cs));
         }
 
