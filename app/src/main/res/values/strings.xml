@@ -12,23 +12,4 @@
     <string name="gold">Złoto</string>
     <string name="silver">Srebro</string>
     <string name="copper">Miedź</string>
-
-    <string name="spells">Czary</string>
-    <string name="abjuration_school">Odrzucanie</string>
-    <string name="conjuration_school">Przywoływanie</string>
-    <string name="divination_school">Poznanie</string>
-    <string name="enchantment_school">Oczarowanie</string>
-    <string name="evocation_school">Wywoływanie</string>
-    <string name="illusion_school">Iluzje</string>
-    <string name="necromancy_school">Nekromancja</string>
-    <string name="transmutation_school">Przemiany</string>
-    <string name="universal_school">Czary Uniwersalne</string>
-
-    <string name="cast_spell">Rzuć Czar</string>
-    <string name="change_spell">Zmień Czar</string>
-
-    <string name="spell0">0</string>
-    <string name="spell1">1</string>
-    <string name="spell2">2</string>
-    <string name="spell3">3</string>
 </resources>

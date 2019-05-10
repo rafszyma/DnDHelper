@@ -4,6 +4,8 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.example.dndhelper.character.Character;
+import com.example.dndhelper.character.QurritoCreator;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
                 _character = new Gson().fromJson(text.toString(), Character.class);
             } else {
-                _character = Character.CreateQurrito();
+                _character = QurritoCreator.createQurrito();
             }
         } catch (Exception e) {
             e.printStackTrace();

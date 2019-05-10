@@ -1,4 +1,4 @@
-package com.example.dndhelper;
+package com.example.dndhelper.enums;
 
 public enum CharacterState {
     Healthy,
