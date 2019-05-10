@@ -1,45 +1,61 @@
-package com.example.dndhelper;
+package com.example.dndhelper.spells;
+
+import com.example.dndhelper.enums.SpellSchool;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Spellbook {
-    private int[] Charges = new int[7];
+    public int MAX_SPELL_LEVELS = 10; // Levels 0-9
+    private SpellLevel[] spellLevels;
 
-    private ArrayList<ArrayList<Spell>> _learnedSpells;
-
-    private ArrayList<ArrayList<Spell>> _activeSpells;
-
-    private Spell _extraSpell;
+    private Spell extraSpell;
+    private SpellSchool extraSpellSchool;
+    private ArrayList<SpellSchool> forbiddenedSchools;
 
 
-    public Spellbook() {
-        _learnedSpells = new ArrayList<>();
-        _activeSpells = new ArrayList<>();
-    }
-
-    public void SetCharges(int[] charges) {
-        for (int i = 0; i < 7; i++)
-        {
-            if (Charges[i] == 0 && charges[i] < 0) {
-                _learnedSpells.set(i, new ArrayList<Spell>());
-                _activeSpells.set(i, new ArrayList<Spell>());
-            }
-            Charges[i] = charges[i];
+    public Spellbook(SpellSchool extraSpellSchool, List<SpellSchool> forbiddenedSchools) {
+        if (extraSpellSchool != SpellSchool.None && forbiddenedSchools != null & forbiddenedSchools.size() > 0) {
+            this.extraSpellSchool = extraSpellSchool;
+            this.forbiddenedSchools = new ArrayList<>(forbiddenedSchools);
         }
+
+        for (int i = 0; i < MAX_SPELL_LEVELS; i++)
+        {
+            spellLevels = new SpellLevel[] {new SpellLevel(i )};
+        }
+
     }
 
-    public void LearnSpell(Spell spell) {
-        // TODO cant learn if there is no charges
-        _learnedSpells.get(spell.GetLevel()).add(spell);
+    public boolean learnSpell(Spell spell) {
+        if (this.forbiddenedSchools.contains(spell.getSpellSchool())){
+            return false;
+        }
+
+        spellLevels[spell.getLevel()].learnSpell(spell);
+        return true;
     }
 
-    public void AddActiveSpell(Spell spell) {
-        // TODO cant learn if there is no charges
-        _activeSpells.get(spell.GetLevel()).add(spell);
+    public boolean castSpell(Spell spell) {
+        if (this.forbiddenedSchools.contains(spell.getSpellSchool())){
+            return false;
+        }
+
+        spellLevels[spell.getLevel()].castSpell(spell);
+        return true;
     }
 
-    public void SetExtraSpell(Spell spell) {
-        // TODO cant learn if there is no charges / check if correct school
-        _extraSpell = spell;
+    public void increaseDailyCharges(int spellLevel, int charges) {
+        spellLevels[spellLevel].modifyDailyCharges(charges);
+    }
+
+    public boolean setExtraSpell(Spell spell) {
+        if (spell.getSpellSchool() != this.extraSpellSchool)
+        {
+            return false;
+        }
+
+        extraSpell = spell;
+        return true;
     }
 }
