@@ -2,7 +2,10 @@ package com.example.dndhelper;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.design.widget.TabItem;
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
 import com.example.dndhelper.character.Character;
 import com.example.dndhelper.character.QurritoCreator;
@@ -15,21 +18,31 @@ import java.io.FileReader;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Character _character;
-    private String _filename = "character";
+    private Character character;
+    private static String FILENAME = "character";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        findViewById(R.id.healButton);
         setContentView(R.layout.activity_main);
-        LoadCharacter();
+        loadCharacter();
+        fillUi();
+    }
+
+    private void fillUi() {
+        TextView healthTextView = findViewById(R.id.healthStatusTextView);
+        healthTextView.setText(String.format("%s / %s", character.getHealth().getHitPoints(), character.getHealth().getContusion()));
+
+        TextView moneyTextView = findViewById(R.id.moneyStatusTextView);
+        moneyTextView.setText(String.format("%sg %ss %sc", character.getMoney().getGold(), character.getMoney().getSilver(), character.getMoney().getCooper()));
+
+        createSpellbook();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        SaveCharacter();
+        saveCharacter();
     }
 
     public boolean fileExists(Context context, String filename) {
@@ -37,12 +50,12 @@ public class MainActivity extends AppCompatActivity {
         return file != null && file.exists();
     }
 
-    private void LoadCharacter() {
+    private void loadCharacter() {
         try {
-            if (fileExists(this, _filename)) {
+            if (fileExists(this, FILENAME)) {
                 StringBuilder text = new StringBuilder();
 
-                BufferedReader reader = new BufferedReader(new FileReader(this.getFileStreamPath(_filename)));
+                BufferedReader reader = new BufferedReader(new FileReader(this.getFileStreamPath(FILENAME)));
                 String line;
 
                 while ((line = reader.readLine()) != null) {
@@ -51,25 +64,33 @@ public class MainActivity extends AppCompatActivity {
                 }
                 reader.close();
 
-                _character = new Gson().fromJson(text.toString(), Character.class);
+                character = new Gson().fromJson(text.toString(), Character.class);
             } else {
-                _character = QurritoCreator.createQurrito();
+                character = QurritoCreator.createQurrito();
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private void SaveCharacter() {
+    private void saveCharacter() {
         FileOutputStream outputStream;
         try {
-            if (_character != null) {
-                outputStream = openFileOutput(_filename, Context.MODE_PRIVATE);
-                outputStream.write(new Gson().toJson(_character).getBytes());
+            if (character != null) {
+                outputStream = openFileOutput(FILENAME, Context.MODE_PRIVATE);
+                outputStream.write(new Gson().toJson(character).getBytes());
                 outputStream.close();
             }
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    private void createSpellbook() {
+        TabLayout spellbook = findViewById(R.id.spellLayout);
+        for (int i = 0; i <= this.character.getSpellbook().getMaxSpellLevel(); i++) {
+            CharSequence cs = String.format("Spells %s", Integer.toString(i));
+            spellbook.addTab(spellbook.newTab().setText(cs));
         }
     }
 }

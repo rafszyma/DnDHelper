@@ -10,6 +10,7 @@ public class Health {
 
     public Health(int maxHitPoints) {
         this.maxHitPoints = maxHitPoints;
+        this.currentHitPoints = maxHitPoints;
     }
 
     public int getHitPoints() {
@@ -20,12 +21,12 @@ public class Health {
         return this.contusionDamage;
     }
 
-    public CharacterState getHit(int hit) {
+    public CharacterState dealDamage(int hit) {
         currentHitPoints = currentHitPoints - hit;
         return Character.getState(currentHitPoints);
     }
 
-    public CharacterState getContusionDmg(int contusion) {
+    public CharacterState dealContusionDamage(int contusion) {
         int currentHitPoints = this.currentHitPoints - contusionDamage - contusion;
 
         // You lost hit damage from contusion

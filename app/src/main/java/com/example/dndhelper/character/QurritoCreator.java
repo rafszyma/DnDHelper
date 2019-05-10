@@ -13,7 +13,7 @@ public class QurritoCreator {
     public static Character createQurrito() {
         Character qurrito = new Character(20, SpellSchool.Evocation, Arrays.asList(SpellSchool.Necromancy, SpellSchool.Conjuration));
         qurrito.getMoney().setCooper(39409);
-        qurrito.getHealth().getHit(12);
+        qurrito.getHealth().dealDamage(12);
         qurrito.getSpellbook().increaseDailyCharges(0, 4);
         qurrito.getSpellbook().increaseDailyCharges(1, 3);
 

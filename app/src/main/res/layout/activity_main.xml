@@ -125,7 +125,7 @@
         app:layout_constraintTop_toBottomOf="@+id/moneyModificationsText" />
 
     <android.support.design.widget.TabLayout
-        android:id="@+id/tabLayout"
+        android:id="@+id/spellLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -135,21 +135,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/divider"
         app:layout_constraintTop_toTopOf="parent">
-
-        <android.support.design.widget.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/spell0" />
-
-        <android.support.design.widget.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/spell1" />
-
-        <android.support.design.widget.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/spell2" />
     </android.support.design.widget.TabLayout>
 
     <fragment
@@ -159,9 +144,9 @@
         android:layout_height="0dp"
         android:layout_marginStart="@dimen/new_row"
         android:layout_marginEnd="@dimen/horizontal_margin"
-        app:layout_constraintEnd_toEndOf="@+id/tabLayout"
+        app:layout_constraintEnd_toEndOf="@+id/spellLayout"
         app:layout_constraintStart_toEndOf="@+id/healButton"
-        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/spellLayout" />
 
     <View
         android:id="@+id/divider"

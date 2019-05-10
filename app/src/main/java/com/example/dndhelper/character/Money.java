@@ -36,8 +36,8 @@ public class Money {
         }
 
         this.cooper = cooper%10;
-        this.cooper = cooper/10;
-        this.cooper = cooper/100;
+        this.silver = (cooper/10)%10;
+        this.gold = cooper/100;
     }
 
     public void setSilver(int silver) {

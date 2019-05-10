@@ -14,17 +14,17 @@ public class Spellbook {
     private ArrayList<SpellSchool> forbiddenedSchools;
 
 
-    public Spellbook(SpellSchool extraSpellSchool, List<SpellSchool> forbiddenedSchools) {
-        if (extraSpellSchool != SpellSchool.None && forbiddenedSchools != null & forbiddenedSchools.size() > 0) {
+    public Spellbook(SpellSchool extraSpellSchool, List<SpellSchool> forbiddenSchools) {
+        if (extraSpellSchool != SpellSchool.None && forbiddenSchools != null & forbiddenSchools.size() > 0) {
             this.extraSpellSchool = extraSpellSchool;
-            this.forbiddenedSchools = new ArrayList<>(forbiddenedSchools);
+            this.forbiddenedSchools = new ArrayList<>(forbiddenSchools);
         }
+        spellLevels = new SpellLevel[MAX_SPELL_LEVELS];
 
         for (int i = 0; i < MAX_SPELL_LEVELS; i++)
         {
-            spellLevels = new SpellLevel[] {new SpellLevel(i )};
+            spellLevels[i] = new SpellLevel(i);
         }
-
     }
 
     public boolean learnSpell(Spell spell) {
@@ -57,5 +57,14 @@ public class Spellbook {
 
         extraSpell = spell;
         return true;
+    }
+
+    public int getMaxSpellLevel() {
+        for (int i = MAX_SPELL_LEVELS - 1; i >= 0; i--) {
+            if (spellLevels[i].getMaxDailyCharges() > 0)
+                return i;
+        }
+
+        return -1;
     }
 }
