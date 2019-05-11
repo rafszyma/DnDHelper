@@ -2,11 +2,11 @@ package com.example.dndhelper;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.dndhelper.character.Character;
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         healthTextView.setText(String.format("%s / %s", character.getHealth().getHitPoints(), character.getHealth().getContusion()));
 
         TextView moneyTextView = findViewById(R.id.moneyStatusTextView);
-        moneyTextView.setText(String.format("%sg %ss %sc", character.getMoney().getGold(), character.getMoney().getSilver(), character.getMoney().getCooper()));
+        moneyTextView.setText(String.format("%sg %ss %sc", character.getMoney().getGold(), character.getMoney().getSilver(), character.getMoney().getCopper()));
 
         createSpellbook();
     }
@@ -122,5 +122,30 @@ public class MainActivity extends AppCompatActivity {
         Fragment fragment = SpellbookFragment.newInstance(this.character.getSpellbook().getLearnedSpells(0));
         ft.replace(R.id.fragment, fragment);
         ft.commit();
+    }
+
+    public void dealDamage(View view) {
+        TextView hpView = findViewById(R.id.hpTextView);
+        this.character.getHealth().dealDamage(Integer.parseInt(hpView.getText().toString()));
+    }
+
+    public void dealContusion(View view) {
+        TextView hpView = findViewById(R.id.hpTextView);
+        this.character.getHealth().dealContusionDamage(Integer.parseInt(hpView.getText().toString()));
+    }
+
+    public void healDamage(View view) {
+        TextView hpView = findViewById(R.id.hpTextView);
+        this.character.getHealth().healDamage(Integer.parseInt(hpView.getText().toString()));
+    }
+
+    public void addMoney(View view) {
+        TextView moneyView = findViewById(R.id.moneyTextView);
+        this.character.getMoney().addCopper(Integer.parseInt(moneyView.getText().toString()));
+    }
+
+    public void subMoney(View view) {
+        TextView moneyView = findViewById(R.id.moneyTextView);
+        this.character.getMoney().subCopper(Integer.parseInt(moneyView.getText().toString()));
     }
 }
