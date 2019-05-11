@@ -41,6 +41,14 @@ public class SpellLevel {
         return learnedSpells.add(spell);
     }
 
+    public boolean prepareSpell(Spell spell) {
+        if (spell.getLevel() != tierNumber) {
+            return false;
+        }
+
+        return activeSpells.add(spell);
+    }
+
     public int getTierNumber() {
         return tierNumber;
     }

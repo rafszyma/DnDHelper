@@ -2,22 +2,17 @@ package com.example.dndhelper;
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.example.dndhelper.spells.Spell;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Objects;
 
 public class SpellbookFragment extends Fragment {
@@ -25,6 +20,8 @@ public class SpellbookFragment extends Fragment {
     private SpellBookViewModel mViewModel;
 
     private static String SPELL_KEY = "spell_key";
+
+    private ActiveSpellListAdapter adapter;
 
     private ArrayList<Spell> activeSpells;
 
@@ -45,10 +42,10 @@ public class SpellbookFragment extends Fragment {
              activeSpells = getArguments().getParcelableArrayList(SPELL_KEY);
 
 
-             ListView spellList = spellView.findViewById(R.id.spellList);
-             SpellListAdapter adapter = new SpellListAdapter(Objects.requireNonNull(getActivity()), activeSpells);
+             ListView spellList = spellView.findViewById(R.id.activeSpellList);
+             adapter = new ActiveSpellListAdapter(Objects.requireNonNull(getActivity()), activeSpells);
              spellList.setAdapter(adapter);
-             adapter.notifyDataSetChanged();
+
          }
 
         return spellView;
@@ -61,4 +58,13 @@ public class SpellbookFragment extends Fragment {
         // TODO: Use the ViewModel
     }
 
+    public void notifySpellCasted(Spell spell) {
+        activeSpells.remove(spell);
+        adapter.notifyDataSetChanged();
+    }
+
+    public void updateSpells(ArrayList<Spell> spells) {
+        activeSpells = spells;
+        adapter.notifyDataSetChanged();
+    }
 }

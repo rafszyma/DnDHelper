@@ -13,6 +13,7 @@
 
     <string name="cast_spell">Rzuć Czar</string>
     <string name="change_spell">Zmień Czar</string>
+    <string name="prepare_spell">Przygotuj Czar</string>
 
     <string name="somatic">Somatyczny</string>
     <string name="verbal">Werbalny</string>

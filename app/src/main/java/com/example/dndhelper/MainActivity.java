@@ -1,6 +1,7 @@
 package com.example.dndhelper;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.dndhelper.character.Character;
 import com.example.dndhelper.character.QurritoCreator;
+import com.example.dndhelper.spells.Spell;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
@@ -20,24 +22,47 @@ import java.io.FileReader;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Character character;
     private static String FILENAME = "character";
+    public static String SPELL_KEY = "learnedSpells";
+
+
+    // This have to be changed
+
+    private SpellbookFragment fragment;
+    public static Character character;
+
+    public void notifySpellCast(Spell spell) {
+        fragment.notifySpellCasted(spell);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        TabLayout layout = findViewById(R.id.spellLayout);
+        fragment.updateSpells(character.getSpellbook().getActiveSpells(layout.getSelectedTabPosition()));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         loadCharacter();
-        fillUi();
+        updateMoneyText();
+        updateHealthText();
+        fillSpellbookUi();
     }
 
-    private void fillUi() {
+    private void updateHealthText() {
         TextView healthTextView = findViewById(R.id.healthStatusTextView);
         healthTextView.setText(String.format("%s / %s", character.getHealth().getHitPoints(), character.getHealth().getContusion()));
+    }
 
+    private void updateMoneyText() {
         TextView moneyTextView = findViewById(R.id.moneyStatusTextView);
         moneyTextView.setText(String.format("%sg %ss %sc", character.getMoney().getGold(), character.getMoney().getSilver(), character.getMoney().getCopper()));
+    }
 
+    private void fillSpellbookUi() {
         createSpellbook();
     }
 
@@ -98,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
             public void onTabSelected(TabLayout.Tab tab) {
                 int level = Integer.parseInt(tab.getText().toString());
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                Fragment fragment = SpellbookFragment.newInstance(character.getSpellbook().getLearnedSpells(level));
+                fragment = SpellbookFragment.newInstance(character.getSpellbook().getActiveSpells(level));
                 ft.replace(R.id.fragment, fragment);
                 ft.commit();
             }
@@ -113,39 +138,51 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        for (int i = 0; i <= this.character.getSpellbook().getMaxSpellLevel(); i++) {
+        for (int i = 0; i <= character.getSpellbook().getMaxSpellLevel(); i++) {
             CharSequence cs = String.format("%s", Integer.toString(i));
             spellbook.addTab(spellbook.newTab().setText(cs));
         }
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        Fragment fragment = SpellbookFragment.newInstance(this.character.getSpellbook().getLearnedSpells(0));
+        fragment = SpellbookFragment.newInstance(character.getSpellbook().getActiveSpells(0));
         ft.replace(R.id.fragment, fragment);
         ft.commit();
     }
 
     public void dealDamage(View view) {
-        TextView hpView = findViewById(R.id.hpTextView);
-        this.character.getHealth().dealDamage(Integer.parseInt(hpView.getText().toString()));
+        TextView hpView = findViewById(R.id.healthModificationsText);
+        character.getHealth().dealDamage(Integer.parseInt(hpView.getText().toString()));
+        updateHealthText();
     }
 
     public void dealContusion(View view) {
-        TextView hpView = findViewById(R.id.hpTextView);
-        this.character.getHealth().dealContusionDamage(Integer.parseInt(hpView.getText().toString()));
+        TextView hpView = findViewById(R.id.healthModificationsText);
+        character.getHealth().dealContusionDamage(Integer.parseInt(hpView.getText().toString()));
+        updateHealthText();
     }
 
     public void healDamage(View view) {
-        TextView hpView = findViewById(R.id.hpTextView);
-        this.character.getHealth().healDamage(Integer.parseInt(hpView.getText().toString()));
+        TextView hpView = findViewById(R.id.healthModificationsText);
+        character.getHealth().healDamage(Integer.parseInt(hpView.getText().toString()));
+        updateHealthText();
     }
 
     public void addMoney(View view) {
-        TextView moneyView = findViewById(R.id.moneyTextView);
-        this.character.getMoney().addCopper(Integer.parseInt(moneyView.getText().toString()));
+        TextView moneyView = findViewById(R.id.moneyModificationsText);
+        character.getMoney().addCopper(Integer.parseInt(moneyView.getText().toString()));
+        updateMoneyText();
     }
 
     public void subMoney(View view) {
-        TextView moneyView = findViewById(R.id.moneyTextView);
-        this.character.getMoney().subCopper(Integer.parseInt(moneyView.getText().toString()));
+        TextView moneyView = findViewById(R.id.moneyModificationsText);
+        character.getMoney().subCopper(Integer.parseInt(moneyView.getText().toString()));
+        updateMoneyText();
+    }
+
+    public void prepareSpells(View view) {
+        Intent intent = new Intent(getBaseContext(), PrepareSpellActivity.class);
+        TabLayout layout = findViewById(R.id.spellLayout);
+        intent.putParcelableArrayListExtra(SPELL_KEY, character.getSpellbook().getLearnedSpells( layout.getSelectedTabPosition()));
+        startActivity(intent);
     }
 }

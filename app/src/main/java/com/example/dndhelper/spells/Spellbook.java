@@ -28,11 +28,21 @@ public class Spellbook {
     }
 
     public boolean learnSpell(Spell spell) {
+
         if (this.forbiddenedSchools.contains(spell.getSpellSchool())){
             return false;
         }
 
         spellLevels[spell.getLevel()].learnSpell(spell);
+        return true;
+    }
+
+    public boolean prepareSpell(Spell spell) {
+        if (this.forbiddenedSchools.contains(spell.getSpellSchool())){
+            return false;
+        }
+
+        spellLevels[spell.getLevel()].prepareSpell(spell);
         return true;
     }
 

@@ -43,7 +43,7 @@ public class Health {
 
     public CharacterState healDamage(int heal) {
         currentHitPoints = Math.min(maxHitPoints, currentHitPoints + heal);
-        contusionDamage = Math.max(0, contusionDamage + heal * 2);
+        contusionDamage = Math.max(0, contusionDamage - heal * 2);
 
         return Character.getState(currentHitPoints);
     }
