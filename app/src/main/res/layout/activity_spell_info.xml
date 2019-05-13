@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpellInfoActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginTop="@dimen/vertical_margin"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        android:layout_marginBottom="@dimen/vertical_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nameSpellView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:text="@string/name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nameValueSpellView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/nameSpellView"
+                app:layout_constraintTop_toTopOf="@+id/nameSpellView"
+                app:layout_constraintBottom_toBottomOf="@+id/nameSpellView"/>
+
+            <TextView
+                android:id="@+id/levelSpellView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/new_line"
+                android:text="@string/level"
+                app:layout_constraintEnd_toEndOf="@+id/nameSpellView"
+                app:layout_constraintStart_toStartOf="@id/nameSpellView"
+                app:layout_constraintTop_toBottomOf="@+id/nameSpellView" />
+
+            <TextView
+                android:id="@+id/levelValueSpellView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/levelSpellView"
+                app:layout_constraintTop_toTopOf="@+id/levelSpellView"
+                app:layout_constraintBottom_toBottomOf="@+id/levelSpellView" />
+
+            <TextView
+                android:id="@+id/componentsSpellView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/new_line"
+                android:text="@string/components"
+                app:layout_constraintEnd_toEndOf="@+id/levelSpellView"
+                app:layout_constraintStart_toStartOf="@id/levelSpellView"
+                app:layout_constraintTop_toBottomOf="@+id/levelSpellView" />
+
+            <TextView
+                android:id="@+id/componentsValueSpellView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/componentsSpellView"
+                app:layout_constraintTop_toTopOf="@+id/componentsSpellView"
+                app:layout_constraintBottom_toBottomOf="@+id/componentsSpellView" />
+
+            <TextView
+                android:id="@+id/schoolSpellView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/new_line"
+                android:text="@string/school"
+                app:layout_constraintEnd_toEndOf="@+id/componentsSpellView"
+                app:layout_constraintStart_toStartOf="@id/componentsSpellView"
+                app:layout_constraintTop_toBottomOf="@+id/componentsSpellView" />
+
+            <TextView
+                android:id="@+id/schoolValueSpellView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/schoolSpellView"
+                app:layout_constraintTop_toTopOf="@+id/schoolSpellView"
+                app:layout_constraintBottom_toBottomOf="@+id/schoolSpellView" />
+
+            <TextView
+                android:id="@+id/rangeSpellView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/new_line"
+                android:text="@string/range"
+                app:layout_constraintEnd_toEndOf="@+id/schoolSpellView"
+                app:layout_constraintStart_toStartOf="@id/schoolSpellView"
+                app:layout_constraintTop_toBottomOf="@+id/schoolSpellView" />
+
+            <TextView
+                android:id="@+id/rangeValueSpellView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/rangeSpellView"
+                app:layout_constraintTop_toTopOf="@+id/rangeSpellView"
+                app:layout_constraintBottom_toBottomOf="@+id/rangeSpellView" />
+
+            <TextView
+                android:id="@+id/targetSpellView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/new_line"
+                android:text="@string/target"
+                app:layout_constraintEnd_toEndOf="@+id/rangeSpellView"
+                app:layout_constraintStart_toStartOf="@id/rangeSpellView"
+                app:layout_constraintTop_toBottomOf="@+id/rangeSpellView" />
+
+            <TextView
+                android:id="@+id/targetValueSpellView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/targetSpellView"
+                app:layout_constraintTop_toTopOf="@+id/targetSpellView"
+                app:layout_constraintBottom_toBottomOf="@+id/targetSpellView" />
+
+            <TextView
+                android:id="@+id/durationSpellView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/new_line"
+                android:text="@string/duration"
+                app:layout_constraintEnd_toEndOf="@+id/targetSpellView"
+                app:layout_constraintStart_toStartOf="@id/targetSpellView"
+                app:layout_constraintTop_toBottomOf="@+id/targetSpellView" />
+
+            <TextView
+                android:id="@+id/durationValueSpellView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/durationSpellView"
+                app:layout_constraintTop_toTopOf="@+id/durationSpellView"
+                app:layout_constraintBottom_toBottomOf="@+id/durationSpellView" />
+
+            <TextView
+                android:id="@+id/defenseSpellView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/new_line"
+                android:text="@string/defense"
+                app:layout_constraintEnd_toEndOf="@+id/durationSpellView"
+                app:layout_constraintStart_toStartOf="@id/durationSpellView"
+                app:layout_constraintTop_toBottomOf="@+id/durationSpellView" />
+
+            <TextView
+                android:id="@+id/defenseValueSpellView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/defenseSpellView"
+                app:layout_constraintTop_toTopOf="@+id/defenseSpellView"
+                app:layout_constraintBottom_toBottomOf="@+id/defenseSpellView" />
+
+            <TextView
+                android:id="@+id/descriptionSpellView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/new_line"
+                android:text="@string/description"
+                app:layout_constraintEnd_toEndOf="@+id/defenseSpellView"
+                app:layout_constraintStart_toStartOf="@id/defenseSpellView"
+                app:layout_constraintTop_toBottomOf="@+id/defenseSpellView" />
+
+
+            <TextView
+                android:id="@+id/descriptionValueSpellView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/descriptionSpellView"
+                app:layout_constraintTop_toTopOf="@+id/descriptionSpellView"
+                app:layout_constraintBottom_toBottomOf="@+id/descriptionSpellView" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

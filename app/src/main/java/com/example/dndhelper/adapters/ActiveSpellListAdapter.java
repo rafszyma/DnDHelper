@@ -1,8 +1,10 @@
 package com.example.dndhelper.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +13,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.dndhelper.MainActivity;
+import com.example.dndhelper.PrepareSpellActivity;
 import com.example.dndhelper.R;
+import com.example.dndhelper.SpellInfoActivity;
 import com.example.dndhelper.character.Character;
 import com.example.dndhelper.spells.Spell;
 
@@ -40,6 +44,14 @@ public class ActiveSpellListAdapter extends ArrayAdapter<Spell> {
 
         TextView textView = listItem.findViewById(R.id.spellNameView);
         textView.setText(currentSpell.getName());
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(sContext, SpellInfoActivity.class);
+                intent.putExtra(SpellInfoActivity.SPELL_PARCEL_KEY, currentSpell);
+                sContext.startActivity(intent);
+            }
+        });
 
         Button castSpellButton = listItem.findViewById(R.id.castSpellButton);
         castSpellButton.setOnClickListener(new View.OnClickListener() {

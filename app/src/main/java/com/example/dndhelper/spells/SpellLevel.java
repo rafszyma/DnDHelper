@@ -41,7 +41,11 @@ public class SpellLevel {
             return false;
         }
 
-        return activeSpells.add(spell);
+        if (activeSpells.size() < maxDailyCharges){
+            return activeSpells.add(spell);
+        }
+
+        return false;
     }
 
     public int getTierNumber() {

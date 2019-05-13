@@ -19,4 +19,10 @@
     <string name="verbal">Werbalny</string>
     <string name="material">Materialny</string>
     <string name="focus">Katalizator</string>
+
+    <string name="will">Wola</string>
+    <string name="reflex">Refleks</string>
+    <string name="endurance">Wytrwałość</string>
+    <string name="touch_attack_melee">Atak dotykowy</string>
+    <string name="touch_attack_range">Atak dotykowy dystansowy</string>
 </resources>

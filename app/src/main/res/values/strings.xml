@@ -12,4 +12,17 @@
     <string name="gold">Złoto</string>
     <string name="silver">Srebro</string>
     <string name="copper">Miedź</string>
+
+    <string name="name">Nazwa:</string>
+    <string name="level">Poziom:</string>
+    <string name="components">Komponenty:</string>
+    <string name="school">Szkoła:</string>
+    <string name="range">Zasięg:</string>
+    <string name="target">Cel:</string>
+    <string name="duration">Czas trwania:</string>
+    <string name="defense">Rzut obronny:</string>
+    <string name="description">Opis:</string>
+
+    <string name="touch">Dotyk</string>
+    <string name="self">Rzucający</string>
 </resources>

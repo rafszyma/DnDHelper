@@ -17,6 +17,7 @@ public class QurritoCreator {
         Character.getInstance().getSpellbook().increaseDailyCharges(0, 4);
         Character.getInstance().getSpellbook().increaseDailyCharges(1, 3);
         Character.getInstance().getSpellbook().increaseDailyCharges(2, 2);
+        Character.getInstance().getSpellbook().setSpellClassLevel(3);
 
         for (Spell spell : GetLearnedSpells()) {
             Character.getInstance().getSpellbook().learnSpell(spell);

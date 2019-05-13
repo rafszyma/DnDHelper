@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Spellbook {
+    public int spellClassLevel;
     public int MAX_SPELL_LEVELS = 10; // Levels 0-9
     private SpellLevel[] spellLevels;
 
@@ -14,7 +15,8 @@ public class Spellbook {
     private ArrayList<SpellSchool> forbiddenedSchools;
 
 
-    public Spellbook(SpellSchool extraSpellSchool, List<SpellSchool> forbiddenSchools) {
+    public Spellbook(int classLevel, SpellSchool extraSpellSchool, List<SpellSchool> forbiddenSchools) {
+        spellClassLevel = classLevel;
         if (extraSpellSchool != SpellSchool.None && forbiddenSchools != null & forbiddenSchools.size() > 0) {
             this.extraSpellSchool = extraSpellSchool;
             this.forbiddenedSchools = new ArrayList<>(forbiddenSchools);
@@ -28,7 +30,7 @@ public class Spellbook {
 
     public boolean learnSpell(Spell spell) {
 
-        if (this.forbiddenedSchools.contains(spell.getSpellSchool())) {
+        if (this.forbiddenedSchools.contains(spell.getSchool())) {
             return false;
         }
 
@@ -37,7 +39,7 @@ public class Spellbook {
     }
 
     public boolean prepareSpell(Spell spell) {
-        if (this.forbiddenedSchools.contains(spell.getSpellSchool())) {
+        if (this.forbiddenedSchools.contains(spell.getSchool())) {
             return false;
         }
 
@@ -46,7 +48,7 @@ public class Spellbook {
     }
 
     public boolean castSpell(Spell spell) {
-        if (this.forbiddenedSchools.contains(spell.getSpellSchool())) {
+        if (this.forbiddenedSchools.contains(spell.getSchool())) {
             return false;
         }
 
@@ -59,7 +61,7 @@ public class Spellbook {
     }
 
     public boolean setExtraSpell(Spell spell) {
-        if (spell.getSpellSchool() != this.extraSpellSchool) {
+        if (spell.getSchool() != this.extraSpellSchool) {
             return false;
         }
 
@@ -82,6 +84,19 @@ public class Spellbook {
         }
 
         return this.spellLevels[level].getActiveSpells();
+    }
+
+    public int getSpellClassLevel() {
+        return spellClassLevel;
+    }
+
+    public boolean setSpellClassLevel(int i) {
+        if (i > 0) {
+            this.spellClassLevel = i;
+            return true;
+        }
+
+        return false;
     }
 
     public ArrayList<Spell> getLearnedSpells(int level) {

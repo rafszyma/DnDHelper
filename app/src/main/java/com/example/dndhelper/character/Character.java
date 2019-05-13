@@ -19,9 +19,10 @@ public class Character {
 
 
     private Character(int maxHealth, SpellSchool extraSpellSchool, List<SpellSchool> forbiddenedSchools) {
+
         health = new Health(maxHealth);
         money = new Money(0);
-        spellbook = new Spellbook(extraSpellSchool, forbiddenedSchools);
+        spellbook = new Spellbook(1, extraSpellSchool, forbiddenedSchools);
     }
 
     public static Character getInstance() {
