@@ -50,6 +50,14 @@ public class ActiveSpellListAdapter extends ArrayAdapter<Spell> {
             }
         });
 
+        Button changeSpellButton = listItem.findViewById(R.id.changeSpellButton);
+        changeSpellButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Character.getInstance().getSpellbook().castSpell(currentSpell);
+                ((MainActivity)sContext).prepareSpells(null);
+            }
+        });
         return listItem;
     }
 }

@@ -10,7 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.dndhelper.MainActivity;
 import com.example.dndhelper.PrepareSpellActivity;
 import com.example.dndhelper.R;
 import com.example.dndhelper.character.Character;
@@ -44,7 +43,7 @@ public class PrepareSpellListAdapter extends ArrayAdapter<Spell> {
         TextView textView = listItem.findViewById(R.id.spellNameView);
         textView.setText(currentSpell.getName());
 
-        Button prepareSpellButton = listItem.findViewById(R.id.prepareSpellButton);
+        Button prepareSpellButton = listItem.findViewById(R.id.changeSpellButton);
         prepareSpellButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
