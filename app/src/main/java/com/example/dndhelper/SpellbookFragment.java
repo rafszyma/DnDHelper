@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.example.dndhelper.adapters.ActiveSpellListAdapter;
+import com.example.dndhelper.character.Character;
 import com.example.dndhelper.spells.Spell;
 
 import java.util.ArrayList;
@@ -19,19 +21,16 @@ public class SpellbookFragment extends Fragment {
 
     private SpellBookViewModel mViewModel;
 
-    private static String SPELL_KEY = "spell_key";
-
     private ActiveSpellListAdapter adapter;
 
-    private ArrayList<Spell> activeSpells;
+    private static String LEVEL_KEY = "level_key";
 
-    public static SpellbookFragment newInstance(ArrayList<Spell> activeSpells) {
-        SpellbookFragment fragment = new SpellbookFragment();
+    public static SpellbookFragment newInstance(int level) {
+        SpellbookFragment spellbookFragment = new SpellbookFragment();
         Bundle bundle = new Bundle();
-        bundle.putParcelableArrayList(SPELL_KEY, activeSpells);
-        fragment.setArguments(bundle);
-
-        return fragment;
+        bundle.putInt(LEVEL_KEY, level);
+        spellbookFragment.setArguments(bundle);
+        return spellbookFragment;
     }
 
     @Override
@@ -39,11 +38,10 @@ public class SpellbookFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View spellView = inflater.inflate(R.layout.spellbook_fragment, container, false);
          if( getArguments() != null) {
-             activeSpells = getArguments().getParcelableArrayList(SPELL_KEY);
-
+             int spellLevel = getArguments().getInt(LEVEL_KEY);
 
              ListView spellList = spellView.findViewById(R.id.activeSpellList);
-             adapter = new ActiveSpellListAdapter(Objects.requireNonNull(getActivity()), activeSpells);
+             adapter = new ActiveSpellListAdapter(Objects.requireNonNull(getActivity()), Character.getInstance().getSpellbook().getActiveSpells(spellLevel));
              spellList.setAdapter(adapter);
 
          }
@@ -58,13 +56,7 @@ public class SpellbookFragment extends Fragment {
         // TODO: Use the ViewModel
     }
 
-    public void notifySpellCasted(Spell spell) {
-        activeSpells.remove(spell);
-        adapter.notifyDataSetChanged();
-    }
-
-    public void updateSpells(ArrayList<Spell> spells) {
-        activeSpells = spells;
+    public void notifySpellChanged() {
         adapter.notifyDataSetChanged();
     }
 }

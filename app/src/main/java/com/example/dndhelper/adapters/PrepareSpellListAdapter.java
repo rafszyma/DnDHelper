@@ -1,4 +1,4 @@
-package com.example.dndhelper;
+package com.example.dndhelper.adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,6 +10,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.dndhelper.MainActivity;
+import com.example.dndhelper.PrepareSpellActivity;
+import com.example.dndhelper.R;
+import com.example.dndhelper.character.Character;
 import com.example.dndhelper.spells.Spell;
 
 import java.util.ArrayList;
@@ -17,12 +21,12 @@ import java.util.List;
 
 
 
-public class ActiveSpellListAdapter extends ArrayAdapter<Spell> {
+public class PrepareSpellListAdapter extends ArrayAdapter<Spell> {
 
     private Context sContext;
     private List<Spell> spellList;
 
-    public ActiveSpellListAdapter(@NonNull Context context, ArrayList<Spell> list) {
+    public PrepareSpellListAdapter(@NonNull Context context, ArrayList<Spell> list) {
         super(context, 0, list);
         sContext = context;
         spellList = list;
@@ -33,19 +37,19 @@ public class ActiveSpellListAdapter extends ArrayAdapter<Spell> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItem = convertView;
         if(listItem == null)
-            listItem = LayoutInflater.from(sContext).inflate(R.layout.active_spell_record,parent,false);
+            listItem = LayoutInflater.from(sContext).inflate(R.layout.learned_spell_record,parent,false);
 
         final Spell currentSpell = spellList.get(position);
 
         TextView textView = listItem.findViewById(R.id.spellNameView);
         textView.setText(currentSpell.getName());
 
-        Button castSpellButton = listItem.findViewById(R.id.castSpellButton);
-        castSpellButton.setOnClickListener(new View.OnClickListener() {
+        Button prepareSpellButton = listItem.findViewById(R.id.prepareSpellButton);
+        prepareSpellButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.character.getSpellbook().castSpell(currentSpell);
-                ((MainActivity)sContext).notifySpellCast(currentSpell);
+                Character.getInstance().getSpellbook().prepareSpell(currentSpell);
+                ((PrepareSpellActivity)sContext).finish();
             }
         });
 

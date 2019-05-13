@@ -1,119 +1,66 @@
 package com.example.dndhelper;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
 import com.example.dndhelper.character.Character;
-import com.example.dndhelper.character.QurritoCreator;
 import com.example.dndhelper.spells.Spell;
-import com.google.gson.Gson;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileReader;
+import java.io.FileNotFoundException;
 
 public class MainActivity extends AppCompatActivity {
-
-    private static String FILENAME = "character";
     public static String SPELL_KEY = "learnedSpells";
 
-
+    public static String FILENAME = "character";
     // This have to be changed
 
     private SpellbookFragment fragment;
-    public static Character character;
-
-    public void notifySpellCast(Spell spell) {
-        fragment.notifySpellCasted(spell);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        TabLayout layout = findViewById(R.id.spellLayout);
-        fragment.updateSpells(character.getSpellbook().getActiveSpells(layout.getSelectedTabPosition()));
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Character.initialize(getFileStreamPath(FILENAME));
         setContentView(R.layout.activity_main);
-        loadCharacter();
         updateMoneyText();
         updateHealthText();
-        fillSpellbookUi();
+        createSpellbook();
     }
 
     private void updateHealthText() {
         TextView healthTextView = findViewById(R.id.healthStatusTextView);
-        healthTextView.setText(String.format("%s / %s", character.getHealth().getHitPoints(), character.getHealth().getContusion()));
+        healthTextView.setText(String.format("%s / %s", Character.getInstance().getHealth().getHitPoints(), Character.getInstance().getHealth().getContusion()));
     }
 
     private void updateMoneyText() {
         TextView moneyTextView = findViewById(R.id.moneyStatusTextView);
-        moneyTextView.setText(String.format("%sg %ss %sc", character.getMoney().getGold(), character.getMoney().getSilver(), character.getMoney().getCopper()));
-    }
-
-    private void fillSpellbookUi() {
-        createSpellbook();
+        moneyTextView.setText(String.format("%sg %ss %sc", Character.getInstance().getMoney().getGold(), Character.getInstance().getMoney().getSilver(), Character.getInstance().getMoney().getCopper()));
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        saveCharacter();
-    }
-
-    public boolean fileExists(Context context, String filename) {
-        File file = context.getFileStreamPath(filename);
-        return file != null && file.exists();
-    }
-
-    private void loadCharacter() {
         try {
-            if (fileExists(this, FILENAME)) {
-                StringBuilder text = new StringBuilder();
-
-                BufferedReader reader = new BufferedReader(new FileReader(this.getFileStreamPath(FILENAME)));
-                String line;
-
-                while ((line = reader.readLine()) != null) {
-                    text.append(line);
-                    text.append('\n');
-                }
-                reader.close();
-
-                character = new Gson().fromJson(text.toString(), Character.class);
-                if (character.getHealth() != null || character.getMoney() != null || character.getSpellbook() != null) {
-                    return;
-                }
-            }
-
-            character = QurritoCreator.createQurrito();
-        } catch (Exception e) {
+            Character.getInstance().saveCharacter(openFileOutput(FILENAME, MODE_PRIVATE));
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
 
-    private void saveCharacter() {
-        FileOutputStream outputStream;
-        try {
-            if (character != null) {
-                outputStream = openFileOutput(FILENAME, Context.MODE_PRIVATE);
-                outputStream.write(new Gson().toJson(character).getBytes());
-                outputStream.close();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        notifyFragment();
+    }
+
+    public void notifyFragment() {
+        fragment.notifySpellChanged();
     }
 
     private void createSpellbook() {
@@ -123,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             public void onTabSelected(TabLayout.Tab tab) {
                 int level = Integer.parseInt(tab.getText().toString());
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                fragment = SpellbookFragment.newInstance(character.getSpellbook().getActiveSpells(level));
+                fragment = SpellbookFragment.newInstance(level);
                 ft.replace(R.id.fragment, fragment);
                 ft.commit();
             }
@@ -138,51 +85,51 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        for (int i = 0; i <= character.getSpellbook().getMaxSpellLevel(); i++) {
+        for (int i = 0; i <= Character.getInstance().getSpellbook().getMaxSpellLevel(); i++) {
             CharSequence cs = String.format("%s", Integer.toString(i));
             spellbook.addTab(spellbook.newTab().setText(cs));
         }
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        fragment = SpellbookFragment.newInstance(character.getSpellbook().getActiveSpells(0));
+        fragment = SpellbookFragment.newInstance(0);
         ft.replace(R.id.fragment, fragment);
         ft.commit();
     }
 
     public void dealDamage(View view) {
         TextView hpView = findViewById(R.id.healthModificationsText);
-        character.getHealth().dealDamage(Integer.parseInt(hpView.getText().toString()));
+        Character.getInstance().getHealth().dealDamage(Integer.parseInt(hpView.getText().toString()));
         updateHealthText();
     }
 
     public void dealContusion(View view) {
         TextView hpView = findViewById(R.id.healthModificationsText);
-        character.getHealth().dealContusionDamage(Integer.parseInt(hpView.getText().toString()));
+        Character.getInstance().getHealth().dealContusionDamage(Integer.parseInt(hpView.getText().toString()));
         updateHealthText();
     }
 
     public void healDamage(View view) {
         TextView hpView = findViewById(R.id.healthModificationsText);
-        character.getHealth().healDamage(Integer.parseInt(hpView.getText().toString()));
+        Character.getInstance().getHealth().healDamage(Integer.parseInt(hpView.getText().toString()));
         updateHealthText();
     }
 
     public void addMoney(View view) {
         TextView moneyView = findViewById(R.id.moneyModificationsText);
-        character.getMoney().addCopper(Integer.parseInt(moneyView.getText().toString()));
+        Character.getInstance().getMoney().addCopper(Integer.parseInt(moneyView.getText().toString()));
         updateMoneyText();
     }
 
     public void subMoney(View view) {
         TextView moneyView = findViewById(R.id.moneyModificationsText);
-        character.getMoney().subCopper(Integer.parseInt(moneyView.getText().toString()));
+        Character.getInstance().getMoney().subCopper(Integer.parseInt(moneyView.getText().toString()));
         updateMoneyText();
     }
 
     public void prepareSpells(View view) {
         Intent intent = new Intent(getBaseContext(), PrepareSpellActivity.class);
         TabLayout layout = findViewById(R.id.spellLayout);
-        intent.putParcelableArrayListExtra(SPELL_KEY, character.getSpellbook().getLearnedSpells( layout.getSelectedTabPosition()));
-        startActivity(intent);
+        intent.putExtra(SPELL_KEY, layout.getSelectedTabPosition());
+        startActivityForResult(intent, 0);
     }
 }

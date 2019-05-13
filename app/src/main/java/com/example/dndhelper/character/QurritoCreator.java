@@ -10,17 +10,16 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 public class QurritoCreator {
-    public static Character createQurrito() {
-        Character qurrito = new Character(20, SpellSchool.Evocation, Arrays.asList(SpellSchool.Necromancy, SpellSchool.Conjuration));
-        qurrito.getMoney().addCopper(39409);
-        qurrito.getHealth().dealDamage(12);
-        qurrito.getSpellbook().increaseDailyCharges(0, 4);
-        qurrito.getSpellbook().increaseDailyCharges(1, 3);
+    public static void createQurrito() {
+        Character.createNewCharacter(20, SpellSchool.Evocation, Arrays.asList(SpellSchool.Necromancy, SpellSchool.Conjuration));
+        Character.getInstance().getMoney().addCopper(39409);
+        Character.getInstance().getHealth().dealDamage(12);
+        Character.getInstance().getSpellbook().increaseDailyCharges(0, 4);
+        Character.getInstance().getSpellbook().increaseDailyCharges(1, 3);
 
         for (Spell spell : GetLearnedSpells()) {
-            qurrito.getSpellbook().learnSpell(spell);
+            Character.getInstance().getSpellbook().learnSpell(spell);
         }
-        return qurrito;
     }
 
     private static Spell[] GetLearnedSpells() {
