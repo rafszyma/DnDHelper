@@ -33,8 +33,8 @@ public class ActiveSpellListAdapter extends ArrayAdapter<Spell> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItem = convertView;
-        if(listItem == null)
-            listItem = LayoutInflater.from(sContext).inflate(R.layout.active_spell_record,parent,false);
+        if (listItem == null)
+            listItem = LayoutInflater.from(sContext).inflate(R.layout.active_spell_record, parent, false);
 
         final Spell currentSpell = spellList.get(position);
 
@@ -46,7 +46,7 @@ public class ActiveSpellListAdapter extends ArrayAdapter<Spell> {
             @Override
             public void onClick(View v) {
                 Character.getInstance().getSpellbook().castSpell(currentSpell);
-                ((MainActivity)sContext).notifyFragment();
+                ((MainActivity) sContext).notifyFragment();
             }
         });
 
@@ -55,7 +55,7 @@ public class ActiveSpellListAdapter extends ArrayAdapter<Spell> {
             @Override
             public void onClick(View v) {
                 Character.getInstance().getSpellbook().castSpell(currentSpell);
-                ((MainActivity)sContext).prepareSpells(null);
+                ((MainActivity) sContext).prepareSpells(null);
             }
         });
         return listItem;

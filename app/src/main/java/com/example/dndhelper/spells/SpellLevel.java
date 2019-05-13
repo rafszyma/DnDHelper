@@ -8,22 +8,9 @@ public class SpellLevel {
     private int tierNumber;
 
     private int maxDailyCharges;
-
-    public HashSet<Spell> getLearnedSpells() {
-        return learnedSpells;
-    }
-
-    public ArrayList<Spell> getActiveSpells() {
-        return activeSpells;
-    }
-
     private int currentCharges;
-
     private HashSet<Spell> learnedSpells;
-
     private ArrayList<Spell> activeSpells;
-
-
 
     public SpellLevel(int tierNumber) {
         this.tierNumber = tierNumber;
@@ -31,6 +18,14 @@ public class SpellLevel {
         this.currentCharges = this.maxDailyCharges;
         this.learnedSpells = new HashSet<>();
         this.activeSpells = new ArrayList<>();
+    }
+
+    public HashSet<Spell> getLearnedSpells() {
+        return learnedSpells;
+    }
+
+    public ArrayList<Spell> getActiveSpells() {
+        return activeSpells;
     }
 
     public boolean learnSpell(Spell spell) {

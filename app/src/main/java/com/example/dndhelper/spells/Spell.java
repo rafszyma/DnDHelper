@@ -11,6 +11,17 @@ import com.example.dndhelper.enums.SpellSchool;
 import java.util.HashSet;
 
 public class Spell implements Parcelable {
+    public static final Creator<Spell> CREATOR = new Creator<Spell>() {
+        @Override
+        public Spell createFromParcel(Parcel in) {
+            return new Spell(in);
+        }
+
+        @Override
+        public Spell[] newArray(int size) {
+            return new Spell[size];
+        }
+    };
     private String name;
     private int level;
     private SpellSchool spellSchool;
@@ -40,18 +51,6 @@ public class Spell implements Parcelable {
         duration = in.readString();
         shortDescription = in.readString();
     }
-
-    public static final Creator<Spell> CREATOR = new Creator<Spell>() {
-        @Override
-        public Spell createFromParcel(Parcel in) {
-            return new Spell(in);
-        }
-
-        @Override
-        public Spell[] newArray(int size) {
-            return new Spell[size];
-        }
-    };
 
     public String getName() {
         return name;

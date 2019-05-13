@@ -12,18 +12,14 @@ import android.widget.ListView;
 
 import com.example.dndhelper.adapters.ActiveSpellListAdapter;
 import com.example.dndhelper.character.Character;
-import com.example.dndhelper.spells.Spell;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class SpellbookFragment extends Fragment {
 
-    private SpellBookViewModel mViewModel;
-
-    private ActiveSpellListAdapter adapter;
-
     private static String LEVEL_KEY = "level_key";
+    private SpellBookViewModel mViewModel;
+    private ActiveSpellListAdapter adapter;
 
     public static SpellbookFragment newInstance(int level) {
         SpellbookFragment spellbookFragment = new SpellbookFragment();
@@ -37,14 +33,14 @@ public class SpellbookFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View spellView = inflater.inflate(R.layout.spellbook_fragment, container, false);
-         if( getArguments() != null) {
-             int spellLevel = getArguments().getInt(LEVEL_KEY);
+        if (getArguments() != null) {
+            int spellLevel = getArguments().getInt(LEVEL_KEY);
 
-             ListView spellList = spellView.findViewById(R.id.activeSpellList);
-             adapter = new ActiveSpellListAdapter(Objects.requireNonNull(getActivity()), Character.getInstance().getSpellbook().getActiveSpells(spellLevel));
-             spellList.setAdapter(adapter);
+            ListView spellList = spellView.findViewById(R.id.activeSpellList);
+            adapter = new ActiveSpellListAdapter(Objects.requireNonNull(getActivity()), Character.getInstance().getSpellbook().getActiveSpells(spellLevel));
+            spellList.setAdapter(adapter);
 
-         }
+        }
 
         return spellView;
     }

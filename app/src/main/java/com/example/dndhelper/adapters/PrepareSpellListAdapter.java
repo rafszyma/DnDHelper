@@ -19,7 +19,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
 public class PrepareSpellListAdapter extends ArrayAdapter<Spell> {
 
     private Context sContext;
@@ -35,8 +34,8 @@ public class PrepareSpellListAdapter extends ArrayAdapter<Spell> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItem = convertView;
-        if(listItem == null)
-            listItem = LayoutInflater.from(sContext).inflate(R.layout.learned_spell_record,parent,false);
+        if (listItem == null)
+            listItem = LayoutInflater.from(sContext).inflate(R.layout.learned_spell_record, parent, false);
 
         final Spell currentSpell = spellList.get(position);
 
@@ -48,7 +47,7 @@ public class PrepareSpellListAdapter extends ArrayAdapter<Spell> {
             @Override
             public void onClick(View v) {
                 Character.getInstance().getSpellbook().prepareSpell(currentSpell);
-                ((PrepareSpellActivity)sContext).finish();
+                ((PrepareSpellActivity) sContext).finish();
             }
         });
 

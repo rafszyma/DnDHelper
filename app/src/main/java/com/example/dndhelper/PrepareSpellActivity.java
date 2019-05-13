@@ -1,15 +1,12 @@
 package com.example.dndhelper;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
 import com.example.dndhelper.adapters.PrepareSpellListAdapter;
 import com.example.dndhelper.character.Character;
-import com.example.dndhelper.spells.Spell;
-
-import java.util.ArrayList;
 
 public class PrepareSpellActivity extends AppCompatActivity {
 

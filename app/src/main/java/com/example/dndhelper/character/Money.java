@@ -26,16 +26,16 @@ public class Money {
     public void addCopper(int copper) {
         int money = this.copper + this.silver * 10 + this.gold * 100;
         money += copper;
-        this.copper = money%10;
-        this.silver = money/10%10;
-        this.gold = money/100;
+        this.copper = money % 10;
+        this.silver = money / 10 % 10;
+        this.gold = money / 100;
     }
 
     public void addSilver(int silver) {
         int money = this.silver * 10 + this.gold * 100;
         money += silver;
-        this.silver = money%10;
-        this.gold = money/10;
+        this.silver = money % 10;
+        this.gold = money / 10;
     }
 
     public void addGold(int gold) {
@@ -45,8 +45,8 @@ public class Money {
     public void subCopper(int copper) {
         int money = this.copper + this.silver * 10 + this.gold * 100;
         money -= copper;
-        this.copper = money%10;
-        this.silver = money/10%10;
-        this.gold = money/100;
+        this.copper = money % 10;
+        this.silver = money / 10 % 10;
+        this.gold = money / 100;
     }
 }

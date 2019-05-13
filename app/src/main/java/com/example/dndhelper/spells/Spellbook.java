@@ -21,15 +21,14 @@ public class Spellbook {
         }
         spellLevels = new SpellLevel[MAX_SPELL_LEVELS];
 
-        for (int i = 0; i < MAX_SPELL_LEVELS; i++)
-        {
+        for (int i = 0; i < MAX_SPELL_LEVELS; i++) {
             spellLevels[i] = new SpellLevel(i);
         }
     }
 
     public boolean learnSpell(Spell spell) {
 
-        if (this.forbiddenedSchools.contains(spell.getSpellSchool())){
+        if (this.forbiddenedSchools.contains(spell.getSpellSchool())) {
             return false;
         }
 
@@ -38,7 +37,7 @@ public class Spellbook {
     }
 
     public boolean prepareSpell(Spell spell) {
-        if (this.forbiddenedSchools.contains(spell.getSpellSchool())){
+        if (this.forbiddenedSchools.contains(spell.getSpellSchool())) {
             return false;
         }
 
@@ -47,7 +46,7 @@ public class Spellbook {
     }
 
     public boolean castSpell(Spell spell) {
-        if (this.forbiddenedSchools.contains(spell.getSpellSchool())){
+        if (this.forbiddenedSchools.contains(spell.getSpellSchool())) {
             return false;
         }
 
@@ -60,8 +59,7 @@ public class Spellbook {
     }
 
     public boolean setExtraSpell(Spell spell) {
-        if (spell.getSpellSchool() != this.extraSpellSchool)
-        {
+        if (spell.getSpellSchool() != this.extraSpellSchool) {
             return false;
         }
 
@@ -79,7 +77,7 @@ public class Spellbook {
     }
 
     public ArrayList<Spell> getActiveSpells(int level) {
-        if (level > MAX_SPELL_LEVELS -1 ) {
+        if (level > MAX_SPELL_LEVELS - 1) {
             return new ArrayList<>();
         }
 
@@ -87,7 +85,7 @@ public class Spellbook {
     }
 
     public ArrayList<Spell> getLearnedSpells(int level) {
-        if (level > MAX_SPELL_LEVELS -1 ) {
+        if (level > MAX_SPELL_LEVELS - 1) {
             return new ArrayList<>();
         }
 

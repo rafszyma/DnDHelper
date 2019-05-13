@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.dndhelper.character.Character;
-import com.example.dndhelper.spells.Spell;
 
 import java.io.FileNotFoundException;
 

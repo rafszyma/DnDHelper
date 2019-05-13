@@ -13,6 +13,17 @@ import java.util.List;
 
 public class Character {
     private static Character ourInstance;
+    private Health health;
+    private Money money;
+    private Spellbook spellbook;
+
+
+    private Character(int maxHealth, SpellSchool extraSpellSchool, List<SpellSchool> forbiddenedSchools) {
+        health = new Health(maxHealth);
+        money = new Money(0);
+        spellbook = new Spellbook(extraSpellSchool, forbiddenedSchools);
+    }
+
     public static Character getInstance() {
         return ourInstance;
     }
@@ -23,31 +34,6 @@ public class Character {
 
     public static void createNewCharacter(int maxHealth, SpellSchool extraSpellSchool, List<SpellSchool> forbiddenedSchools) {
         ourInstance = new Character(maxHealth, extraSpellSchool, forbiddenedSchools);
-    }
-
-
-    private Health health;
-
-    private Money money;
-
-    private Spellbook spellbook;
-
-    private Character(int maxHealth, SpellSchool extraSpellSchool, List<SpellSchool> forbiddenedSchools) {
-        health = new Health(maxHealth);
-        money = new Money(0);
-        spellbook = new Spellbook(extraSpellSchool, forbiddenedSchools);
-    }
-
-    public Health getHealth() {
-        return health;
-    }
-
-    public Money getMoney() {
-        return money;
-    }
-
-    public Spellbook getSpellbook() {
-        return spellbook;
     }
 
     public static CharacterState getState(int hp) {
@@ -92,6 +78,18 @@ public class Character {
         }
 
         QurritoCreator.createQurrito();
+    }
+
+    public Health getHealth() {
+        return health;
+    }
+
+    public Money getMoney() {
+        return money;
+    }
+
+    public Spellbook getSpellbook() {
+        return spellbook;
     }
 
     public void saveCharacter(FileOutputStream outputStream) {

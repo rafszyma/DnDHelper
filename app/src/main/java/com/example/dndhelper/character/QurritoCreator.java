@@ -24,7 +24,7 @@ public class QurritoCreator {
     }
 
     private static Spell[] GetLearnedSpells() {
-        return new Spell[] {
+        return new Spell[]{
                 new Spell("Otumanienie", 0, SpellSchool.Enchantment, new HashSet<>(Arrays.asList(SpellComponent.Verbal, SpellComponent.Somatic, SpellComponent.Material)), SpellRange.Close, "1 cel <4KW", "1 runda", SpellDefense.Will, "Humanoid o maksymalnie 4 KW traci następną akcję."),
                 new Spell("Odporność", 0, SpellSchool.Abjuration, new HashSet<>(Arrays.asList(SpellComponent.Verbal, SpellComponent.Somatic, SpellComponent.Material)), SpellRange.Touch, "Dotyk", "1 min", SpellDefense.Will, "Podmiot otrzymuje +1 do rzutów obronnych"),
                 new Spell("Odczytanie Magii", 0, SpellSchool.Divination, new HashSet<>(Arrays.asList(SpellComponent.Verbal, SpellComponent.Somatic, SpellComponent.Focus)), SpellRange.Self, "Ja", "10min / lvl", SpellDefense.None, "Pozwala odczytywać zwoje i księgi zaklęć"),
@@ -49,7 +49,7 @@ public class QurritoCreator {
                 new Spell("Trzewia z żelaza", 1, SpellSchool.Abjuration, new HashSet<>(Arrays.asList(SpellComponent.Verbal, SpellComponent.Somatic, SpellComponent.Material)), SpellRange.Touch, "Dotyk", "10 min / lvl", SpellDefense.Will, "+4 na wytrwałość przeciw truciznom"),
                 new Spell("Tarcza", 1, SpellSchool.Abjuration, new HashSet<>(Arrays.asList(SpellComponent.Verbal, SpellComponent.Somatic)), SpellRange.Self, "Ja", "10 min / lvl", SpellDefense.None, "Neguje magiczne pociski, +4 KP z tarczy, również przed bezcielesne ataki dotykowe"),
                 new Spell("Alarm", 1, SpellSchool.Abjuration, new HashSet<>(Arrays.asList(SpellComponent.Verbal, SpellComponent.Somatic, SpellComponent.Focus)), SpellRange.Close, "Emanacja o promieniu 6m", "2 godziny / lvl", SpellDefense.None, "Alarm jak malutka lub większa wkroczy w krąg. Jak podasz hasło to nie triggruje alarmu. Decyduje czy będzie mentalny czy słyszalny."),
-                new Spell("Deszcz Kolorów", 1, SpellSchool.Illusion, new HashSet<>(Arrays.asList(SpellComponent.Verbal, SpellComponent.Somatic,  SpellComponent.Material)), SpellRange.m4point5, "Stożek", "Instant", SpellDefense.Will, "2KW i mniej: nieprzytomna, oślepiona i oszołomiona na 2k4. (3-4KW) Potem 1k4 oślepiona i oszołomiona i (5KW+) 1 runde oszołomiona"),
+                new Spell("Deszcz Kolorów", 1, SpellSchool.Illusion, new HashSet<>(Arrays.asList(SpellComponent.Verbal, SpellComponent.Somatic, SpellComponent.Material)), SpellRange.m4point5, "Stożek", "Instant", SpellDefense.Will, "2KW i mniej: nieprzytomna, oślepiona i oszołomiona na 2k4. (3-4KW) Potem 1k4 oślepiona i oszołomiona i (5KW+) 1 runde oszołomiona"),
                 new Spell("Identyfikacja", 1, SpellSchool.Divination, new HashSet<>(Arrays.asList(SpellComponent.Verbal, SpellComponent.Somatic, SpellComponent.Material)), SpellRange.Touch, "1 przedmiot", "Instant", SpellDefense.None, "Rzuca się 1 godzinę. Potemmożna określić wszystkie właściwości przedmiotu, oraz liczbę ładunków. Komponent: perła o wartości co najmniej 100sz"),
                 new Spell("Porażający uścisk", 1, SpellSchool.Evocation, new HashSet<>(Arrays.asList(SpellComponent.Verbal, SpellComponent.Somatic)), SpellRange.Touch, "1 cel", "Instant", SpellDefense.None, "Atak wręcz 1k6 na poziom. +3 do ataku jak przeciwnik ma dużo metalu"),
 
