@@ -1,8 +1,8 @@
 package com.example.dndhelper;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.example.dndhelper.character.Character;
@@ -139,32 +139,28 @@ public class SpellInfoActivity extends AppCompatActivity {
                 case Verbal:
                     if (componentString.isEmpty()) {
                         componentString = getResources().getString(R.string.verbal);
-                    }
-                    else {
+                    } else {
                         componentString = componentString.concat(", " + getResources().getString(R.string.verbal));
                     }
                     break;
                 case Somatic:
                     if (componentString.isEmpty()) {
                         componentString = getResources().getString(R.string.somatic);
-                    }
-                    else {
+                    } else {
                         componentString = componentString.concat(", " + getResources().getString(R.string.somatic));
                     }
                     break;
                 case Material:
                     if (componentString.isEmpty()) {
                         componentString = getResources().getString(R.string.material);
-                    }
-                    else {
+                    } else {
                         componentString = componentString.concat(", " + getResources().getString(R.string.material));
                     }
                     break;
                 case Focus:
                     if (componentString.isEmpty()) {
                         componentString = getResources().getString(R.string.focus);
-                    }
-                    else {
+                    } else {
                         componentString = componentString.concat(", " + getResources().getString(R.string.focus));
                     }
                     break;

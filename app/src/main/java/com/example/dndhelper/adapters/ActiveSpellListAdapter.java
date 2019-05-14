@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.dndhelper.MainActivity;
-import com.example.dndhelper.PrepareSpellActivity;
 import com.example.dndhelper.R;
 import com.example.dndhelper.SpellInfoActivity;
 import com.example.dndhelper.character.Character;

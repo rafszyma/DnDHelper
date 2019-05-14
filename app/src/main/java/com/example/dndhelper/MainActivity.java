@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.dndhelper.character.Character;
+import com.example.dndhelper.spells.AllSpells;
 
 import java.io.FileNotFoundException;
 
@@ -24,11 +25,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AllSpells.getInstance().readFromJSON(getResources().openRawResource(R.raw.spells));
         Character.initialize(getFileStreamPath(FILENAME));
         setContentView(R.layout.activity_main);
         updateMoneyText();
         updateHealthText();
         createSpellbook();
+
     }
 
     private void updateHealthText() {

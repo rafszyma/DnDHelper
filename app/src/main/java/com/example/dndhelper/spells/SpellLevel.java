@@ -41,7 +41,7 @@ public class SpellLevel {
             return false;
         }
 
-        if (activeSpells.size() < maxDailyCharges){
+        if (activeSpells.size() < maxDailyCharges) {
             return activeSpells.add(spell);
         }
 

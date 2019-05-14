@@ -3,16 +3,13 @@ package com.example.dndhelper.spells;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.example.dndhelper.enums.Class;
 import com.example.dndhelper.enums.SpellComponent;
 import com.example.dndhelper.enums.SpellDefense;
 import com.example.dndhelper.enums.SpellRange;
 import com.example.dndhelper.enums.SpellSchool;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Set;
 
 public class Spell implements Parcelable {
     public static final Creator<Spell> CREATOR = new Creator<Spell>() {
@@ -26,8 +23,10 @@ public class Spell implements Parcelable {
             return new Spell[size];
         }
     };
+
     private String name;
     private int level;
+    private HashSet<Class> classes;
     private SpellSchool school;
     private HashSet<SpellComponent> components;
     private SpellRange range;
@@ -36,10 +35,11 @@ public class Spell implements Parcelable {
     private SpellDefense defense;
     private String shortDescription;
 
-    public Spell(String name, int level, SpellSchool spellSchool, HashSet<SpellComponent> spellComponents, SpellRange spellRange, String target, String duration, SpellDefense defense, String shortDescription) {
+    public Spell(String name, int level, SpellSchool spellSchool, HashSet<Class> classes, HashSet<SpellComponent> spellComponents, SpellRange spellRange, String target, String duration, SpellDefense defense, String shortDescription) {
         this.name = name;
         this.level = level;
         this.school = spellSchool;
+        this.classes = classes;
         this.components = spellComponents;
         this.range = spellRange;
         this.target = target;
@@ -53,6 +53,7 @@ public class Spell implements Parcelable {
         level = in.readInt();
         school = SpellSchool.valueOf(in.readString());
         components = (HashSet<SpellComponent>) in.readSerializable();
+        classes = (HashSet<Class>) in.readSerializable();
         range = SpellRange.valueOf(in.readString());
         target = in.readString();
         duration = in.readString();
@@ -107,6 +108,7 @@ public class Spell implements Parcelable {
         dest.writeInt(level);
         dest.writeString(school.toString());
         dest.writeSerializable(components);
+        dest.writeSerializable(classes);
         dest.writeString(range.toString());
         dest.writeString(target);
         dest.writeString(duration);

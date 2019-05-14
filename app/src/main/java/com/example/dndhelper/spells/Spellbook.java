@@ -6,10 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Spellbook {
+    private static final int SPELL_LEVELS = 10;
     public int spellClassLevel;
-    public int MAX_SPELL_LEVELS = 10; // Levels 0-9
     private SpellLevel[] spellLevels;
-
     private Spell extraSpell;
     private SpellSchool extraSpellSchool;
     private ArrayList<SpellSchool> forbiddenedSchools;
@@ -21,9 +20,10 @@ public class Spellbook {
             this.extraSpellSchool = extraSpellSchool;
             this.forbiddenedSchools = new ArrayList<>(forbiddenSchools);
         }
-        spellLevels = new SpellLevel[MAX_SPELL_LEVELS];
 
-        for (int i = 0; i < MAX_SPELL_LEVELS; i++) {
+        spellLevels = new SpellLevel[SPELL_LEVELS];
+
+        for (int i = 0; i < SPELL_LEVELS; i++) {
             spellLevels[i] = new SpellLevel(i);
         }
     }
@@ -70,7 +70,7 @@ public class Spellbook {
     }
 
     public int getMaxSpellLevel() {
-        for (int i = MAX_SPELL_LEVELS - 1; i >= 0; i--) {
+        for (int i = SPELL_LEVELS - 1; i >= 0; i--) {
             if (spellLevels[i].getMaxDailyCharges() > 0)
                 return i;
         }
@@ -79,7 +79,7 @@ public class Spellbook {
     }
 
     public ArrayList<Spell> getActiveSpells(int level) {
-        if (level > MAX_SPELL_LEVELS - 1) {
+        if (level > SPELL_LEVELS - 1) {
             return new ArrayList<>();
         }
 
@@ -100,7 +100,7 @@ public class Spellbook {
     }
 
     public ArrayList<Spell> getLearnedSpells(int level) {
-        if (level > MAX_SPELL_LEVELS - 1) {
+        if (level > SPELL_LEVELS - 1) {
             return new ArrayList<>();
         }
 

@@ -1,17 +1,26 @@
 package com.example.dndhelper.enums;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+import com.google.gson.annotations.SerializedName;
 
 public enum SpellSchool {
+    @SerializedName("none")
     None,
+    @SerializedName("abjuration")
     Abjuration,
+    @SerializedName("conjuration")
     Conjuration,
+    @SerializedName("divination")
     Divination,
+    @SerializedName("enchantment")
     Enchantment,
+    @SerializedName("evocation")
     Evocation,
+    @SerializedName("illusion")
     Illusion,
+    @SerializedName("necromancy")
     Necromancy,
+    @SerializedName("transmutation")
     Transmutation,
+    @SerializedName("universal")
     Universal
 }
