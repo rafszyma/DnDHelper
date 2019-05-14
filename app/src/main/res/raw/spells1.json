@@ -1,0 +1,739 @@
+[
+  {
+    "name": "Trzewia z żelaza",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "abjuration",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "1 cel",
+    "duration": "10 minut / poziom",
+    "defense": "will",
+    "shortDescription": "Sprawiasz, iż stworzeniu łatwiej jest zwalczać efekty trucizn - otrzymuje premię z okoliczności +4 do rzutów obronnych na Wytrwałość przeciwko wszekiego rodzaju truciznom, bez względu na to, jak siędostały do organizmu (poprzez ranę, kontakt, spożycie czy wdychanie). Komponent materialny: Fiolka zawierająca rozcieńczoną truciznę czterech różnych stworzeń"
+  },
+  {
+    "name": "Brzuchomówstwo",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "illusion",
+    "components": [
+      "verbal",
+      "focus"
+    ],
+    "range": "close",
+    "target": "osobisty",
+    "duration": "1 min / lvl",
+    "defense": "will",
+    "shortDescription": "Sprawiasz, \u0004e twój głos (lub dowolny inny dzwiek, który potrafisz z siebie wydac za pomoca głosu)\nzdaje sie pochodzic z innego miejsca. Mo\u0004esz mówic w dowolnym znanym ci jezyku. Ka\u0004dy, kto\nsłyszy te dzwieki i wykona udany rzut obronny, rozpozna, \u0004e sa iluzja (ale nadal bedzie je słyszał).\nKoncentrator: Zwiniety pergamin tworzacy sto\u0004ek."
+  },
+  {
+    "name": "Deszcz kolorów",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "illusion",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "4.5m",
+    "target": "rozprysk w kształcie stożka",
+    "duration": "instant",
+    "defense": "will",
+    "shortDescription": "Z twojej dłoni wystrzeliwuje sto\u0004ek jaskrawych, nakładajacych sie na siebie kolorów. Istoty, które\nznajda sie na jego obszarze, padaja ofiara oszołomienia, byc mo\u0004e zostaja oslepione, a nawet traca\nprzytomnosc. Efekt zaklecia zale\u0004y od KW stworzenie w sto\u0004ku.\n2 KW lub mniej: Istota jest nieprzytomna, oslepiona i oszołomiona przez 2k4 rundy, nastepnie\noslepiona i oszołomiona przez 1k4 rundy, a potem oszołomiona przez 1 runde (przytomnosc traca\ntylko \u0004yjace stworzenia).\n3 lub 4 KW: Stworzenie jest oslepione i oszołomione przez 1k4 rundy, a potem oszołomione przez 1\nrunde.\n5 lub wiecej KW: Istota jest oszołomiona przez 1 runde.\nDeszcz kolorów nie wpływa na stworzenia, które nie posiadaja zmysłu wzroku.\nKomponent materialny: Szczypta piasku lub proszku koloru czerwonego, \u0004ółtego i niebieskiego."
+  },
+  {
+    "name": "Magiczna aura Nystula",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "illusion",
+    "components": [
+      "verbal",
+      "somatic",
+      "focus"
+    ],
+    "range": "touch",
+    "target": "Jeden dotkniety przedmiot o wadze nieprzekraczajacej 2,5 kg/poziom",
+    "duration": "1 dzień / lvl",
+    "defense": "none",
+    "shortDescription": "Zmieniasz aure przedmiotu tak, \u0004e zaklecia wykrycia (i czary o podobnych mo\u0004liwosciach) wykazuja,\n\u0004e ma on własciwosci magiczne, choc w rzeczywistosci ich nie posiada, lub odwrotnie. W tym drugim\nprzypadku, zale\u0004nie od twej decyzji, mo\u0004e to byc aura konkretnego przedmiotu lub efekt wybranego\nczaru.\nJe\u0004eli na przedmiot z magiczna aura jakas osoba rzuci identyfikacje lub zbada go w podobny sposób,\nto – po udanym rzucie obronnym na Wole – odkryje, i\u0004 aura jest fałszywa i pozna prawdziwe cechy\ndanej rzeczy. W przypadku nieudanego rzutu obronnego uwierzy w prawdziwosc aury i \u0004adne\ndodatkowe testy nie wyjawia jej prawdziwej natury magii obiektu.\nJesli aura przedmiotu znajdujacego sie pod wpływem magicznej aury jest szczególnie pote\u0004na (na\nprzykład, w artefaktach), niniejszy czar nie działa.\nUwaga: Magiczna bron, tarcza czy zbroja musza byc mistrzowsko wykonane, a zatem wykuty\nw normalny sposób miecz wykazujacy magiczna aure wyda sie podejrzany.\nKoncentrator: Skrawek jedwabiu, który rozposcierasz nad przedmiotem majacym znalezc sie pod\nwpływem zaklecia."
+  },
+  {
+    "name": "Milczący obraz",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "illusion",
+    "components": [
+      "verbal",
+      "somatic",
+      "focus"
+    ],
+    "range": "far",
+    "target": "Wizualna ułuda o wielkosci nieprzekraczajacej czterech szescianów o krawedzi 3 m + jeden szescian o krawedzi 3 m/poziom (K)",
+    "duration": "koncentracja",
+    "defense": "will",
+    "shortDescription": "Zaklecie to powołuje do istnienia wizualna iluzje przedmiotu, stworzenia lub mocy, zgodna z twoimi\nwyobra\u0004eniami. Za jego pomoca nie stworzysz dzwieków, zapachów ani efektów cieplnych\ni dotykowych. Mo\u0004esz poruszac obrazem w granicach rozmiaru efektu czaru.\nKoncentrator: Kłebek wełny."
+  },
+  {
+    "name": "Przebranie",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "illusion",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "osobisty",
+    "target": "ja",
+    "duration": "10 min / lvl",
+    "defense": "none",
+    "shortDescription": "Czar ten sprawia, \u0004e wygladasz inaczej – dotyczy to równie\u0004 stroju, zbroi, broni i wyposa\u0004enia.\nMo\u0004esz wydawac sie o 30 centymetrów wy\u0004szy lub ni\u0004szy, grubszy albo chudszy. Nie masz jednak\u0004e\nprawa zmienic typu swego ciała. W pozostałych aspektach zmiany zale\u0004a tylko od ciebie. Mo\u0004esz\ndodac lub ukryc pomniejsza ceche charakterystyczna lub te\u0004 wygladac jak ktos zupełnie inny.\nNiniejszy czar nie obdarza zdolnosciami ani manierami wybranej formy oraz nie zmienia namacalnych\n(dotyk) i słyszalnych (dzwiek) własciwosci ciebie i twojego wyposa\u0004enia.\nJesli u\u0004yjesz tego zaklecia do stworzenia przebrania, otrzymujesz premie +10 do testów Przebierania.\nIstota wchodzaca w interakcje ze zwidem ma prawo do rzutu obronnego na Wole – udany pozwala\nrozpoznac iluzje."
+  },
+  {
+    "name": "Dotyk chłodu",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "necromancy",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "touch",
+    "target": "Dotknięta istota lub istoty (1 / lvl)",
+    "duration": "instant",
+    "defense": "endurance",
+    "shortDescription": "Czar sprawia, \u0004e twoja dłon zaczyna jarzyć sie błekitnie – wystarczy, \u0004e dotkniesz nia jakąś \u0004yjaca\nistote, by rozchwiac jej siły \u0004yciowe. Ka\u0004dy dotyk oznacza u\u0004ycie energii negatywnej powodujacej\n1k6 obra\u0004en. Dotknieta ofiara musi wykonac rzut obronny na Wytrwałosc – nieudany oznacza\nobni\u0004enie Siły o 1 punkt. Ten atak dotykowy wrecz mo\u0004esz wyprowadzac maksymalnie raz na\npoziom.\nNieumarli, których dotkniesz, nie otrzymuja \u0004adnych ran, ale musza wykonac rzut obronny na Wole –\nnieudany oznacza ucieczke (jakby ogarneła je panika) przez 1k4 rundy +1 runda na poziom\nczarujacego."
+  },
+  {
+    "name": "Promień osłabienia",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "necromancy",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "close",
+    "target": "promień",
+    "duration": "1 min / lvl",
+    "defense": "touch_ranged",
+    "shortDescription": "Z twojej reki wystrzeliwuje swiecacy płomien, który trafia w wybrany cel, jesli powiedzie ci sie atak\ndotykowy dystansowy. Ugodzona ofiara podlega karze do Siły równej 1k6 +1 na dwa poziomy\nczarujacego (maksymalnie 1k6+5). W efekcie działania niniejszego zaklecia wartosc owego atrybutu\nnie mo\u0004e spasc poni\u0004ej 1."
+  },
+  {
+    "name": "Wywołanie strachu",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "necromancy",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "close",
+    "target": "Jedna żywa istota o 5 lub mniej KW",
+    "duration": "1k4 rund lub 1 runda",
+    "defense": "will",
+    "shortDescription": "W istocie, na która zadziałał, czar wywołuje przera\u0004enie. Ofiara, której powiedzie sie rzut obronny na\nWole, jest wstrzasnieta przez 1 runde. Istoty majace 6 lub wiecej Kostek Wytrzymałosci sa niepodatne\nna ten efekt."
+  },
+  {
+    "name": "Hipnoza",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "enchantment",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "close",
+    "target": "Kilka żyjacych istot, z których żadne dwie nie moga znajdowac sie w odległosci wiekszej niż 9 m od siebie",
+    "duration": "2k4 rund",
+    "defense": "will",
+    "shortDescription": "Za sprawa gestów i monotonnej inkantacji fascynujesz znajdujace sie w pobli\u0004u ciebie istoty, które\nzatrzymuja sie i wpatruja w ciebie otepiałe. Mo\u0004esz wykorzystac uwage, która na tobie skupiły, by\ntwoje sugestie i prosby budziły dodatkowe zaufanie, przez co z wiekszym prawdopodobienstwem\nzostana spełnione. Rzuc 2k4, aby okreslic całkowita liczbe Kostek Wytrzymałosci stworzen, na które\nwpłynie zaklecie. W pierwszej kolejnosci jego ofiara padaja istoty o najmniejszym KW. Czar działa\ntylko na te stworzenia, które cie słysza lub widza, ale nie musza cie rozumiec, aby ulec fascynacji.\nJe\u0004eli u\u0004yjesz hipnozy w walce, ka\u0004da istota zyskuje premie +2 do rzutu obronnego. Jesli zas chcesz ja\nrzucic na jedno stworzenie, a w pobli\u0004u nie toczy sie \u0004adne starcie, jego rzut obronny podlega karze –\n2.\nOfiara zafascynowana za sprawa tego zaklecia reaguje tak, jakby miała do ciebie nastawienie lepsze\no dwa stopnie. Dzieki temu mo\u0004esz zwrócic sie do zahipnotyzowanego stworzenia z jedna krótka\ni rozsadna prosba, jesli oczywiscie potrafisz sie z nim porozumiec. Nawet kiedy czar dobiegnie konca,\njego ofiara zachowuje nowe nastawienie wzgledem ciebie, ale tylko w zwiazku z owa konkretna\nprosba.\nIstota, której nie powiódł sie rzut obronny, nie pamieta, \u0004e padła ofiara zaklecia."
+  },
+  {
+    "name": "Uśpienie",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "enchantment",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "medium",
+    "target": "Jedna lub wiecej żyjacych istot w rozprysku o promieniu 3 m",
+    "duration": "1 min / lvl",
+    "defense": "will",
+    "shortDescription": "Zaklecie to usypia istoty o łacznej liczbie 4 Kostek Wytrzymałosci. W pierwszej kolejnosci wpływa na\nstworzenia o najmniejszej liczbie KW. Je\u0004eli kilka istot ma tyle samo KW, ofiarami efektu padaja\nnajpierw te znajdujace sie najbli\u0004ej punktu poczatkowego czaru. KW niewystarczajace do tego, by\nzadziałac na jakies stworzenie, zostaja stracone.\nUspione istoty sa bezradne. Klaps lub zranienie je budza, ale normalne dzwieki – nie. Obudzenie\nstworzenia to akcja standardowa (zastosowanie akcji pomaganie sprzymierzencowi).\nUspienie nie wpływa na istoty nieprzytomne, konstrukty oraz nieumarłych.\nKomponent materialny: Szczypta drobnego piasku, płatki ró\u0004y lub \u0004ywy swierszcz."
+  },
+  {
+    "name": "Zauroczenie osoby",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "enchantment",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "close",
+    "target": "1 humanoidalna istota",
+    "duration": "1h / lvl",
+    "defense": "will",
+    "shortDescription": "Za pomoca tego zaklecia sprawiasz, \u0004e humanoidalna istota traktuje cie jak zaufanego przyjaciela\ni sprzymierzenca (nastawienie ofiary w stosunku do ciebie nale\u0004y uznac za przyjazne). Je\u0004eli w danym\nmomencie stworzeniu zagra\u0004asz ty lub twoi towarzysze badz te\u0004 wrecz je atakujecie, otrzymuje ono\npremie +5 do rzutu obronnego.\nNiniejsze zaklecie nie umo\u0004liwia ci kontrolowania zauroczonej osoby, jakby była automatem, chocia\u0004\ntraktuje ona twoje czyny i słowa mo\u0004liwie najprzychylniej. Masz prawo próbowac wydawac ofierze\nczaru rozkazy, ale musisz wygrac w spornym tescie Charyzmy, aby przekonac ja do zrobienia czegos,\nczego normalnie by nie uczyniła (tego rzutu nie mo\u0004na powtarzac). Istota pod działaniem zauroczenia\nosoby nigdy nie usłucha rozkazu samobójczego lub w oczywisty sposób przynoszacego jej szkode, ale\nmo\u0004na ja przekonac, \u0004e jakis niebezpieczny dla niej czyn warto podjac. Ka\u0004de działanie ze strony\ntwojej lub twoich sprzymierzenców, które bedzie stanowiło zagro\u0004enie dla zauroczonej osoby,\nautomatycznie przerywa działanie czaru. Musisz albo posługiwac sie jezykiem ofiary, albo skutecznie\nwykorzystywac “jezyk migowy”, aby przekazac jej rozkazy."
+  },
+  {
+    "name": "Alarm",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "abjuration",
+    "components": [
+      "verbal",
+      "somatic",
+      "focus"
+    ],
+    "range": "close",
+    "target": "Emanacja o promieniu 6 metrów i srodku w jakims punkcie przestrzeni",
+    "duration": "2h / lvl",
+    "defense": "none",
+    "shortDescription": "Czar ten wznieca mentalny lub słyszalny alarm za ka\u0004dym razem, gdy istota rozmiaru malutkiego lub\nwieksza wkroczy na chroniony teren badz te\u0004 dotknie jego granicy. Stworzenie, które wypowie hasło\n(ustalane w chwili rzucania zaklecia) nie uruchomi alarmu. Ty decydujesz w chwili rzucania czaru,\nczy alarm bedzie miał postac mentalna, czy słyszalna.\nAlarm mentalny: Ta wersja czaru ostrzega ciebie (i tylko ciebie), dopóki przebywasz w promieniu 1,5\nkilometra od chronionego obszaru. Odczuwasz mentalne, pojedyncze “dzyn”, które budzi cie\nz normalnego snu, ale w \u0004aden sposób nie wpływa na koncentracje. Zaklecie cisza nie ma wpływu na\nte wersje alarmu.\nAlarm słyszalny: W tej postaci czar tworzy dzwiek dzwoneczka, który dobrze słysza wszyscy\nw promieniu 18 metrów od chronionego obszaru. Ka\u0004de drzwi blokujace rozchodzenie sie dzwieków\nzmniejszaja wspomniany dystans o 3 metry, a ka\u0004da materialna sciana o 6 metrów. W całkowitej ciszy\ndzwonienie słychac słabo nawet w odległosci 54 metrów. Dzwiek brzmi przez runde. Istoty znajdujace\nsie na obszarze działania zaklecia cisza jednak go nie słysza.\nStworzenia eteryczne i astralne nie uruchamiaja alarmu.\nMo\u0004na sprawic, by alarm miał charakter permanentny, wykorzystujac do tego celu zaklecie\nutrwalenie.\nKoncentrator wtajemniczen: Dzwoneczek i kawałek bardzo cienkiego srebrnego drutu."
+  },
+  {
+    "name": "Ochrona przed chaosem/dobrem/prawem/złem",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "abjuration",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "dotknięta istota",
+    "duration": "1 min / lvl",
+    "defense": "will",
+    "shortDescription": "Zaklecie to chroni podmiot przed atakami złych istot, przed mentalna kontrola oraz przed\nprzyzwanymi stworzeniami. Powołuje do istnienia magiczna bariere wokół postaci, w odległosci około\n30 centymetrów. Zapora porusza sie wraz z owa postacia, powodujac trzy istotne efekty.\nPo pierwsze, podmiot zyskuje premie z odbicia +2 do KP i premie z odpornosci +2 do rzutów\nobronnych. Obie nale\u0004y brac pod uwage przypadku ataków złych istot i wykorzystywanych przez nie\nefektów.\nPo drugie, bariera blokuje wszelkie próby opetania chronionej istoty (chocby za sprawa magicznego\nsłoja) lub narzucenia jej mentalnej kontroli (co obejmuje efekty oczarowania (zauroczenia) oraz\noczarowania (przymusu), które zapewniaja długotrwała kontrole nad ofiara, jak na przykład\nzdominowanie osoby). Niniejszy czar nie zabezpiecza podmiotu przed obraniem go za cel takiego\nefektu, ale tłumi ten ostatni przez czas swego działania. Je\u0004eli to zaklecie dobiegnie konca, zanim\nrozwieje sie efekt zapewniajacy kontrole mentalna, korzystajaca z niego istota mo\u0004e rozkazywac\nmentalnie podmiotowi. Analogicznie ochrona przed złem blokuje opetanie sił \u0004yciowych, lecz nie\nzapobiega mu, jesli doszło do niego, zanim rzucono niniejszy czar. Warto zaznaczyc, \u0004e opisywane\ndziałanie funkcjonuje bez wzgledu na charakter.\nPo trzecie, niniejsze zaklecie zapobiega cielesnemu kontaktowi z przyzwanymi istotami. A zatem ataki\nbronia naturalna takich stworzen zawodza, jesli wymagaja dotkniecia podmiotu. Wyprowadzajace je\nistoty zostaja odepchniete. Dobre przyzwane stworzenia sa niepodatne na niniejszy efekt. Ochrona\nprzed cielesnym kontaktem z przyzwanymi istotami konczy sie w momencie, gdy podmiot zaatakuje\nktóras z nich lub spróbuje pchnac bariere na przyblokowane stworzenie. Odpornosc na czary pozwala\nprzełamac to zabezpieczenie i ewentualnie umo\u0004liwia dotkniecie chronionego.\nMaterialny komponent wtajemniczen: Nieco sproszkowanego srebra, którym rysujesz na podłodze (lub\nziemi) okrag o srednicy 90 centymetrów wokół chronionego stworzenia."
+  },
+  {
+    "name": "Odporność na żywioły",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "abjuration",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "touch",
+    "target": "dotknięta istota",
+    "duration": "24h",
+    "defense": "will",
+    "shortDescription": "Istota chroniona za pomoca odpornosci na \u0006ywioły nie cierpi w goracym lub mroznym otoczeniu. Nie\nodnosi obra\u0004en w srodowisku o temperaturze od –45 do 60 stopni Celsjusza; nie musi nawet\nwykonywac rzutów obronnych na Wytrwałosc. W podobny sposób chroniony jest ekwipunek\npodmiotu niniejszego zaklecia.\nOdpornosc na \u0006ywioły nie chroni przed obra\u0004eniami od ognia i zimna. Nie pomaga równie\u0004\nw zetknieciu z innymi niebezpieczenstwami srodowiskowymi, takimi jak dym, brak powietrza i tym\npodobne."
+  },
+  {
+    "name": "Tarcza",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "abjuration",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "self",
+    "target": "osobisty",
+    "duration": "1 min / lvl",
+    "defense": "none",
+    "shortDescription": "Zaklecie to powołuje do istnienia niewidzialny, poruszajacy sie dysk mocy wielkosci pawe\u0004y, który\nunosi sie przed toba. Tarcza neguje wymierzone w ciebie magiczne pociski. Dysk zapewnia równie\u0004\npremie z tarczy +4 do KP, która nale\u0004y brac pod uwage równie\u0004 wzgledem bezcielesnych ataków\ndotykowych, poniewa\u0004 jest to efekt mocy. Tarcza nie powoduje kary do testów z pancerza i z jej\nu\u0004ywaniem nie wia\u0004e sie ryzyko niepowodzenia czarów wtajemniczen. W odró\u0004nieniu od zwykłej\npawe\u0004y, czar ten nie pozwala na korzystanie z osłony."
+  },
+  {
+    "name": "Zamknięcie drzwi",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "abjuration",
+    "components": [
+      "verbal"
+    ],
+    "range": "medium",
+    "target": "jeden portal, do 1.8m2 / lvl",
+    "duration": "instant",
+    "defense": "none",
+    "shortDescription": "Magia tego czaru zamyka drzwi, wrota, okna oraz drewniane, metalowe czy kamienne okiennice.\nW wyniku działania niniejszego zaklecia portal bedacy podmiotem zostaje dobrze zamkniety, równie\u0004\nna normalny klucz. Zamkniecie drzwi neguje kołatka oraz udane rozproszenie magii.\nJesli ktos próbuje siła otworzyc zamkniete moca niniejszego czaru drzwi, okna itp., do normalnego ST\ntakiego działania dodaj 5."
+  },
+  {
+    "name": "Celny cios",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "divination",
+    "components": [
+      "verbal",
+      "focus"
+    ],
+    "range": "self",
+    "target": "osobisty",
+    "duration": "opis",
+    "defense": "none",
+    "shortDescription": "Na krótki czas zyskujesz intuicyjny wglad w najbli\u0004sza przyszłosc zwiazana z twoim nastepnym\natakiem. Kolejny test ataku (jesli bedzie on miał miejsce przed koncem nastepnej rundy) wykonujesz\nz premia z olsnienia +20. Ponadto nie musisz sie liczyc z ryzykiem chybienia spowodowanym\nukryciem celu.\nKoncentrator: Niewielka drewniana replika tarczy łuczniczej."
+  },
+  {
+    "name": "Identyfikacja",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "divination",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "jeden dotknięty przedmiot",
+    "duration": "instant",
+    "defense": "none",
+    "shortDescription": "Czar ten pozwala okreslic wszystkie magiczne własciwosci jednego przedmiotu magicznego, a zatem\ntak\u0004e sposoby aktywacji jego funkcji (jesli dotyczy) oraz liczbe niewykorzystanych ładunków\n(równie\u0004 je\u0004eli dotyczy).\nIdentyfikacja nie działa wzgledem artefaktów.\nMaterialny komponent wtajemniczen: Perła wartosci co najmniej 100 sz, która po sproszkowaniu\nmiesza sie z winem za pomoca sowiego pióra; tak powstała substancje wypijasz przed rzuceniem\nzaklecia."
+  },
+  {
+    "name": "Rozumienie języków",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "divination",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "self",
+    "target": "osobisty",
+    "duration": "10 min / lvl",
+    "defense": "none",
+    "shortDescription": "Potrafisz zrozumiec wypowiadane przez istoty słowa i czytac w przeciwnym razie niezrozumiałe\nzapiski. W obu wypadkach musisz dotknac stworzenia lub tekstu. Umiejetnosc czytania nie zawsze\noznacza, \u0004e zyskujesz dodatkowy wglad w zapisane słowa; po prostu rozumiesz je dosłownie. Zaklecie\nsprawia, \u0004e rozumiesz lub potrafisz czytac w nieznanym jezyku, jednak\u0004e nie mówisz nim i nic nie\npotrafisz w nim zapisac.\nTeksty czytasz w tempie strony (250 słów) na minute. Magicznych zapisków nie potrafisz odczytac,\nale zaklecie pozwala ci stwierdzic, \u0004e sa magiczne. Mo\u0004na je oszukac za pomoca specyficznej magii\nochronnej (w rodzaju czarów sekretna strona czy iluzoryczne pismo). Nie pozwala rozszyfrowywac\nkodów i nie ujawnia wiadomosci ukrytych w zwykłym tekscie.\nRozumienie jezyków mo\u0004na uczynic permanentnym za pomoca zaklecia utrwalenie.\nMaterialny komponent wtajemniczen: Szczypta sadzy i kilka grudek soli."
+  },
+  {
+    "name": "Wykrycie nieumarłych",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "divination",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "18m",
+    "target": "emanacja w kształcie stożka",
+    "duration": "koncentacja, 1min / lvl",
+    "defense": "none",
+    "shortDescription": "Wykrywasz aure otaczajaca nieumarłych. Ilosc informacji, jakie uzyskasz, zale\u0004y od tego, ile czasu\nposwiecisz przeszukiwaniu danego obszaru i jak długo skupiasz sie na konkretnym terenie lub\npodmiocie.\nPierwsza runda: Obecnosc lub brak obecnosci aur nieumarłych w obszarze.\nDruga runda: Liczba aur nieumarłych w obszarze oraz siła najpote\u0004niejszej z nich. Je\u0004eli masz dobry\ncharakter, najsilniejsza z aur jest przytłaczajaca (patrz dalej), a KW istoty co najmniej dwukrotnie\nprzekraczaja twój poziom postaci, ulegasz na 1 runde oszołomieniu; jednoczesnie wykrycie\nnieumarłych dobiega konca.\nTrzecia runda: Siła i poło\u0004enie ka\u0004dej z aur w obszarze. Jesli aura pojawi sie poza twoim polem\nwidzenia, poznajesz kierunek, w jakim sie znajduje a nie dokładna lokalizacje.\nSiła aury: Siła aury zale\u0004y od KW nieumarłego, co podano w pobliskiej tabeli. Utrzymywanie sie aury: Aura nieumarłych utrzymuje sie jeszcze po tym, jak jej zródło ulegnie\nzniszczeniu. Jesli rzucisz wykrycie nieumarłych i skierujesz je w miejsce utrzymujacej sie aury,\nwska\u0004e ono nieznaczna siłe (potega jeszcze mniejsza ni\u0004 w przypadku aury słabej). To, jak długo aura\nutrzymuje sie na poziomie nieznacznej siły, zale\u0004y od jej oryginalnej potegi. W ka\u0004dej rundzie mo\u0004esz sie obrócic i wykrywac nieumarłych na nowym obszarze. Niniejsze zaklecie\nprzenika bariery, ale jego działanie blokuje 30 centymetrów kamienia, 2,5 centymetra zwykłego\nmetalu, cienka warstwa ołowiu i 0,9 metra drewna lub ziemi.\nMaterialny komponent wtajemniczen: Nieco ziemi z grobu."
+  },
+  {
+    "name": "Wykrycie sekretnych drzwi",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "divination",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "18m",
+    "target": "emanacja w kształcie stożka",
+    "duration": "koncentacja, 1min / lvl",
+    "defense": "none",
+    "shortDescription": "Potrafisz wykryc sekretne drzwi, pomieszczenia, skrytki i tak dalej. Czar ten pozwala odnalezc tylko\nprzejscia, drzwi i otwory skonstruowane tak, by nie dało sie ich znalezc. Ilosc informacji, jakie\nuzyskasz, zale\u0004y od tego, ile czasu poswiecisz przeszukiwaniu danego obszaru i jak długo skupisz sie\nna konkretnym terenie lub podmiocie.\nPierwsza runda: Obecnosc lub brak obecnosci sekretnych drzwi.\nDruga runda: Liczba sekretnych drzwi w obszarze oraz poło\u0004enie wszystkich. Jesli sekretne drzwi\nznajduja sie poza twoim polem widzenia, poznajesz kierunek, w jakim sie znajduja, a nie dokładna\nlokalizacje.\nKa\u0006da kolejna runda: Mechanizm lub sposób otwarcia jednego konkretnego sekretnego przejscia,\nktóre uwa\u0004nie zbadałes.\nW ka\u0004dej rundzie mo\u0004esz sie obrócic i wykrywac sekretne drzwi na nowym obszarze. Niniejsze\nzaklecie przenika bariery, ale jego działanie blokuje 30 centymetrów kamienia, 2,5 centymetra\nzwykłego metalu, cienka warstwa ołowiu i 0,9 metra drewna lub ziemi."
+  },
+  {
+    "name": "Magiczna broń",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "touch",
+    "target": "dotknięta broń",
+    "duration": "1 min / lvl",
+    "defense": "will",
+    "shortDescription": "Magiczna bron obdarza ore\u0004 premia z usprawnienia +1 do testów ataków i obra\u0004en (wspomniana\npremia z usprawnienia nie kumuluje sie z premia +1 do testów ataków mistrzowsko wykonanej broni).\nNie mo\u0004esz rzucic niniejszego zaklecia na ore\u0004 naturalny, taki jak uderzenie bez broni (w odró\u0004nieniu\nod magicznego kła). Uderzenie bez broni mnicha jest traktowane jak bron, a zatem mo\u0004na je\nwzmocnic moca tego zaklecia."
+  },
+  {
+    "name": "Ożywienie liny",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "medium",
+    "target": "jeden przypominajacy line obiekt o długosci do 15 m + 1,5 m/poziom; patrz opis",
+    "duration": "1 runda / lvl",
+    "defense": "none",
+    "shortDescription": "O\u0004ywiasz jeden podobny do liny przedmiot. Maksymalna długosc zakłada, \u0004e lina ma srednice 2,5\ncentymetra. Zmniejsz ja o 50% za ka\u0004de dodatkowe 2,5 centymetra grubosci, a zwieksz równie\u0004\no 50% za ka\u0004de zmniejszenie srednicy o 1/2.\nOto mo\u0004liwe rozkazy: “Zwin sie” (w kłebek), “Zwin sie i zwia\u0004”, “Utwórz petle”, “Utwórz petle\ni zwia\u0004”, “Zawia\u0004 wezeł” oraz odwrotnosci wszystkich wymienionych (a zatem „Rozwin sie” itd.).\nW ka\u0004dej rundzie mo\u0004esz wydac tylko jeden rozkaz i bedzie to akcja ruchu – analogicznie jak\nw przypadku kierowania aktywnym zakleciem.\nLina mo\u0004e sie owinac tylko wokół istoty lub przedmiotu znajdujacego sie w odległosci do 30\ncentymetrów od niej. Nie porusza sie, wijac, a zatem nale\u0004y ja rzucic w pobli\u0004e wybranego celu, co\nwymaga udanego ataku dotykowego dystansowego (przyrost zasiegu 3 metry). Typowa lina konopna\no grubosci 2,5 centymetra ma 2 punkty wytrzymałosci i KP 10, a rozerwanie jej wymaga udanego\ntestu Siły o ST 23. Sznur nie powoduje obra\u0004en, ale mo\u0004e słu\u0004yc za potykacz lub dodatkowe\nzabezpieczenie, badz te\u0004 oplatac przeciwnika, któremu nie powiedzie sie rzut obronny na Refleks.\nZwiazana za pomoca niniejszego zaklecia istota musi wykonac udany test Koncentracji o ST 15, aby\nrzucic czar. Oplatany mo\u0004e sie uwolnic po udanym tescie Wyzwalanie sie o ST 20.\nLina, a tak\u0004e zawiazane na niej supły nie sa magiczne.\nZaklecie to zapewnia premie +2 do wszystkich testów U\u0004ywania lin stosowanych przy wykorzystaniu\nsznura, na który go rzucono.\nCzar ten nie pozwala o\u0004ywiac przedmiotów, które jakas istota posiada, trzyma w dłoniach lub niesie."
+  },
+  {
+    "name": "Pomniejszenie osoby",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "close",
+    "target": "jedna humanoidalna istota",
+    "duration": "1 min / lvl",
+    "defense": "endurance",
+    "shortDescription": "Za sprawa niniejszego zaklecia humanoid ulega pomniejszeniu. Jego wzrost, szerokosc i długosc\nmaleja o połowe, a waga spada do 1/8. Zmniejszeniu ulega równie\u0004 kategoria rozmiaru podmiotu –\nmaleje o jedna. Zyskuje on ponadto premie z rozmiaru +2 do Zrecznosci, lecz podlega karze\nz rozmiaru –2 do Siły (minimum 1) oraz – z racji zmiany kategorii rozmiaru – zyskuje premie +1 do\ntestów ataków i KP.\nMały humanoid po zmianie rozmiaru staje sie malutki, zajmuje przestrzen kwadratu o boku 0,75 metra\ni posiada naturalny zasieg 0 (co oznacza, \u0004e musi wejsc na pole przeciwnika, by go zaatakowac). Du\u0004y\nhumanoid z kolei maleje do rozmiaru sredniego, zajmuje przestrzen kwadratu o boku 1,5 metra\ni posiada naturalny zasieg 1,5 metra. Niniejsze zaklecie nie wpływa na szybkosc stworzenia.\nWszelkie wyposa\u0004enie niesione przez istote lub zało\u0004one przez nia równie\u0004 ulega pomniejszeniu. Bron\ndo walki wrecz i miotajaca, która znajdzie sie pod wpływem niniejszego zaklecia, powoduje mniejsze\nobra\u0004enia. Magiczne własciwosci pomniejszonego ekwipunku nie ulegaja zmianie. Pomniejszony\nprzedmiot, który przestanie znajdowac sie w posiadaniu podmiotu, natychmiast powraca do\nnormalnych rozmiarów. Oznacza to, \u0004e bron rzucana powoduje normalne rany, a pociski zadaja\nobra\u0004enia zale\u0004ne od rozmiaru ore\u0004a, z jakiego je wystrzelono.\nKilka magicznych efektów zmniejszajacych rozmiar sie nie kumuluje.\nPomniejszenie osoby kontruje i rozprasza powiekszenie osoby.\nPomniejszeniu osoby mo\u0004na nadac charakter permanentny za pomoca zaklecia utrwalenie.\nKomponent materialny: Szczypta sproszkowanego \u0004elaza."
+  },
+  {
+    "name": "Powiększenie osoby",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "close",
+    "target": "jedna humanoidalna istota",
+    "duration": "1 min / lvl",
+    "defense": "endurance",
+    "shortDescription": "Czar ten sprawia, \u0004e humanoid natychmiast sie rozrasta – jego wzrost zwieksza sie dwukrotnie, a waga\nosmiokrotnie. Zwiekszeniu ulega równie\u0004 kategoria rozmiaru podmiotu – rosnie o jedna. Zyskuje on\nponadto premie z rozmiaru +2 do Siły, lecz podlega karze z rozmiaru –2 do Zrecznosci (minimum 1)\noraz – z racji zmiany kategorii rozmiaru – karze –1 do testów ataków i KP.\nJesli przestrzen, w której przebywa istota, jest zbyt mała, by osiagneła ona stosowny rozmiar,\nprzybiera najwieksza mo\u0004liwa wielkosc i mo\u0004e wykonac test Siły (wykorzystujac zwiekszona wartosc\ntego atrybutu) – udany pozwala zniszczyc bariere w procesie rozrostu. Nieudany oznacza, \u0004e materiał\notaczajacy podmiot ogranicza go, ale nie czyni mu \u0004adnej krzywdy. A zatem tego zaklecia nie mo\u0004na\nwykorzystywac do mia\u0004d\u0004enia stworzen poprzez zwiekszanie ich rozmiaru.\nWszelkie wyposa\u0004enie niesione przez istote lub przez nia zało\u0004one równie\u0004 ulega powiekszeniu. Bron\ndo walki wrecz i miotajaca, która znajdzie sie pod wpływem niniejszego zaklecia, powoduje wieksze\nobra\u0004enia. Powiekszony przedmiot, który przestanie znajdowac sie w posiadaniu podmiotu,\nnatychmiast powraca do normalnych rozmiarów. Oznacza to, \u0004e bron rzucana powoduje normalne\nrany, a pociski zadaja obra\u0004enia zale\u0004ne od rozmiaru ore\u0004a, z jakiego je wystrzelono. Magiczne\nwłasciwosci powiekszonego ekwipunku nie ulegaja zmianie.\nKilka magicznych efektów zwiekszajacych rozmiar sie nie kumuluje.\nPowiekszenie osoby kontruje i rozprasza pomniejszenie osoby.\nPowiekszeniu osoby mo\u0004na nadac charakter permanentny za pomoca zaklecia utrwalenie.\nKomponent materialny: Szczypta sproszkowanego \u0004elaza."
+  },
+  {
+    "name": "Skok",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "dotknięta istota",
+    "duration": "1 min / lvl",
+    "defense": "will",
+    "shortDescription": "Podmiot czaru zyskuje premie z usprawnienia +10 do testów Skakania. Premia z usprawnienia rosnie\ndo +20 na 5. poziomie czarujacego i +30 (maksimum) na 9. poziomie czarujacego.\nKomponent materialny: Tylne odnó\u0004a konika polnego, które łamiesz w chwili rzucenia zaklecia."
+  },
+  {
+    "name": "Spadające piórko",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal"
+    ],
+    "range": "close",
+    "target": "Jeden średni lub mniejszy swobodnie spadajacy przedmiot lub istota/poziom, \u0004adne dwa\npodmioty zaklecia nie moga sie znajdowac od siebie w odległosci przekraczajacej 6 m",
+    "duration": "do wylądowania lub 1 runda / poziom",
+    "defense": "will",
+    "shortDescription": "Istoty lub przedmioty, na które działa niniejszy czar, spadaja powoli. Zaklecie natychmiast zmienia\ntempo upadku podmiotów do zaledwie 18 metrów na runde (odpowiednik spadania z wysokosci mniej\nwiecej 2-3 metrów), dzieki czemu nie otrzymuja one \u0004adnych obra\u0004en, gdy znajda sie na ziemi.\nJednak\u0004e gdy czas działania spadajacego piórka dobiegnie konca, tempo spadania wraca do normy.\nZaklecie wpływa na jedno lub wiecej srednich i mniejszych stworzen (oraz na ich wyposa\u0004enie\ni niesione przez nie przedmioty o wadze nieprzekraczajacej ich maksymalnego obcia\u0004enia) czy\nprzedmiotów, badz te\u0004 na odpowiednio mniejsza liczbe wiekszych podmiotów. Du\u0004a istote (lub\nprzedmiot) nale\u0004y traktowac jak dwie srednie, wielka jak dwie du\u0004e i tak dalej.\nZaklecie to mo\u0004esz rzucic za pomoca krótkiej wypowiedzi – dostatecznie szybko, by uratowac sie przy\nokazji niespodziewanego upadku. Rzucenie spadajacego piórka to akcja darmowa, tak jak rzucenie\nprzyspieszonego czaru, i wlicza sie ono do normalnego ograniczenia jednego przyspieszonego zaklecia\nna runde. Mo\u0004esz rzucic niniejszy czar nawet nie w swojej turze.\nSpadajace piórko nie wpływa na bron dystansowa, chyba \u0004e ta spada z bardzo du\u0004ej wysokosci. Je\u0004eli\nrzuci sie je na du\u0004y obiekt spadajacy – to powoduje on połowe normalnych obra\u0004en zale\u0004nych od\nwagi, bez premii wynikajacej z wysokosci.\nNiniejsze zaklecie wpływa tylko na podmioty swobodnie spadajace. Nie zadziała na uderzajacy miecz\nani na szar\u0004ujaca czy lecaca istote."
+  },
+  {
+    "name": "Szybki odwrót",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "self",
+    "target": "osobisty",
+    "duration": "1 min / lvl",
+    "defense": "none",
+    "shortDescription": "Niniejszy czar zwieksza twoja bazowa szybkosc naziemna o 9 metrów (te modyfikacje nale\u0004y\ntraktowac jak premie z usprawnienia). Nie wpływa on na inne sposoby poruszania sie, takie jak rycie,\nwspinanie, latanie czy pływanie. To zaklecie, jak ka\u0004dy inny efekt zwiekszajacy szybkosc, wpływa na\ndystans, jaki mo\u0004esz pokonac skaczac (patrz umiejetnosc Skakanie)."
+  },
+  {
+    "name": "Wymazanie",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "close",
+    "target": "jeden zwój lub dwie strony",
+    "duration": "instant",
+    "defense": "opis",
+    "shortDescription": "Wymazywanie usuwa zapiski magicznej i zwykłej natury ze zwoju, jednej lub dwóch stron papieru,\npergaminu badz podobnej powierzchni. Za pomoca niniejszego zaklecia mo\u0004esz sie pozbyc glifu\nstra\u0006niczego, mistycznego znaku, wybuchajacych run czy zygzaku atramentowego we\u0006a, ale nie\niluzorycznego pisma oraz symbolu. Niemagiczne pismo automatycznie ulega wymazaniu, jesli go\ndotkniesz i je\u0004eli nikt inny nie trzyma w dłoniach kartki, na której zostało spisane. W przeciwnym\nrazie szansa usuniecia niemagicznych zapisków wynosi 90%.\nWymazanie magicznego pisma wymaga dotkniecia go i udanego testu poziomu czarujacego (1k20 +\npoziom czarujacego) o ST 15 (naturalne 1 lub 2 zawsze oznacza pora\u0004ke w tym tescie). Je\u0004eli nie uda\nci sie usunac glifu stra\u0006niczego, wybuchajacych run lub zygzaku atramentowego we\u0006a, przypadkowo\nuruchomisz dane zapiski."
+  },
+  {
+    "name": "Nieprzenikniona mgła",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "conjuration",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "6m",
+    "target": "mgła w fali o promieniu 6m, wysoka na 6m",
+    "duration": "1 min / lvl",
+    "defense": "none",
+    "shortDescription": "Otaczaja cie mgliste opary, które od chwili powstania sie nie poruszaja. Uniemo\u0004liwiaja one\nkorzystanie z wszelkiego typu wzroku, włacznie z widzeniem w ciemnosciach, poza zasieg 1,5 metra.\nIstoty w odległosci 1,5 metra posiadaja ukrycie (ataki podlegaja ryzyku chybienia 20%). Stworzenia\nznajdujace sie dalej korzystaja z całkowitego ukrycia (ryzyko chybienia 50%, a atakujacy nie mo\u0004e\nzlokalizowac celu za pomoca zmysłu wzroku).\nSredni wiatr (16,5+ km/h) – jak chocby ten stworzony za sprawa zaklecia podmuch wiatru – rozwiewa\nmgłe w 4 rundy, a silny (31,5+ km/h) w 1 runde. Kula ognista, ogniste uderzenie i podobne czary\nwypalaja mgłe na obszarze swego działania. Sciana ognia natomiast wypala opary na obszarze, na\nktórym powoduje obra\u0004enia.\nCzar ten nie działa pod woda."
+  },
+  {
+    "name": "Niewidoczny służący",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "conjuration",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "close",
+    "target": "jeden niewidzialny, bezmyślny, bezkształtny służący",
+    "duration": "1h / lvl",
+    "defense": "none",
+    "shortDescription": "Za pomoca tego czaru tworzysz niezwykłego słu\u0004acego – niewidzialna, bezmyslna, bezkształtna moc,\nktóra wykona proste, zlecone przez ciebie zadania. Postac taka mo\u0004e przynosic przedmioty, otwierac\nniezablokowane drzwi, podsuwac krzesła oraz czyscic i naprawiac sprzety. Nie potrafi wykonywac\nkilku czynnosci naraz, ale jesli jej naka\u0004esz, bedzie powtarzac wybrana czynnosc raz po raz, dopóki\nbedziesz w zasiegu. Mo\u0004e otwierac normalne drzwi, szuflady, wieka i tym podobne. Jej Siła ma\nefektywna wartosc 2 (jest zatem w stanie uniesc cie\u0004ar 10 kilogramów, a ciagnac 50 kilogramów),\na porusza sie z szybkoscia 4,5 metra. Mo\u0004e te\u0004 uruchamiac pułapki i podobne mechanizmy, ale jest\nw stanie przyło\u0004yc nacisk równowa\u0004ny 10 kilogramom, a to zwykle za mało, by reagujace na nacisk\npłyty czy inne urzadzenia zadziałały. Nie potrafi wykonac zadania wymagajacego testu umiejetnosci\no ST przekraczajacej 10 lub wykorzystania umiejetnosci, z których nie da sie korzystac bez\nwyszkolenia.\nSłu\u0004acy nie mo\u0004e atakowac w \u0004aden sposób. Nie ma prawa wykonac testu ataku. Nie da sie go zabic,\nale rozwiewa sie, gdy otrzyma 6 obra\u0004en w wyniku ataków obszarowych (nie ma prawa wykonywac\nna nie rzutów obronnych). Przestaje te\u0004 istniec, gdy poslesz go poza zasieg działania niniejszego czaru\n(liczony od twojego aktualnego poło\u0004enia).\nKomponent materialny: Kawałek sznurka i drewna."
+  },
+  {
+    "name": "Przywanie potwora I",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "conjuration",
+    "components": [
+      "verbal",
+      "somatic",
+      "focus"
+    ],
+    "range": "close",
+    "target": "jedna przyzwana istota",
+    "duration": "1 runda / poziom",
+    "defense": "none",
+    "shortDescription": "Zaklecie to przyzywa istote pozaplanarna (zwykle przybysza, \u0004ywiołaka lub magiczna bestie bedaca\nrdzennym mieszkancem innego wymiaru). Stworzenie pojawia sie we wskazanym przez ciebie\nmiejscu i działa natychmiast, w twojej turze. Atakuje wrogów, wykorzystujac wszystkie swe\nzdolnosci. Je\u0004eli potrafisz sie z nim porozumiec, mo\u0004esz mu nakazac, by nie atakowało, walczyło\nz konkretnymi przeciwnikami lub wykonywało inne działania.\nZaklecie to przywołuje jedna istote z listy dla 1. poziomu znajdujacej sie w pobliskiej tabeli\n“Przyzwanie potwora”. Przy ka\u0004dym rzuceniu czaru wybierasz stworzenie, które przyzywasz.\nSprowadzony przez ciebie potwór nie mo\u0004e przyzywac ani w inny sposób przywoływac jakichs istot.\nNie ma te\u0004 prawa korzystac z posiadanych zdolnosci teleportowania lub podró\u0004owania planarnego.\nNie da sie przyzwac stworzenia do srodowiska, w którym nie zdołałoby przetrwac.\nJesli za pomoca czaru przyzywania korzystasz z usług istoty chaosu, dobra, ognia, powietrza,\npraworzadnosci, wody, ziemi lub zła, zaklecie to staje sie czarem odpowiedniego typu.\nKoncentrator wtajemniczen: Torebka i mała swieczka (niekoniecznie zapalona)."
+  },
+  {
+    "name": "Tłuszcz",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "conjuration",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "close",
+    "target": "jeden przedmiot lub kwadrat o boku 3m",
+    "duration": "1 runda / lvl",
+    "defense": "opis",
+    "shortDescription": "Niniejszy czar pokrywa powierzchnie materialna warstwa sliskiego tłuszczu. Ka\u0004da istota na obszarze\ndziałania zaklecia w chwili jego rzucenia musi wykonac rzut obronny na Refleks – nieudany oznacza\nupadek. Wspomniany rzut obronny stworzenie przebywajace na terenie funkcjonowania czaru\npowtarza w ka\u0004dej rundzie, w twojej turze. Istota mo\u0004e chodzic po obszarze działania tłuszczu\ni przechodzic przezen z 1/2 normalnej predkosci po wykonaniu udanego testu Zachowania równowagi\no ST 10. Pora\u0004ka oznacza, i\u0004 w danej rundzie nie ma ona prawa sie poruszyc (i musi wykonac rzut\nobronny na Refleks – nieudany oznacza upadek), a pora\u0004ka o 5 i wiecej swiadczy o upadku (wiecej\ninformacji znajdziesz w opisie umiejetnosci Zachowanie równowagi).\nCzar ten pozwala równie\u0004 pokryc przedmiot warstwa sliskiego tłuszczu. Zawsze działa on na\nmaterialne obiekty, których nikt nie u\u0004ywa. Jesli zas chodzi o przedmiot, który jakas istota trzyma\nw dłoniach lub którego u\u0004ywa, to ma on prawo do rzutu obronnego na Refleks – udany oznacza\nunikniecie efektu. Je\u0004eli jednak ów pierwszy rzut obronny sie nie powiedzie, stworzenie natychmiast\nupuszcza dany obiekt. Ponadto musi ono wykonywac rzut obronny w ka\u0004dej rundzie, w której chce\npodniesc lub u\u0004ywac natłuszczonego przedmiotu. Istota majaca na sobie zbroje lub ubranie poddane\ndziałaniu niniejszego czaru otrzymuje premie z okolicznosci +10 do testów Wyzwalania sie i testów\nzwarcia wykonywanych w celu unikniecia lub ucieczki ze zwarcia oraz przyszpilenia.\nKomponent materialny: Kawałek wieprzowej skórki lub masła."
+  },
+  {
+    "name": "Wierzchowiec",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "conjuration",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "close",
+    "target": "jeden wierzchowiec",
+    "duration": "2h / lvl",
+    "defense": "none",
+    "shortDescription": "Przyzywasz lekkiego konia lub kuca (twoja decyzja), który bedzie twoim wierzchowcem. Rumak\nsłu\u0004y ci chetnie i dobrze. Wierzchowiec przybywa z wedzidłem, uzda i siodłem jezdzieckim.\nKomponent materialny: Nieco konskiej siersci."
+  },
+  {
+    "name": "Zbroja maga",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "conjuration",
+    "components": [
+      "verbal",
+      "somatic",
+      "focus"
+    ],
+    "range": "touch",
+    "target": "dotknięta istota",
+    "duration": "1h / lvl",
+    "defense": "will",
+    "shortDescription": "Podmiot niniejszego czaru otacza niewidzialne, ale namacalne pole mocy, zapewniajace premie\nz pancerza +4 do KP. W odró\u0004nieniu do zwykłej zbroi, ta nie powoduje kary do testów z pancerza\ni ryzyka niepowodzenia czarów wtajemniczen oraz nie zmniejsza szybkosci. Poniewa\u0004 zbroja maga\njest stworzona z mocy, bezcielesne istoty nie ignoruja jej jak zwykłego pancerza.\nKoncentrator: Kawałek zakonserwowanej skóry."
+  },
+  {
+    "name": "Magiczny pocisk",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "evocation",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "medium",
+    "target": "do pieciu istot, z których żadne dwie nie moga sie znajdowac w odległosci wiekszej niż 4,5 m od siebie",
+    "duration": "instant",
+    "defense": "none",
+    "shortDescription": "Z twojego palca wystrzeliwuje pocisk magicznej energii, który bezbłednie trafia w cel i zadaje 1k4+1\nobra\u0004en od mocy.\nPocisk trafia nieomylnie, nawet jesli cel toczy walke wrecz lub posiada osłone czy ukrycie mniejsze\nni\u0004 całkowite. Nie mo\u0004esz jednak\u0004e wybierac w tym charakterze konkretnych czesci ciała ofiary.\nPonadto niniejszy czar nie jest w stanie uszkodzic nieo\u0004ywionych przedmiotów.\nNa ka\u0004de dwa poziomy czarujacego powy\u0004ej 1. zyskujesz dodatkowy pocisk – czyli wystrzeliwujesz\ndwa na 3., trzy na 5., cztery na 7. oraz maksymalnie piec na 9. i wy\u0004szym. Je\u0004eli u\u0004ywasz kilku\npocisków, mo\u0004esz razic nimi jeden cel lub kilka. Niemniej pojedynczy pocisk masz prawo wystrzelic\ntylko w jedna istote.\nWybierasz cele, zanim wykonasz testy obra\u0004en i sprawdzisz działanie odpornosci na czary\npotencjalnych ofiar."
+  },
+  {
+    "name": "Płonące dłonie",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "conjuration",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "4.5m",
+    "target": "rozprysk w kształcie stożka",
+    "duration": "instant",
+    "defense": "reflex",
+    "shortDescription": "Z koniuszków twoich palców wystrzeliwuje sto\u0004ek piekacych płomieni. Ka\u0004da istota, która znajdzie\nsie w ich obszarze, otrzymuje 1k4 obra\u0004enia od ognia na poziom czarujacego (maksymalnie 5k4).\nŁatwopalne materiały – takie jak ubrania, papier, pergamin czy cienkie drewno – ulegaja zapaleniu,\ngdy dotkna ich płomienie. Bohater mo\u0004e ugasic płonace przedmioty, poswiecajac na to akcje\ncałorundowa."
+  },
+  {
+    "name": "Porażający uścisk",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "conjuration",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "touch",
+    "target": "dotknięta istota lub przedmiot",
+    "duration": "instant",
+    "defense": "touch_melee",
+    "shortDescription": "Twój udany atak dotykowy wrecz powoduje 1k6 obra\u0004en od elektrycznosci na poziom czarujacego\n(maksymalnie 5k6). Atakujac przy u\u0004yciu niniejszego zaklecia, otrzymujesz premie +3 do testów\nataków, je\u0004eli przeciwnik ma na sobie metalowa zbroje (lub sam jest z metalu, dzwiga du\u0004o metalu\ni tym podobne)."
+  },
+  {
+    "name": "Unoszący się dysk Tensera",
+    "level": 1,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "conjuration",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "close",
+    "target": "dysk o średnicy 90cm",
+    "duration": "1h / lvl",
+    "defense": "none",
+    "shortDescription": "Powołujesz do istnienia umiarkowanie wklesła okragła powierzchnie mocy, która poda\u0004a za toba,\nunosza ró\u0004ne przedmioty. Dysk ma 90 centymetrów srednicy i w samym srodku opada na głebokosc\n2,5 centymetra. Potrafi utrzymac cie\u0004ar 50 kilogramów na poziom czarujacego (jesli transportujesz\nnim ciecz, ma pojemnosc 7,5 litra). Dysk unosi sie na wysokosci mniej wiecej 90 centymetrów nad\nziemia, zawsze wypoziomowany. Dryfuje w poziomie na zasieg czaru i bedzie ci towarzyszył\nw ka\u0004dej rundzie w tempie nieprzekraczajacym twojej normalnej szybkosci. Jesli nie naka\u0004esz inaczej,\ndysk bedzie trzymał sie w odległosci 1,5 metra od ciebie. Przestanie natomiast istniec, gdy czas\ndziałania zaklecia dobiegnie konca oraz gdy oddalisz sie poza zasieg lub gdy spróbujesz podniesc dysk\nponad powierzchnie na wysokosc wieksza ni\u0004 90 centymetrów. Kiedy dysk zniknie, wszystko, co sie\nna nim znajdowało, spadnie na ziemie.\nKomponent materialny: Kropla rteci."
+  }
+]

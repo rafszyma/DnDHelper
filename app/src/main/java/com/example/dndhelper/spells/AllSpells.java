@@ -76,7 +76,11 @@ public class AllSpells {
             }.getType();
             ArrayList<Spell> spellList = gson.fromJson(writer.toString(), collectionType);
             for (Spell spell : spellList) {
-                this.addSpell(spell);
+                if (spell.checkIfValid()) {
+                    this.addSpell(spell);
+                } else {
+                    Log.i(AllSpells.class.getName(), String.format("spell %s is not valid", spell.getName()));
+                }
             }
         } catch (Exception ex) {
             Log.e(AllSpells.class.getName(), "Unhandled ex", ex);

@@ -35,6 +35,10 @@ public class Spell implements Parcelable {
     private SpellDefense defense;
     private String shortDescription;
 
+    public boolean checkIfValid() {
+        return name!= null && !name.isEmpty() && level >= 0 && !classes.contains(null) && school != null && !components.contains(null) && range != null && target != null && !target.isEmpty() && duration != null && !duration.isEmpty() && defense != null && shortDescription != null && !shortDescription.isEmpty();
+    }
+
     public Spell(String name, int level, SpellSchool spellSchool, HashSet<Class> classes, HashSet<SpellComponent> spellComponents, SpellRange spellRange, String target, String duration, SpellDefense defense, String shortDescription) {
         this.name = name;
         this.level = level;

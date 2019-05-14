@@ -16,7 +16,7 @@
     "target": "1 cel <4KW",
     "duration": "1 runda",
     "defense": "will",
-    "shortDescription": "Humanoid o maksymalnie 4 KW traci następną akcję."
+    "shortDescription": "To zaklecie ze szkoły oczarowania maci umysł jednej humanoidalnej istoty o 4 lub mniejszej liczbie\nKostek Wytrzymałosci, powodujac otumanienie. Czar nie wpływa na stworzenia o 5 i wiecej KW.\nOtumaniona ofiara nie jest oszołomiona, a zatem atakujacy ja przeciwnicy nie uzyskuja \u0004adnych\nkorzysci.\nKomponent materialny: Kłebek wełny lub podobnej substancji."
   },
   {
     "name": "Odporność",
@@ -35,7 +35,7 @@
     "target": "Dotyk",
     "duration": "1 min",
     "defense": "will",
-    "shortDescription": "Podmiot otrzymuje +1 do rzutów obronnych."
+    "shortDescription": "Nasaczasz podmiot magiczna energia, która chroni go przed szkodami, zapewniajac premie\nz odpornosci +1 do rzutów obronnych.\nOdpornosci mo\u0004na nadac charakter permanentny za pomoca zaklecia utrwalenie.\nMaterialny komponent wtajemniczen: Miniaturowy płaszcz."
   },
   {
     "name": "Odczytanie Magii",
@@ -54,7 +54,7 @@
     "target": "Osobisty",
     "duration": "10min / lvl",
     "defense": "none",
-    "shortDescription": "Pozwala odczytywać zwoje i księgi zaklęć."
+    "shortDescription": "Dzieki temu zakleciu mo\u0004esz odcyfrowac magiczne, w przeciwnym razie niezrozumiałe zapiski\nzamieszczone na ró\u0004nych przedmiotach, takich jak ksia\u0004ki, zwoje czy bron. Odczytujac teksty, nie\nuwalniasz zawartej w nich magii, choc mo\u0004e tak sie zdarzyc w przypadku przekletego zwoju. Ponadto\npo rzuceniu niniejszego zaklecia i rozszyfrowaniu magicznego zapisu masz prawo pózniej go czytac\nbez koniecznosci siegania po odczytanie magii. Tempo czytania wynosi jedna strone (250 słów) na\nminute.\nZa pomoca niniejszego zaklecia i po udanym tescie Czarostwa o ST 13 rozpoznajesz glif stra\u0006niczy; po\nudanym tescie Czarostwa o ST 16 – pote\u0006niejszy glif stra\u0006niczy; po udanym tescie Czarostwa o ST 10\n+ poziom czaru – ka\u0004dy z symboli.\nOdczytaniu magii mo\u0004na nadac charakter permanentny za pomoca zaklecia utrwalenie.\nKoncentrator: Przejrzysty kryształowy lub mineralny graniastosłup."
   },
   {
     "name": "Wykrycie Magii",
@@ -72,7 +72,7 @@
     "target": "stożek emanacja",
     "duration": "1 min / lvl, koncentracja",
     "defense": "none",
-    "shortDescription": "Wykrywa czary i magiczne przedmioty w zasięgu 18m."
+    "shortDescription": "Wykrywasz aury magiczne. Ilosc informacji, jakie uzyskasz, zale\u0004y od tego, ile czasu poswiecisz\nprzeszukiwaniu danego obszaru i jak długo skupiasz sie na konkretnym terenie lub podmiocie.\nPierwsza runda: Obecnosc lub brak obecnosci magicznych aur w obszarze.\nDruga runda: Liczba magicznych aur w obszarze oraz siła najpote\u0004niejszej z nich.\nTrzecia runda: Siła i poło\u0004enie ka\u0004dej z aur w obszarze. Je\u0004eli przedmioty lub istoty promieniujace\naurami znajduja sie w twoim polu widzenia, mo\u0004esz wykonac test umiejetnosci Czarostwo – udany\npozwala okreslic szkołe magii zwiazana z danym efektem (wykonujesz jeden test na aure; ST 15 +\npoziom czaru lub 15 + 1/2 poziomu czarujacego w przypadku efektów niebedacych zakleciami).\nMagiczne obszary, kilka rodzajów magii oraz pote\u0004ne lokalne emanacje magiczne moga wypaczyc lub\nukryc słabsze aury.\nSiła aury: Siła aury zale\u0004y od poziomu czarujacego funkcjonujacego zaklecia lub poziomu\nczarujacego przedmiotu. Je\u0004eli siła aury klasyfikuje ja do wiecej ni\u0004 jednej kategorii, niniejszy czar\nujawnia pote\u0004niejsza. Utrzymywanie sie aury: Magiczna aura utrzymuje sie jeszcze po tym, jak jej zródło sie rozwieje (w\nprzypadku czaru) lub ulegnie zniszczeniu (gdy chodzi o przedmiot magiczny). Jesli rzucisz wykrycie\nmagii i skierujesz je w miejsce utrzymujacej sie aury, wska\u0004e ono nieznaczna siłe (potega jeszcze\nmniejsza ni\u0004 w przypadku słabej aury). To, jak długo aura utrzymuje sie na poziomie nieznacznej siły,\nzale\u0004y od jej oryginalnej potegi. Przybysze i \u0004ywiołaki to istoty, które nie sa magiczne same w sobie. Jesli jednak ktos je przyzwał,\nwykrycie magii ujawni zaklecie ze szkoły przywoływania, które sie do tego przyczyniło.\nW ka\u0004dej rundzie mo\u0004esz sie obrócic i wykrywac magie na nowym obszarze. Niniejsze zaklecie\nprzenika przeszkody, ale jego działanie blokuje 30 centymetrów kamienia, 2,5 centymetra zwykłego\nmetalu, cienka warstwa ołowiu i 0,9 metra drewna lub ziemi.\nWykryciu magii mo\u0004na nadac charakter permanentny za pomoca zaklecia utrwalenie."
   },
   {
     "name": "Wykrycie Trucizny",
@@ -90,7 +90,7 @@
     "target": "kratka przylegająca",
     "duration": "instant",
     "defense": "none",
-    "shortDescription": "Wykrywa truciznę w jednej istocie lub przedmiocie."
+    "shortDescription": "Ustalasz, czy istota, przedmiot lub obszar został zatruty lub jest trujacy. Wykonujac udany test\nRoztropnosci o ST 20, okreslasz dokładny rodzaj toksyny. Bohater posiadajacy Rzemiosło (alchemie)\nmo\u0004e spróbowac wykonac test rzeczonej umiejetnosci o ST 20, je\u0004eli nie powiedzie mu sie test\nRoztropnosci, albo te\u0004 przed testem Roztropnosci wykonac test Rzemiosła (alchemii).\nNiniejsze zaklecie przenika bariery, ale jego działanie blokuje 30 centymetrów kamienia, 2,5\ncentymetra zwykłego metalu, cienka warstwa ołowiu i 0,9 metra drewna lub ziemi."
   },
   {
     "name": "Dłoń Maga",
@@ -108,7 +108,7 @@
     "target": "niemagiczny, nietrzymany przedmiot",
     "duration": "Koncentracja",
     "defense": "none",
-    "shortDescription": "Telekineza na 2,5 kg."
+    "shortDescription": "Wskazujesz przedmiot palcem, po czym unosisz go i poruszasz nim na odległosc, zgodnie ze swoja\nwola. W akcji ruchu mo\u0004esz przesunac obiekt na dystans 4,5 metra w dowolnym kierunku. Działanie\nczaru dobiega konca, gdy przedmiot wydostanie sie poza zasieg zaklecia."
   },
   {
     "name": "Naprawa",
@@ -126,7 +126,7 @@
     "target": "przedmiot o wadze < 0.5kg",
     "duration": "instant",
     "defense": "will",
-    "shortDescription": "Dokonuje drobnych napraw przedmiotu."
+    "shortDescription": "Niniejszy czar naprawia niewielkie pekniecia, uszkodzenia lub rozdarcia przedmiotów (lecz nie\nwpływa na wypaczenia, powodowane chocby przez zaklecie wypaczenie drewna). W przypadku\nelementów metalowych zespawaniu ulega jedno pekniecie. Popekane w wielu miejscach przedmioty\nceramiczne lub drewniane naprawa zlepia i łaczy tak, \u0004e sa niczym nowe. Niniejszy czar zaszyje te\u0004\ndziure w skórzanej sakwie lub bukłaku, naprawi te\u0004 przedmiot magiczny, ale nie odtworzy jego\nmagicznych własciwosci. Nie zdoła natomiast nareperowac połamanych magicznych bereł, lasek\ni ró\u0004d\u0004ek. Nie ma tak\u0004e wpływu na istoty (wliczajac w to konstrukty)."
   },
   {
     "name": "Otwarcie / Zamknięcie",
@@ -145,7 +145,7 @@
     "target": "przedmiot lub wejście o wadze <15kg",
     "duration": "instant",
     "defense": "will",
-    "shortDescription": "Otwiera lub zamyka małe i lekkie przedmioty."
+    "shortDescription": "Otwierasz lub zamykasz (wybór nale\u0004y do ciebie) drzwi, skrzynie, pudełko, okno, torbe, sakiewke,\nbeczke, butelke czy inny pojemnik. Je\u0004eli cos uniemo\u0004liwia taka operacje (zamknieta zasuwka\nw drzwiach lub zamek w skrzyni), zaklecie zawodzi. Czar ów pozwala otwierac lub zamykac\nprzedmioty o wadze nieprzekraczajacej 15 kilogramów, a zatem nie wpłynie na drzwi, skrzynie\ni podobne przedmioty przystosowane rozmiarami do olbrzymich istot.\nKoncentrator: Mosie\u0004ny klucz."
   },
   {
     "name": "Wiadomość",
@@ -164,7 +164,7 @@
     "target": "1 cel / lvl",
     "duration": "10 min / lvl",
     "defense": "none",
-    "shortDescription": "Rozmowa szeptem na odległość."
+    "shortDescription": "Mo\u0004esz szeptem wypowiadac wiadomosci i w podobny sposób otrzymywac odpowiedzi z niewielka\nszansa podsłuchania. Palcem wskazujesz ka\u0004da istote, która ma otrzymac informacje. Wyszeptana\nprzez ciebie wiadomosc słysza wszystkie wybrane osoby w zasiegu. Niniejszy czar blokuje magiczna\ncisza, 30 centymetrów kamienia, 2,5 centymetra zwykłego metalu (i cienka warstwa ołowiu) oraz 90\ncentymetrów drewna lub ziemi. Wiadomosc nie musi poda\u0004ac w linii prostej. Mo\u0004e omijac\nprzeszkody, jesli ciebie i podmiot łaczy niezablokowana scie\u0004ka w całosci biegnaca w zasiegu\nzaklecia. Istota, która otrzyma wiadomosc, mo\u0004e wyszeptac odpowiedz, a ty ja usłyszysz. Trzeba tylko\npamietac, \u0004e czar przekazuje dzwieki, a nie znaczenia. Nie umo\u0004liwia zatem pokonania bariery\njezykowej.\nUwaga: Wypowiadajac wiadomosc, musisz poruszac ustami i szeptac, a zatem obserwatorzy maja\nszanse wyczytac informacje z ruchu twoich warg.\nKoncentrator: Krótki kawałek miedzianego drutu."
   },
   {
     "name": "Kuglarstwo",
@@ -182,7 +182,7 @@
     "target": "Opis",
     "duration": "1h",
     "defense": "none",
-    "shortDescription": "Powołuje do istnienia drobne sztuczki."
+    "shortDescription": "Kuglarstwo to pomniejsze sztuczki, za sprawa których nowicjusze w czarodziejstwie cwicza sie\nw sztuce. Rzuciwszy niniejsze zaklecie, mo\u0004esz przez 1 godzine tworzyc proste efekty magiczne. Sa\none bardzo podstawowe i maja du\u0004e ograniczenia. Kuglarstwo pozwala powoli uniesc nieo\u0004ywiony\nprzedmiot o wadze do 0,5 kilograma. Za jego sprawa mo\u0004esz w runde pokolorowac, oczyscic lub\npoplamic przedmiot objetosci szescianu o krawedzi 30 centymetrów. Kuglarstwo ochładza równie\u0004,\nociepla, aromatyzuje lub przyprawia 0,5 kilograma materii nieo\u0004ywionej. Nie jest natomiast w stanie\npowodowac obra\u0004en i wpływac na koncentracje istot rzucajacych czary. Masz jednak\u0004e prawo za jego\nsprawa tworzyc małe przedmioty, choc beda one wygladały sztucznie i prymitywnie i beda niezwykle\nkruche, wiec nie moga słu\u0004yc za narzedzia, bron czy komponenty do zaklec. Kuglarstwo wreszcie jest\nza słabe, by kopiowac efekty innych czarów. Na dodatek ka\u0004da zmiana dotyczaca przedmiotu (poza\nporuszeniem go, oczyszczeniem lub ubrudzeniem) utrzymuje sie tylko przez 1 godzine."
   },
   {
     "name": "Mistyczny Znak",
@@ -200,7 +200,7 @@
     "target": "0.1m2",
     "duration": "pernamentny",
     "defense": "none",
-    "shortDescription": "Umożliwia zapisanie prywatnej runy."
+    "shortDescription": "Czar ten pozwala ci zapisac prywatny znak lub rune, na które składa sie maksymalnie szesc symboli.\nPismo mo\u0004e byc widoczne lub niewidzialne. Mistyczny znak umo\u0004liwia umieszczenie runy na\ndowolnym materiale nie niszczac go w \u0004aden sposób. Jesli symbol jest niewidzialny, zaklecie wykrycie\nmagii sprawia, \u0004e zaczyna swiecic i staje sie widoczny, choc wcale nie musi byc przez to zrozumiały.\nZobaczenie niewidzialnego, widzenie prawdy oraz klejnot widzenia i szata oczu równie\u0004 pozwalaja\nujrzec niewidzialny mistyczny znak. Natomiast odczytanie magii ujawnia, jakie zapisano w nim słowa\n(je\u0004eli w ogóle miało to miejsce). Znaku nie da sie rozproszyc, a usunac mo\u0004e go twórca lub czar\nwymazywanie. Jesli mistyczny znak umieszczono na \u0004ywej istocie, zwykłe “zu\u0004ycie” sprawi, \u0004e efekt\npowoli rozwieje sie w ciagu miesiaca.\nMistycznym znakiem nale\u0004y oznaczyc przedmiot przed rzuceniem nan czaru natychmiastowe\nprzyzwanie (szczegóły znajdziesz w opisie tego ostatniego zaklecia)."
   },
   {
     "name": "Promień Mrozu",
@@ -217,8 +217,8 @@
     "range": "close",
     "target": "1 cel",
     "duration": "instant",
-    "defense": "touch-ranged",
-    "shortDescription": "Promień zadający 1k3 obrażeń od zimna."
+    "defense": "touch_ranged",
+    "shortDescription": "Z twojego palca wskazujacego wystrzeliwuje lodowaty, zamra\u0004ajacy powietrze promien, który trafia\nw wybrany cel, jesli powiedzie ci sie atak dotykowy dystansowy. Ugodzona ofiara otrzymuje 1k3\nobra\u0004enia od zimna."
   },
   {
     "name": "Raca",
@@ -235,7 +235,7 @@
     "target": "rozprysk",
     "duration": "instant",
     "defense": "endurance",
-    "shortDescription": "Istota pada ofiarą olśnienia (-1 do testów ataków)."
+    "shortDescription": "Niniejsza sztuczka powołuje do istnienia rozprysk swiatła. Jesli ów wybuch bedzie miał miejsce tu\u0004\nprzed jakas istota (mo\u0004esz tak zadecydowac), na 1 minute padnie ona ofiara olsnienia, chyba \u0004e\npowiedzie sie jej rzut obronny na Wytrwałosc. Raca nie działa na istoty niewidome oraz ju\u0004 olsnione."
   },
   {
     "name": "Światło",
@@ -253,7 +253,7 @@
     "target": "dotyk",
     "duration": "10 min / lvl",
     "defense": "none",
-    "shortDescription": "Przedmiot rozświetla się niczym pochodnia."
+    "shortDescription": "Niniejszy czar sprawia, \u0004e dotkniety przedmiot swieci niczym pochodnia, rozjasniajac wszystko\nw promieniu 6 metrów (w odległosci dalszych 6 metrów panuje półmrok). Sam efekt nie jest mobilny,\nale obiekt, na który rzucisz zaklecie, mo\u0004esz swobodnie przenosic. Takie swiatło wniesione w obszar\nmagicznej ciemnosci przestaje działac.\nCzar swiatła (czyli posiadajacy okreslnik swiatło) kontruje i rozprasza zaklecie ciemnosci (z\nokreslnikiem ciemnosc) tego samego i ni\u0004szego poziomu.\nMaterialny komponent wtajemniczen: Chrzaszcz swietlik lub kawałek fosforyzujacego mchu."
   },
   {
     "name": "Tańczące Światło",
@@ -271,7 +271,7 @@
     "target": "do 4 świateł",
     "duration": "1 min",
     "defense": "none",
-    "shortDescription": "Tworzy pochodnie i innego typu światła."
+    "shortDescription": "Zale\u0004nie od wybranej wersji, tworzysz nie wiecej jak cztery przypominajace latarnie lub pochodnie\nswiatła (daja własnie tyle blasku), cztery \u0004arzace sie kule swiatła (wygladajace niczym błedne ogniki)\nalbo wreszcie lekko błyszczacy, z grubsza humanoidalny kształt. Tanczace swiatła musza pozostawac\nw promieniu do 3 metrów od siebie, ale poza tym moga sie poruszac zgodnie z twoja wola (wymaga to\ntylko koncentracji): do przodu lub do tyłu, w góre lub w dół, na wprost lub skrecajac za rogi i tym\npodobne. W rundzie pokonuja do 30 metrów. Gasna, je\u0004eli dystans pomiedzy toba a nimi przekroczy\nzasieg zaklecia.\nTanczacym swiatłom mo\u0004na nadac charakter permanentny za pomoca zaklecia utrwalenie."
   },
   {
     "name": "Widmowy odgłos",
@@ -290,7 +290,7 @@
     "target": "dźwięki",
     "duration": "1 runda / lvl",
     "defense": "will",
-    "shortDescription": "Tworzy złudne dźwięki."
+    "shortDescription": "Czar ten pozwala ci wzbudzic dzwiek, który unosi sie, opada, zbli\u0004a lub pozostaje w okreslonym\nmiejscu. O tym, jakiego rodzaju bedzie to odgłos, decydujesz w chwili rzucania zaklecia, po czym nie\nmo\u0004esz ju\u0004 zmienic jego podstawowych cech.\nGłosnosc dzwieku zale\u0004y od twojego poziomu. Masz prawo stworzyc hałas o nate\u0004eniu, które\nwywołałoby czterech normalnych ludzi na poziom czarujacego (maksymalnie dwudziestu ludzi).\nA zatem mo\u0004esz powołac do istnienia odgłos rozmów, spiewów, smiechu, biegania czy maszerowania.\nOdgłosy powstałe za sprawa niniejszego zaklecia moga byc w zasadzie dowolnego rodzaju, jesli tylko\nnie przekraczaja ograniczenia głosnosci. Stado biegnacych, piszczacych szczurów robi mniej wiecej\ntyle samo hałasu, co osmiu biegajacych i krzyczacych ludzi. Ryczacy lew to odgłos odpowiadajacy\nkrzykom szesnastu ludziom, a ryczacy złowieszczy tygrys – a\u0004 dwudziestu.\nWidmowy odgłos pozwala wzmocnic efektywnosc zaklecia milczacy obraz.\nWidmowy odgłos mo\u0004e zyskac charakter permanentny dzieki zakleciu utrwalenie.\nKomponent materialny: Kłak wełny lub grudka wosku."
   },
   {
     "name": "Wyciszenie drzwi",
@@ -307,6 +307,61 @@
     "target": "jedne odrzwia",
     "duration": "1h / lvl",
     "defense": "will",
-    "shortDescription": "Odrzwia otwierają się cicho jak się otwiera je w magiczny sposób."
+    "shortDescription": "Ta prosta sztuczka neguje dźwięki otwierania oraz zamykania jedynych \"odrzwi\" (drzwi, okna, bramy, szuflary, wieka kufra itd.). Podczas działania tego czaru nawet najbardziej skrzypiące drzwi otwierają się bezdźwięcznie. Wyciszenie odrzwi działa jedynie w przypadku normalnego otwierania i zamykania danej rzeczy. Wybicie okna lub kopanie w drzwi narobi hałasu, ale już otwarcie wypadajacych z zawiasów drzwi nie (gdyż jest to normalny sposób, w który, by się one otworzyły). Ten czar nie działa na odrzwia stworzone z magicznej energii. W przypadku magicznych lub nawet inteligetnych odrzwi stosuje się odporność na czary oraz rzut obronny na Wolę (ST10 + modyfikator z atrybutu osoby, która rzuciła dany czar + inne odpowiednie modyfikatory)"
+  },
+  {
+    "name": "Wybuch kwasu",
+    "level": 0,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "conjuration",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "close",
+    "target": "jeden pocisk",
+    "duration": "instant",
+    "defense": "touch_ranged",
+    "shortDescription": "Strzelasz do celu kulka kwasu. Musi ci sie powiesc atak dotykowy dystansowy – tylko wówczas trafisz\nofiare. Kula powoduje 1k3 obra\u0004enia od kwasu."
+  },
+  {
+    "name": "Dotyk zmęczenia",
+    "level": 0,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "necromancy",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "dotknięta istota",
+    "duration": "1 runda / lvl",
+    "defense": "endurance",
+    "shortDescription": "Przesyłasz dotykiem energie negatywna, wywołujac w ofierze zmeczenie. Trafienie jej wymaga\nudanego ataku dotykowego. Podmiot natychmiast staje sie zmeczony i pozostaje takim przez czas\ndziałania czaru.\nNiniejszy czar nie wpływa na stworzenia, które ju\u0004 sa zmeczone. W odró\u0004nieniu od zwykłego\nzmeczenia, efekt ten sie konczy, gdy minie czas działania zaklecia.\nKomponent materialny: Kropla potu."
+  },
+  {
+    "name": "Zranienie nieumarłego",
+    "level": 0,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "necromancy",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "close",
+    "target": "promień",
+    "duration": "instant",
+    "defense": "touch_ranged",
+    "shortDescription": "Powołujesz do istnienia promien energii pozytywnej. Jesli powiedzie ci sie atak dotykowy\ndystansowy, trafiasz promieniem w nieumarłego, zadajac mu 1k6 obra\u0004en."
   }
 ]
