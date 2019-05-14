@@ -1,0 +1,312 @@
+[
+  {
+    "name": "Otumanienie",
+    "level": 0,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "enchantment",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "close",
+    "target": "1 cel <4KW",
+    "duration": "1 runda",
+    "defense": "will",
+    "shortDescription": "Humanoid o maksymalnie 4 KW traci następną akcję."
+  },
+  {
+    "name": "Odporność",
+    "level": 0,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "abjuration",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "Dotyk",
+    "duration": "1 min",
+    "defense": "will",
+    "shortDescription": "Podmiot otrzymuje +1 do rzutów obronnych."
+  },
+  {
+    "name": "Odczytanie Magii",
+    "level": 0,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "divination",
+    "components": [
+      "verbal",
+      "somatic",
+      "focus"
+    ],
+    "range": "self",
+    "target": "Osobisty",
+    "duration": "10min / lvl",
+    "defense": "none",
+    "shortDescription": "Pozwala odczytywać zwoje i księgi zaklęć."
+  },
+  {
+    "name": "Wykrycie Magii",
+    "level": 0,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "divination",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "18m",
+    "target": "stożek emanacja",
+    "duration": "1 min / lvl, koncentracja",
+    "defense": "none",
+    "shortDescription": "Wykrywa czary i magiczne przedmioty w zasięgu 18m."
+  },
+  {
+    "name": "Wykrycie Trucizny",
+    "level": 0,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "divination",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "close",
+    "target": "kratka przylegająca",
+    "duration": "instant",
+    "defense": "none",
+    "shortDescription": "Wykrywa truciznę w jednej istocie lub przedmiocie."
+  },
+  {
+    "name": "Dłoń Maga",
+    "level": 0,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "divination",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "close",
+    "target": "niemagiczny, nietrzymany przedmiot",
+    "duration": "Koncentracja",
+    "defense": "none",
+    "shortDescription": "Telekineza na 2,5 kg."
+  },
+  {
+    "name": "Naprawa",
+    "level": 0,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "3m",
+    "target": "przedmiot o wadze < 0.5kg",
+    "duration": "instant",
+    "defense": "will",
+    "shortDescription": "Dokonuje drobnych napraw przedmiotu."
+  },
+  {
+    "name": "Otwarcie / Zamknięcie",
+    "level": 0,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic",
+      "focus"
+    ],
+    "range": "close",
+    "target": "przedmiot lub wejście o wadze <15kg",
+    "duration": "instant",
+    "defense": "will",
+    "shortDescription": "Otwiera lub zamyka małe i lekkie przedmioty."
+  },
+  {
+    "name": "Wiadomość",
+    "level": 0,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic",
+      "focus"
+    ],
+    "range": "medium",
+    "target": "1 cel / lvl",
+    "duration": "10 min / lvl",
+    "defense": "none",
+    "shortDescription": "Rozmowa szeptem na odległość."
+  },
+  {
+    "name": "Kuglarstwo",
+    "level": 0,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "universal",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "3m",
+    "target": "Opis",
+    "duration": "1h",
+    "defense": "none",
+    "shortDescription": "Powołuje do istnienia drobne sztuczki."
+  },
+  {
+    "name": "Mistyczny Znak",
+    "level": 0,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "universal",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "touch",
+    "target": "0.1m2",
+    "duration": "pernamentny",
+    "defense": "none",
+    "shortDescription": "Umożliwia zapisanie prywatnej runy."
+  },
+  {
+    "name": "Promień Mrozu",
+    "level": 0,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "evocation",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "close",
+    "target": "1 cel",
+    "duration": "instant",
+    "defense": "touch-ranged",
+    "shortDescription": "Promień zadający 1k3 obrażeń od zimna."
+  },
+  {
+    "name": "Raca",
+    "level": 0,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "evocation",
+    "components": [
+      "verbal"
+    ],
+    "range": "close",
+    "target": "rozprysk",
+    "duration": "instant",
+    "defense": "endurance",
+    "shortDescription": "Istota pada ofiarą olśnienia (-1 do testów ataków)."
+  },
+  {
+    "name": "Światło",
+    "level": 0,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "evocation",
+    "components": [
+      "verbal",
+      "material"
+    ],
+    "range": "touch",
+    "target": "dotyk",
+    "duration": "10 min / lvl",
+    "defense": "none",
+    "shortDescription": "Przedmiot rozświetla się niczym pochodnia."
+  },
+  {
+    "name": "Tańczące Światło",
+    "level": 0,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "evocation",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "medium",
+    "target": "do 4 świateł",
+    "duration": "1 min",
+    "defense": "none",
+    "shortDescription": "Tworzy pochodnie i innego typu światła."
+  },
+  {
+    "name": "Widmowy odgłos",
+    "level": 0,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "evocation",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "close",
+    "target": "dźwięki",
+    "duration": "1 runda / lvl",
+    "defense": "will",
+    "shortDescription": "Tworzy złudne dźwięki."
+  },
+  {
+    "name": "Wyciszenie drzwi",
+    "level": 0,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "evocation",
+    "components": [
+      "somatic"
+    ],
+    "range": "close",
+    "target": "jedne odrzwia",
+    "duration": "1h / lvl",
+    "defense": "will",
+    "shortDescription": "Odrzwia otwierają się cicho jak się otwiera je w magiczny sposób."
+  }
+]
