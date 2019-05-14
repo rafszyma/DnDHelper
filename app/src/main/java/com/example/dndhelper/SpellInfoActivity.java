@@ -137,16 +137,36 @@ public class SpellInfoActivity extends AppCompatActivity {
             switch (component) {
 
                 case Verbal:
-                    componentString = String.join(", ", componentString, getResources().getString(R.string.verbal));
+                    if (componentString.isEmpty()) {
+                        componentString = getResources().getString(R.string.verbal);
+                    }
+                    else {
+                        componentString = componentString.concat(", " + getResources().getString(R.string.verbal));
+                    }
                     break;
                 case Somatic:
-                    componentString = String.join(", ", componentString, getResources().getString(R.string.somatic));
+                    if (componentString.isEmpty()) {
+                        componentString = getResources().getString(R.string.somatic);
+                    }
+                    else {
+                        componentString = componentString.concat(", " + getResources().getString(R.string.somatic));
+                    }
                     break;
                 case Material:
-                    componentString = String.join(", ", componentString, getResources().getString(R.string.material));
+                    if (componentString.isEmpty()) {
+                        componentString = getResources().getString(R.string.material);
+                    }
+                    else {
+                        componentString = componentString.concat(", " + getResources().getString(R.string.material));
+                    }
                     break;
                 case Focus:
-                    componentString = String.join(", ", componentString, getResources().getString(R.string.focus));
+                    if (componentString.isEmpty()) {
+                        componentString = getResources().getString(R.string.focus);
+                    }
+                    else {
+                        componentString = componentString.concat(", " + getResources().getString(R.string.focus));
+                    }
                     break;
                 default:
                     throw new TypeNotPresentException(component.toString(), new Exception());
