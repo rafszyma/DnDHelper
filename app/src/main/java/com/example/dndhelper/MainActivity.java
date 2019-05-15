@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         AllSpells.getInstance().readFromJSON(getResources().openRawResource(R.raw.spells0));
         AllSpells.getInstance().readFromJSON(getResources().openRawResource(R.raw.spells1));
+        AllSpells.getInstance().readFromJSON(getResources().openRawResource(R.raw.spells2));
         Character.initialize(getFileStreamPath(FILENAME));
         setContentView(R.layout.activity_main);
         updateMoneyText();

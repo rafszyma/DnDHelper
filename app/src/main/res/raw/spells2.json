@@ -1,0 +1,934 @@
+[
+  {
+    "name": "Hipnotyczny wzór",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "illusion",
+    "components": [
+      "somatic",
+      "material"
+    ],
+    "range": "medium",
+    "target": "kolorowe światła w fali o promieniu 3m",
+    "duration": "koncentracja + 2 rundy",
+    "defense": "will",
+    "shortDescription": "W powietrzu pojawia się w delikatny wzorzec mieniących się barw, który fascynuje wszystkie istoty\nznajdujące się na jego obszarze. Rzuć 2k4 i dodaj swój poziom czarującego (maksymalnie 10), aby\nokreślić całkowitą liczbę Kostek Wytrzymałości stworzeń, na które wpłynie niniejsze zaklęcie.\nW pierwszej kolejności jego ofiarą padają istoty o najmniejszym KW. W przypadku stworzeń o tej\nsamej liczbie Kostek Wytrzymałości, czar wpływa najpierw na te znajdujące się najbliżej punktu\npoczątkowego. KW niewystarczające do tego, by zadziałać na jakąś istotę, zostają stracone. Ofiary\nczaru ulegają fascynacji, do której przyczynia się barwny wzorzec, dlatego też stworzenia pozbawione\nzmysłu wzroku są niepodatne na to zaklęcie.\nKomponent werbalny: Czarodziej i zaklinacz nie muszą wypowiadać słów, gdy rzucają hipnotyczny\nwzór. Bard natomiast musi śpiewać, grać na instrumencie lub recytować wiersz – to w jego wypadku\nkomponent werbalny niniejszego czaru.\nKomponent materialny: Płonące kadzidło lub kryształowy walec wypełniony fosforyzującą substancją."
+  },
+  {
+    "name": "Lustrzane odbicie",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "illusion",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "self",
+    "target": "osobisty",
+    "duration": "1 min / lvl",
+    "defense": "none",
+    "shortDescription": "Czar ten sprawia, że pojawia się kilka twoich iluzyjnych kopii, utrudniających wrogom celowanie\nw ciebie. Ułudy pozostają blisko ciebie, dopóki nie znikną w wyniku trafienia.\nLustrzane odbicie tworzy 1k4 obrazy plus jeden na trzy poziomy czarującego (do maksymalnie\nw sumie ośmiu odbić). Ułudy znajdują się obok ciebie i są od ciebie oddzielone. Pozostają blisko\nsiebie – każda w odległości przynajmniej 1,5 metra od innego odbicia. Możesz wchodzić w lustrzane\nodbicia i przez nie przechodzić. Kiedy zaś się od nich oddzielisz, obserwatorzy nie mogą za pomocą\nwzroku lub słuchu odróżnić ciebie od ułud powstałych za sprawą tego czaru. Co więcej, odbicia mogą\nsię poruszać również przez siebie. Naśladują także twoje działania – udają rzucanie zaklęcia, gdy ty to\nrobisz; piją mikstury, jeśli ty je spożywasz; lewitują, gdy się unosisz w powietrzu i tak dalej.\nWrogowie, którzy próbują cię zaatakować lub rzucić na ciebie czar, muszą wybrać jeden cel spośród\nkilku niczym się od siebie nieróżniących istot. Uogólniając, należy ustalić losowo, czy przeciwnik\ntrafił w prawdziwy cel, czy w ułudę. Udane trafienie odbicia niszczy je. KP ułudy wynosi 10 + twój\nmodyfikator z rozmiaru + twój modyfikator ze Zr. Odbicia zdają się normalnie reagować na czary\nobszarowe (a zatem po zadziałaniu kuli ognistej wyglądają na poparzone lub martwe).\nPoruszając się, zlewasz się z ułudami i giniesz pośród nich, przez co wrogowie, którzy odkryli, że\ndany cel jest realny, znów zostaną oszukani.\nOdbicia oszukują tylko tych atakujących, którzy je widzą. A zatem jeżeli jesteś niewidzialny lub\nprzeciwnik zamknie oczy, niniejsze zaklęcie nie będzie miało efektu (niemożność patrzenia powoduje\ntakie same kary jak oślepienie)."
+  },
+  {
+    "name": "Magiczne usta",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "illusion",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "close",
+    "target": "jedna istota lub przedmiot",
+    "duration": "pernamentnie do wyładowania",
+    "defense": "will",
+    "shortDescription": "Niniejszy czar obdarza wybrany przedmiot lub istotę czarodziejskimi ustami, które pojawiają się nagle\ni wypowiadają wiadomość, gdy tylko zajdą specyficzne wydarzenia. Wspomniana wiadomość może\nliczyć maksymalnie 25 słów w dowolnym znanym ci języku, a dostarczenie jej nie ma prawa zająć\nwięcej niż 10 minut. Usta nie mogą wypowiadać komponentów werbalnych, słów rozkazu ani\naktywować efektów magicznych. Poruszają się natomiast stosownie do wypowiadanych słów.\nA zatem, jeżeli umieścisz je na posągu, będzie się wydawało, że to jego usta się poruszają. Oczywiście\nmożesz w nie wyposażyć też drzewo, kamień i dowolny inny przedmiot czy istotę.\nZaklęcie zaczyna działać, gdy zajdą specyficzne warunki, które ustalasz podczas jego rzucania. Sam\nokreślasz ich szczegółowość, ale możesz wykorzystać jedynie widoczne i słyszalne elementy. Czar\nreaguje na wszystko, co wydaje się zgodne z opisem, a zatem można go oszukać za pomocą przebrania\ni iluzji. Normalna ciemność nie neguje czynników wizualnych, ale magiczna ciemność lub\nniewidzialność już tak. Czynniki dźwiękowe natomiast neguje ciche poruszanie się lub magiczna cisza.\nWspomniane słyszalne bodźce mogą być nastawione na odgłosy natury ogólnej, na specyficzne\ndźwięki lub na wypowiedziane słowo. Czar uruchomić może każde działanie, które jest widzialne lub\nsłyszalne. Magiczne usta nie są w stanie rozróżniać charakteru, poziomu, Kostek Wytrzymałości\ni klasy postaci, chyba że informuje o tym jej strój.\nZasięg, w jakim może mieć miejsce czynnik uruchamiający zaklęcie, wynosi 4,5 metra na poziom\nczarującego, a zatem na 6. poziomie możesz nakazać magicznym ustom zareagować na coś, co\nwydarzy się w promieniu 27 metrów. Bez względu na ograniczenie dystansu, czar reaguje tylko na\nwidzialne lub słyszalne czynniki znajdujące się w polu widzenia bądź zasięgu słuchu.\nMagicznym ustom można nadać charakter permanentny za pomocą zaklęcia utrwalenie.\nKomponent materialny: Kawałeczek plastra miodu i nefrytowy pył wartości 10 sz."
+  },
+  {
+    "name": "Niewidzialność",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "illusion",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "ja lub istota bądź obiekt o wadze nieprzekraczającej 50kg/poziom",
+    "duration": "1 min / lvl",
+    "defense": "will",
+    "shortDescription": "Dotknięta istota (lub przedmiot) staje się niewidzialna i znika z pola widzenia (włącznie z widzeniem\nw ciemnościach). Jeżeli podmiot ma jakieś wyposażenie, znika ono wraz z nim. Jeśli rzucisz niniejszy\nczar na wybraną osobę, ani ty, ani twoi sprzymierzeńcy nie zdołacie jej zobaczyć, chyba że normalnie\nto potraficie lub użyjecie odpowiedniej do tego celu magii.\nUpuszczone lub położone przez niewidzialnego przedmioty stają się widzialne. Z kolei rzeczy, które\npodnosi i chowa pod ubraniem lub w kieszeniach – znikają. Tylko światło nigdy nie staje się\nniewidzialne, choć jego źródło może zniknąć (w efekcie światło nie ma widocznego źródła). Wszelkie\nczęści przedmiotów, które niesie podmiot niniejszego czaru, a które mają długość przekraczającą 3\nmetry, stają się widzialne.\nOczywiście podmiot niewidzialności nie znajduje się w magicznej ciszy, a zatem niektóre czynności,\njakie wykonuje, pozwalają go wykryć (kiedy na przykład przejdzie przez kałużę). Czar kończy swe\ndziałanie, gdy istota, na którą wpływa, zaatakuje jakieś stworzenie. Na potrzeby niewidzialności za\natak uznaje się każde zaklęcie wycelowane w przeciwnika bądź obejmujące go obszarem lub efektem\n(to, kto jest wrogiem, zależy od punktu widzenia niewidzialnego). Czynności skierowane przeciw\nprzedmiotom, których nikt nie trzyma, nie kończą działania niewidzialności. Niebezpośredni atak\nrównież nie neguje niniejszego czaru. A zatem niewidzialny może otwierać drzwi, rozmawiać, jeść,\nwchodzić po schodach, przyzywać potwory i nakazywać im atak, odcinać liny podtrzymujące most, na\nktórym znajdują się wrogowie, uruchamiać pułapki na odległość, otwierać komórki z psami oraz\nwypuszczać je na przeciwników i tak dalej. Jeżeli jednak podmiot niniejszego czaru zaatakuje\nbezpośrednio, staje się natychmiast widzialny wraz z całym swoim wyposażeniem. Warto pamiętać, że\ntakie czary jak błogosławieństwo, które wpływają jedynie na sojuszników, nie uznaje się za atak\nprzerywający działanie niewidzialności, nawet jeśli wrogowie znajdą się na obszarze ich działania.\nNiewidzialności można nadać charakter permanentny za pomocą zaklęcia utrwalenie, lecz tylko\nw przypadku, gdy pod jej wpływem znajdzie się przedmiot.\nMaterialny komponent wtajemniczeń: Rzęsa zatopiona w kawałku gumy arabskiej."
+  },
+  {
+    "name": "Pomniejszy obraz",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "illusion",
+    "components": [
+      "verbal",
+      "somatic",
+      "focus"
+    ],
+    "range": "far",
+    "target": "Wizualna ułuda o wielkosci nieprzekraczajacej czterech szescianów o krawedzi 3 m + jeden szescian o krawedzi 3 m/poziom (K)",
+    "duration": "koncentracja + 2 rundy",
+    "defense": "will",
+    "shortDescription": "Czar ten działa jak milczący obraz, z tą tylko różnicą, iż pozwala stworzyć dźwięki, ale nie zrozumiałą\nmowę."
+  },
+  {
+    "name": "Przeinaczenie magii",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "illusion",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "close",
+    "target": "jedna istota lub przedmiot o maksymalnym rozmiarze sześcianu o krawędzi 3m",
+    "duration": "1h / lvl",
+    "defense": "will",
+    "shortDescription": "Za sprawą niniejszego zaklęcia przeinaczasz informacje pozyskiwane za sprawą ujawniających aury\nczarów poznania (takich jak wykrycie zła, wykrycie magii, ujawnienie kłamstw itp.). Rzucając\nprzeinaczenie magii, wybierasz inny obiekt w zasięgu. Przez czas działania niniejszego zaklęcia\nwykrywania, które wpływają na podmiot, funkcjonują tak, jakby ich celem był wspomniany wybrany\nobiekt (względem tego efektu ani ów obiekt, ani podmiot nie mają prawa do rzutu obronnego). Czary\nwykrywające zapewniają informacje oparte na badaniu drugiego obiektu, a nie aktualnego celu –\nchyba że osoba, która je rzuci, wykona udany rzut obronny na Wolę. Na przykład, możesz sprawić, że\nbędziesz przez wykrycia traktowany jak drzewo, jeśli to jest w zasięgu – nie będziesz zły, nie będziesz\nkłamał, nie będziesz miał przy sobie nic magicznego, a twój charakter okaże się neutralny i tak dalej.\nNiniejsze zaklęcie nie wpływa na innego rodzaju magię poznania (czyli na przykład na przepowiednię,\nwykrycie myśli, jasnosłyszenie/jasnowidzenie i tak dalej)."
+  },
+  {
+    "name": "Pułapka Leomunda",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "illusion",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "dotknięty przedmiot",
+    "duration": "pernamentny",
+    "defense": "none",
+    "shortDescription": "Za sprawą niniejszego czaru zamek lub inny mały mechanizm wydaje się zabezpieczony pułapką,\noczywiście dla osoby, która potrafi to wykryć. Umieszczasz zaklęcie na urządzeniu lub mechanizmie,\ntakim jak zamek, zawias, zapadka, korek, nakrętka czy skobel. Każda postać, która potrafi wykrywać\npułapki lub która użyje czaru bądź urządzenia do takiego właśnie celu, jest na 100% pewna, że\nprawdziwa pułapka istnieje. Rzecz jasna efekt to iluzja, a uruchomienie pułapki nie wywołuje efektów.\nCzar ma za zadnie przede wszystkim wystraszyć złodzieja lub zmusić go, by stracił cenny czas.\nRzucenie czar kończy się niepowodzeniem, jeśli w promieniu 15 metrów od miejsca jego\numieszczenia znajduje się inna aktywna widmowa pułapka.\nKomponent materialny: Kawałek pirytu, którym dotykasz zabezpieczanego przedmiotu. W czasie\nrzucania czaru musisz dany obiekt posypać specjalnym pyłem, którego przygotowanie kosztuje co\nnajmniej 50 sz."
+  },
+  {
+    "name": "Rozmycie",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "illusion",
+    "components": [
+      "verbal"
+    ],
+    "range": "touch",
+    "target": "dotknięta istota",
+    "duration": "1 min / lvl",
+    "defense": "will",
+    "shortDescription": "Zarysy podmiotu ulegają rozmyciu, zmieniają się i chwieją, rozpraszając uwagę przeciwników\ni zapewniając mu ukrycie (ryzyko chybienia 20%).\nZaklęcie zobaczenie niewidzialnego nie neutralizuje efektu rozmycia, ale widzenie prawdy już tak.\nWrogowie, którzy nie są w stanie widzieć podmiotu, ignorują efekt czaru (ale walka z niewidocznym\nprzeciwnikiem powoduje inne kary)."
+  },
+  {
+    "name": "Dotyk ghoula",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "necromancy",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "dotknięty żyjący humanoid",
+    "duration": "1k6 + 2 rund",
+    "defense": "endurance",
+    "shortDescription": "Czar ten nasącza cię negatywną energią, dzięki której na czas jego działania paraliżujesz jednego\nżyjącego humanoida, jeśli trafisz go atakiem dotykowym wręcz.\nSparaliżowana ofiara śmierdzi padliną, przez co wszystkie żyjące istoty (poza tobą) w fali o promieniu\n3 metrów ulegają osłabieniu (Wytrwałość neguje). Zaklęcie neutralizacja trucizny neguje efekt\nosłabienia. Smród nie wpływa na stworzenia niepodatne na działanie trucizn.\nKomponent materialny: Skrawek materiału odcięty od ubrania ghoula albo szczypta ziemi z leża tego\nnieumarłego."
+  },
+  {
+    "name": "Fałszywe życie",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "illusion",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "self",
+    "target": "osobisty",
+    "duration": "1h / lvl lub wyładowanie",
+    "defense": "none",
+    "shortDescription": "Wykorzystujesz moc nieżycia, zapewniając sobie ograniczoną zdolność wymknięcia się śmierci.\nRzuciwszy zaklęcie, otrzymujesz tymczasowe punkty wytrzymałości w liczbie 1k10 +1 na poziom\nczarującego (maksymalnie +10).\nKomponent materialny: Niewielka ilość alkoholu lub innego wydestylowanego napoju, którym\nw czasie rzucania zaklęcia rysujesz symbole na ciele. Kiedy ciecz wyparuje, znaków nie widać."
+  },
+  {
+    "name": "Rozkazywanie nieumarłym",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "illusion",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "close",
+    "target": "jeden nieumarły",
+    "duration": "jeden dzień / lvl",
+    "defense": "will",
+    "shortDescription": "Czar ten umożliwia ci uzyskanie pewnej kontroli nad jednym nieumarłym. Jeśli stworzenie jest\ninteligentne, rozumie cię i postrzega twoje słowa oraz czyny w możliwie najbardziej przychylny\nsposób (jego nastawienie uznaje się za przyjazne). Dopóki czar działa, nie zaatakuje cię. Możesz\nwydawać nieumarłemu rozkazy, ale musisz zwyciężyć w spornym teście Charyzmy, aby przekonać go\ndo zrobienia czegoś, czego normalnie by nie uczynił (tego rzutu nie można powtarzać). Inteligentny\nstwór pod wpływem rozkazywania nieumarłym nigdy nie usłucha rozkazu samobójczego lub\nw oczywisty sposób przynoszącego mu szkodę. Niemniej można go przekonać, że jakieś\nniebezpieczny dla niego czyn warto wykonać.\nNieinteligentny nieumarły nie ma prawa do rzutu obronnego na ten czar. Jeśli kontrolujesz bezmyślną\nistotę, możesz jej wydawać tylko podstawowe rozkazy, takie jak “Chodź tu”, “Idź tam”, “Walcz” czy\n“Stój w bezruchu”. Nieinteligentny nieumarły nie będzie się opierał rozkazom samobójczym\ni w oczywisty sposób przynoszącym mu szkodę.\nKażde działanie – twoje lub twoich sprzymierzeńców – zagrażające nieumarłemu, któremu\nrozkazujesz (bez względu na jego Intelekt), kończy działanie zaklęcia.\nRozkazów nie wydajesz telepatycznie, więc nieumarły musi cię słyszeć.\nKomponent materialny: Strzęp surowego mięsa i odłamek kości."
+  },
+  {
+    "name": "Ślepota/głuchota",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "illusion",
+    "components": [
+      "verbal"
+    ],
+    "range": "medium",
+    "target": "jedna żywa istota",
+    "duration": "pernamentny",
+    "defense": "endurance",
+    "shortDescription": "Sięgasz po potęgę nieżycia i powodujesz albo oślepienie, albo ogłuszenie ofiary – zależnie od tego,\njaki efekt chcesz uzyskać."
+  },
+  {
+    "name": "Upiorna dłoń",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "illusion",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "medium",
+    "target": "jedna upiorna dłoń",
+    "duration": "1 min / lvl",
+    "defense": "none",
+    "shortDescription": "Za sprawą tego czaru materializuje się upiorna, jarząca się dłoń utworzona z twojej siły życiowej.\nPorusza się ona zgodnie z twoim życzeniem i pozwala przenosić niskopoziomowe zaklęcia dotykowe.\nRzuciwszy niniejszy czar, tracisz 1k4 punkty wytrzymałości, które odzyskujesz, gdy upiorna dłoń\nprzestanie działać (nawet w wyniku rozproszenia), ale nie gdy zostanie zniszczona. Rzecz jasna te\npunkty wytrzymałości można normalnie wyleczyć. Dopóki upiorna dłoń działa, możesz za jej pomocą\nprzenieść każde zaklęcie 4. lub niższego poziomu. Niniejszy czar zapewnia ci premię +2 do testu ataku\ndotykowego wręcz, lecz atak ręką należy traktować jak zwykły atak. Dłoń zawsze atakuje z twojego\nkierunku, ale nie może flankować przeciwników jak normalne istoty i nie umożliwia sprzymierzeńcom\nflankowania. Kiedy ręka dostarczy czar lub oddali się poza zasięg zaklęcia bądź zniknie ci z pola\nwidzenia, powróci do ciebie i zawiśnie obok.\nRęka jest bezcielesna i dlatego nie można jej zranić normalnym orężem. Posiada doskonalsze\nuchylanie (1/2 obrażeń po nieudanym rzucie obronnym na Refleks i bez ran po udanym), twoje premie\ndo rzutów obronnych oraz KP przynajmniej 22. Na KP dłoni wpływa twój modyfikator z Intelektu,\njakby był to modyfikator ze Zręczności. Posiada ona od 1 do 4 punktów wytrzymałości – dokładnie\ntyle, ile straciłeś, by ją stworzyć."
+  },
+  {
+    "name": "Wystraszenie",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "illusion",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "medium",
+    "target": "jedna żywa istota na trzy poziomy, z których żadne dwie nie mogą się znajdować dalej niż 9 m\nod siebie",
+    "duration": "1 runda / lvl lub 1 runda, patrz opis wywołania strachu",
+    "defense": "will",
+    "shortDescription": "Czar ten działa jak wywołanie strachu, z tą jednak różnicą, że przerażeniu ulegają wszystkie\npotencjalne ofiary o KW mniej niż 6.\nKomponent materialny: Odłamek kości nieumarłego – szkieletu, zombiego, ghoula, ghasta lub mumii."
+  },
+  {
+    "name": "Dotyk głupoty",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "enchantment",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "touch",
+    "target": "dotknięta żywa istota",
+    "duration": "10 min / lvl",
+    "defense": "none",
+    "shortDescription": "Dotknięcie wystarczy, by obniżyć umysłowy potencjał podmiotu. Twój udany atak dotykowy wręcz\npowoduje karę 1k6 do wartości Intelektu, Roztropności i Charyzmy ofiary. Kara ta nie może obniżyć\nżadnej z tych wartości poniżej 1.\nNiniejsze zaklęcie uniemożliwia ofierze rzucanie przynajmniej części (a być może i wszystkich)\nczarów, jeżeli wartość atrybutu związanego z czarowaniem spadnie poniżej minimalnej wartości\npozwalającej rzucać zaklęcia danego poziomu."
+  },
+  {
+    "name": "Otumanienie potwora",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "enchantment",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "medium",
+    "target": "jedna żywa istota o 6 lub mniej KW",
+    "duration": "1 runda",
+    "defense": "will",
+    "shortDescription": "Czar ten działa jak otumanienie, ale wpływa na wszystkie żywe istoty, bez względu na ich typ.\nZaklęcie nie wpływa na stworzenia o 7 i więcej KW."
+  },
+  {
+    "name": "Upiorny śmiech Tashy",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "enchantment",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "close",
+    "target": "jedna istota",
+    "duration": "1 runda / lvl",
+    "defense": "will",
+    "shortDescription": "Zaklęcie to zmusza podmiot do niekontrolowanego śmiechu. Istota, na którą rzucisz ten czar, pada na\nziemię, wijąc się i chichocząc szaleńczo. Nie może poza tym wykonywać innych czynności, ale nie\nuznaje się jej za bezradną. Kiedy czar dobiega końca, podmiot działa normalnie.\nZaklęcie nie wpływa na istoty o Intelekcie wartości 2 lub mniej. Stworzenie innego typu niż rzucający\nten czar otrzymuje premię +4 do rzutu obronnego, ponieważ humor trudno „tłumaczyć”.\nKomponent materialny: Ciasteczka z owocami, którymi rzucasz w podmiot, oraz pióro, którym\nmachasz w powietrzu."
+  },
+  {
+    "name": "Mistyczny zamek",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "abjuration",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "dotknięte drzwi, skrzynia lub portal; maksymalny rozmiar to 2.7m2 / lvl",
+    "duration": "pernamentny",
+    "defense": "none",
+    "shortDescription": "Czar ten, rzucony na drzwi, skrzynię lub portal, magicznie je zamyka. Sam masz prawo swobodnie\nomijać zabezpieczenie stworzone przez mistyczny zamek, nie wpływając nań. Jednakże inne istoty, aby\notworzyć drzwi czy zamknięty przedmiot, muszą albo użyć siły, albo udanie zastosować rozproszenie\nmagii lub kołatkę (ten ostatni czar nie usuwa mistycznego zamka, a tylko tłumi jego działanie na 10\nminut). Niniejsze zaklęcie sprawia, że do normalnej ST wyłamania drzwi czy portalu należy dodać 10.\nKomponent materialny: Złoty pył wart 25 sz."
+  },
+  {
+    "name": "Ochrona przed strzałami",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "abjuration",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "dotknięta istota",
+    "duration": "1h / lvl lub do wyładowania",
+    "defense": "will",
+    "shortDescription": "Chroniona tym czarem istota zyskuje odporność na broń dystansową – ma ona postać redukcji obrażeń\n10/magia względem takiego oręża (należy zaznaczyć, że niniejsze zaklęcia nie zapewnia podmiotowi\nzdolności do ranienia stworzeń o podobnej redukcji obrażeń). Ochrona przed strzałami dobiega końca\ni ulega wyładowaniu, gdy zapobiegnie 10 obrażeniom na poziom czarującego (maksymalnie 100).\nKoncentrator: Kawałek skorupy żółwia."
+  },
+  {
+    "name": "Odporność na energię",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "abjuration",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "touch",
+    "target": "dotknięta istota",
+    "duration": "10 min / lvl",
+    "defense": "endurance",
+    "shortDescription": "To zaklęcie ze szkoły odrzucanie zapewnia tymczasową ochronę przed wybranym typem energii\n(dźwiękiem, elektrycznością, kwasem, ogniem lub zimnem), który wybierasz w chwili rzucania czaru.\nPodmiot zyskuje odporność na wybrany typ energii w wysokości 10. Oznacza to, że za każdym razem,\ngdy otrzymuje obrażenia spowodowane przez daną energię (mającą naturalne lub magiczne źródło),\nich liczbę należy zmniejszyć o 10, zanim rany wpłyną na punkty wytrzymałości. Wartość odporności\nna energię rośnie do 20 punktów na 7. poziomie i maksymalnie do 30 punktów na 11. Zaklęcie chroni\npodmiot oraz jego wyposażenie.\nOdporność na energię wpływa jedynie na obrażenia, a zatem podmiot niniejszego czaru może paść\nofiarą efektów pobocznych.\nUwaga: Odporność na energię nakłada się (a nie kumuluje) z ochroną przed energią. Jeśli daną istotę\nchronią oba te zaklęcia, czar ochrony wchłania obrażenia aż do wyczerpania."
+  },
+  {
+    "name": "Schowanie przedmiotu",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "abjuration",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "jeden dotknięty przedmiot o wadze nieprzekraczającej 50kg/lvl",
+    "duration": "8h",
+    "defense": "will",
+    "shortDescription": "Czar ten ukrywa przedmiot przed lokalizacją za pomocą efektów poznania (szpiegowania), takich jak\nzaklęcie szpiegowanie czy kryształowa kula. Taka próba automatycznie kończy się niepowodzeniem\n(jeżeli celem poznania jest dany obiekt) lub nie percypuje przedmiotu (jeśli poznanie skierowano na\nokolicę, obiekt czy osobę).\nMaterialny komponent wtajemniczeń: Kawałek skóry kameleona."
+  },
+  {
+    "name": "Wykrycie myśli",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "divination",
+    "components": [
+      "verbal",
+      "somatic",
+      "focus"
+    ],
+    "range": "18m",
+    "target": "emanacja w kształcie stożka",
+    "duration": "koncentracja, do 1 min / lvl",
+    "defense": "will",
+    "shortDescription": "Wykrywasz powierzchowne myśli. Ilość informacji, jakie uzyskasz, zależy od tego, ile czasu\npoświęcisz przeszukiwaniu danego obszaru i jak długo skupiasz się na konkretnym terenie lub\npodmiocie.\nPierwsza runda: Obecność lub brak obecności myśli (świadomych istot o Intelekcie wartości\nprzynajmniej 1).\nDruga runda: Liczba myślących umysłów w obszarze oraz wartość Intelektu każdego z nich. Jeżeli\nnajwiększa wartość Intelektu wynosi 26 lub więcej (i ten atrybut jest o co najmniej 10 punktów\nwiększy od twojego Int), ulegasz na 1 rundę oszołomieniu; jednocześnie wykrycie myśli dobiega\nkońca. Niniejsze zaklęcie nie pozwala określić położenia myślącego umysłu, jeżeli nie widzisz istoty,\nktórej myśli wykrywasz.\nTrzecia runda: Powierzchowne myśli każdego umysłu w obszarze. Podmiot ma prawo do rzutu\nobronnego na Wolę – udany chroni przed czytaniem jego myśli. Jeżeli chcesz mieć kolejną szansę,\nmusisz po raz drugi rzucić niniejszy czar. Myśli stworzeń o zwierzęcym Intelekcie (wartości 1 lub 2)\nsą proste oraz instynktowne – i tylko takie potrafisz wykryć.\nW każdej rundzie możesz się obrócić i wykrywać sekretne drzwi na nowym obszarze. Niniejsze\nzaklęcie przenika bariery, ale jego działanie blokuje 30 centymetrów kamienia, 2,5 centymetra\nzwykłego metalu, cienka warstwa ołowiu i 0,9 metra drewna lub ziemi.\nKoncentrator wtajemniczeń: Sztuka miedzi."
+  },
+  {
+    "name": "Zlokalizowanie przedmiotu",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "divination",
+    "components": [
+      "verbal",
+      "somatic",
+      "focus"
+    ],
+    "range": "far",
+    "target": "krąg o środku w tobie i promieniu dalekim",
+    "duration": "1 min / lvl",
+    "defense": "none",
+    "shortDescription": "Wykrywasz kierunek, w którym znajduje się przedmiot – dobrze ci znany lub dokładnie przez ciebie\nwyobrażony. Możesz poszukiwać rzeczy ogólnych – i w tym przypadku znajdujesz najbliższy\nprzedmiot danego rodzaju, jeśli w zasięgu znajduje się więcej niż jeden. Jeżeli chcesz znaleźć\nokreśloną rzecz, musisz stworzyć jej dokładny mentalny obraz. Czar zawiedzie, jeżeli owo\nwyobrażenie będzie odbiegało od wyglądu przedmiotu. Nie możesz lokalizować konkretnego,\njedynego w swoim rodzaju obiektu, chyba że widziałeś go osobiście (nie za pomocą magii poznania).\nNiniejsze zaklęcie blokuje nawet cienka warstewka ołowiu. Za jego pomocą nie można też\nlokalizować istot. Da się je zaś oszukać za sprawą polimorfowania dowolnego obiektu.\nKoncentrator wtajemniczeń: Rozwidlona gałązka."
+  },
+  {
+    "name": "Zobaczenie niewidzialnego",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "divination",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "self",
+    "target": "osobisty",
+    "duration": "10 min / lvl",
+    "defense": "none",
+    "shortDescription": "Dostrzegasz wszystkie przedmioty i byty, które są niewidzialne i które znajdują się w twoim polu\nwidzenia. Widzisz także istoty eteryczne, jakby były normalnie widzialne. Wspomniane byty jawią ci\nsię jako półprzezroczyste kształty, dzięki czemu bez trudu rozróżniasz stworzenia widzialne,\nniewidzialne i eteryczne.\nNiniejszy czar nie zdradza metody uzyskiwania niewidzialności. Nie ujawnia również iluzji i nie\npozwala patrzeć przez nieprzezroczyste przedmioty. Nie pozwala także dojrzeć stworzeń, które po\nprostu się schowały, korzystają z ukrycia, lub które z innych powodów trudno ujrzeć.\nZobaczeniu niewidzialnego można nadać charakter permanentny za pomocą zaklęcia utrwalenie.\nKomponent materialny: Szczypta talku oraz garstka sproszkowanego srebra."
+  },
+  {
+    "name": "Gracja kota",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "dotknięta istota",
+    "duration": "1min / lvl",
+    "defense": "will",
+    "shortDescription": "Istota, na którą wpłynie to zaklęcie, zyskuje na gracji, gibkości oraz koordynacji ruchów. Czar\nzapewnia jej premię z usprawnienia +4 do Zręczności, odpowiednio wpływając na KP, rzuty obronne\nna Refleks oraz wszelkie zastosowanie modyfikatora ze Zręczności.\nKomponent materialny: Kłębek kociej sierści."
+  },
+  {
+    "name": "Kołatka",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal"
+    ],
+    "range": "medium",
+    "target": "jedne drzwi, skrzynia lub kufer o powierzchni nieprzekraczającej 1m2/lvl",
+    "duration": "instant",
+    "defense": "none",
+    "shortDescription": "Kołatka otwiera drzwi – zatrzaśnięte, zabarykadowane, zamknięte na zamek czy przy użycia czaru\nzamknięcie drzwi lub mistyczny zamek, a także sekretne drzwi, skrzynie czy kufry – zamknięte\nnormalnie lub przemyślnie. Rozluźnia także spawy, kajdany i łańcuchy (pod warunkiem, że służą one\ndo zamknięcia jakiegoś przedmiotu).\nJeżeli użyjesz kołatki do otwarcia drzwi zamkniętych na mistyczny zamek, nie usuwasz go – przestaje\non działać na 10 minut. We wszystkich pozostałych aspektach drzwi same z siebie się nie zamykają\ni nie zatrzaskują.\nKołatka nie unosi natomiast zwodzonych mostów i podobnych zabezpieczeń (takich jak spuszczana\nkrata). Nie wpływa także na liny, pnącza i tym podobne. Efekt działania czaru zależy zaś od obszaru\njego działania. Każde rzucenie niniejszego zaklęcia neguje dwa sposoby uniemożliwiające otwarcie\nczy wejście."
+  },
+  {
+    "name": "Lewitacja",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic",
+      "focus"
+    ],
+    "range": "close",
+    "target": "ja lub jedna chętna istota bądź przedmiot (całkowita waga do 50kg / lvl)",
+    "duration": "1 min / lvl",
+    "defense": "none",
+    "shortDescription": "Lewitacja pozwala tobie, innej istocie lub przedmiotowi unosić się w górę i w dół, zależnie do twojej\nwoli. Stworzenie, na które rzucasz niniejszy czar, musi chętnie poddać się jego działaniu. Przedmiotu\nz kolei nikt nie może trzymać lub musi się on znajdować w posiadaniu istoty chętnej lewitacji.\nMentalnie kierujesz podmiot tego zaklęcia w górę lub w dół, poruszając go na dystans maksymalnie 6\nmetrów w rundzie; jest to dla ciebie akcja ruchu. Nie masz prawa poruszać podmiotem w poziomie.\nNiemniej może się on, na przykład, poruszać wzdłuż urwiska czy też odpychać od sufitu (zwykle\nw taki sposób porusza się z szybkością równą 1/2 naziemnej).\nLewitująca istota, która atakuje bronią do walki wręcz lub dystansową, staje się coraz mniej stabilna.\nDlatego też jej pierwszy atak podlega karze –1 do testu ataków, drugi karze –2 i tak dalej, aż do\nmaksimum –5. Cała runda poświęcona na odzyskanie równowagi sprawia, że kara spada znów do –1.\nKoncentrator: Skórzana pętelka lub kawałek złotego drucika wygiętego w kształt miseczki z długim\nuchwytem na końcu."
+  },
+  {
+    "name": "Mądrość sowy",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "dotknięta istota",
+    "duration": "1 min / lvl",
+    "defense": "will",
+    "shortDescription": "Istota, na którą rzucasz ten czar, staje się mądrzejsza. Zaklęcie zapewnia premię z usprawnienia +4 do\nRoztropności, z której należy korzystać w przypadku wszystkich umiejętności opartych na tym\natrybucie oraz we wszystkich innych wypadkach, gdy używa się modyfikatora z tego atrybutu.\nKapłani, druidzi, paladyni i tropiciele (oraz inne klasy rzucające czary dzięki Roztropności), którzy\nznajdą się pod działaniem mądrości sowy, nie zyskują dodatkowych czarów, ale wzrasta ST rzutów\nobronnych na ich zaklęcia.\nMaterialny komponent wtajemniczeń: Kilka piór lub szczypta odchodów sowy."
+  },
+  {
+    "name": "Pajęcza wspinaczka",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "dotknięta istota",
+    "duration": "10 min / lvl",
+    "defense": "will",
+    "shortDescription": "Podmiot potrafi wspinać się na pionowe powierzchnie i poruszać po nich, a nawet po sufitach –\ndokładnie tak jak pająk. Jednak aby się tak przemieszczać, musi mieć wolne ręce. Podmiot zyskuje\nszybkość wspinania 6 metrów. Ponadto nie musi wykonywać testów Wspinaczki podczas\npokonywania pionowych i poziomych powierzchni (nawet gdy porusza się do góry nogami).\nZachowuje również premię ze Zręczności do Klasy Pancerza (jeśli jakąś posiada), a atakujący go\nwrogowie nie zyskują specjalnych premii. Podmiot zaklęcia nie może jednakże w trakcie wspinaczki\nużywać akcji bieg.\nKomponent materialny: Kropla bituminu i żywy pająk, które podmiot musi zejść."
+  },
+  {
+    "name": "Pirotechnika",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "far",
+    "target": "jedno źródło ognia o objętności maksymalnie sześcianu o krawędzi 6m",
+    "duration": "1k4+1 rund lub 1k4+1 rund po tym, jak istoty opuszczą chmurę dymu; patrz opis",
+    "defense": "will",
+    "shortDescription": "Pirotechnika przemienia ogień w wybuchające i oślepiające fajerwerki albo w gęstą chmurę duszącego\ndymu – zależnie od twojej decyzji dotyczącej wersji zaklęcia.\nFajerwerki: Są to rozbłyskujące, ogniste, krótkotrwałe, następujące w powietrzu wybuchy barwnych,\nżarzących się świateł. W wyniku tego efektu istoty w promieniu 36 metrów od źródła ognia, które\nłączy z nim linia pola widzenia, ulegają na 1k4+1 rund oślepieniu (Wola neguje); może mu zapobiec\nodporność na czary.\nChmura dymu: Ze źródła ognia unosi się chmura gryzącego dymu, rozciągająca się we wszystkich\nkierunkach w promieniu 6 metrów i istniejąca przez 1 rundę na poziom czarującego. Opary166\nuniemożliwiają korzystanie z wszelkiego typu wzroku, włącznie z widzeniem w ciemnościach. Każda\nistota przebywająca w chmurze podlega karze –4 do Siły i Zręczności (Wytrwałość neguje).\nWspomniane efekty utrzymują się jeszcze przez 1k4+1 rund po tym, jak opary się rozwieją lub po tym,\njak istota je opuści. W tym przypadku odporność na czary nie ma zastosowania.\nKomponent materialny: Czar wykorzystuje jedno źródło ognia, które natychmiast gaśnie. Ogień\nwielkości przekraczającej obszar sześcianu o krawędzi 6 metrów ulega tylko częściowemu ugaszeniu.\nW ten sposób nie da się zgasić płomieni magicznych. Istoty oparte na ogniu użyte na potrzeby tego\nczaru jako źródła płomieni otrzymują 1 obrażenie na poziom czarującego."
+  },
+  {
+    "name": "Przekształcenie siebie",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "self",
+    "target": "osobisty",
+    "duration": "10 min / lvl",
+    "defense": "none",
+    "shortDescription": "Przybierasz kształty istoty tego samego typu, do jakiego zalicza się twoja normalna forma. Nowa\npostać nie może być większa ani mniejsza o więcej niż jedną kategorię od twojego normalnego\nrozmiaru. Maksymalna liczba KW przybieranej formy odpowiada twojemu poziomowi czarującego,\ndo maksymalnie 5 KW na 5. poziomie. Możesz zmienić się w przedstawiciela własnej rasy, a nawet\nw siebie samego.\nZachowujesz wówczas wartości atrybutów. Zmianie nie ulegają również klasa i poziom, punkty\nwytrzymałości, charakter, bazowa premia do ataku oraz bazowe premie do rzutów obronnych.\nZachowujesz także wszystkie nadnaturalne i czaropodobne ataki specjalne oraz właściwości normalnej173\nformy, z wyjątkiem tych wykorzystujących części ciała, których brak w formie nowej (na przykład:\nusta potrzebne do użycia broni oddechowej czy oczy konieczne do ataku wzrokowego). Nie tracisz\nnadzwyczajnych ataków i cech wynikających z poziomów w klasie, ale te wynikające z normalnej\nformy – już tak.\nJeśli nowa forma umożliwia wypowiadanie się, możesz się normalnie komunikować. Zachowujesz\nwszelkie zdolności czarowe posiadane w oryginalnym kształcie, ale by stosować komponenty\nwerbalne, nowa forma musi zrozumiale mówić (czyli posługiwać się językiem). W przypadku\nkomponentów somatycznych i materialnych zaś niezbędne są jej kończyny pozwalające ich używać.\nPrzyjmujesz fizyczne cechy nowej formy, zachowując swój umysł. Wspomniane cechy fizyczne\nobejmują naturalny rozmiar, zwykłe sposoby poruszania się (takie jak rycie, wspinanie, chodzenie,\npływanie, latanie na skrzydłach – do maksymalnie 36 metrów prędkości latania i 18 metrów\nporuszania się w inny sposób), premię z naturalnego pancerza, naturalną broń (czyli pazury, ugryzienie\nitp.), premie do umiejętności rasowych, premiowe atuty rasowe oraz wszelkie wyraźne właściwości\nkształtu (obecność lub brak skrzydeł, liczba kończyn i tak dalej). Ciało wyposażone w dodatkowe\nkończyny nie uprawnia cię do wykonania większej liczby ataków niż normalnie (ani lepszych ataków\nbronią dwuręczną).\nNie otrzymujesz nadzwyczajnych specjalnych ataków ani cech, których nie podano wcześniej, takich\njak widzenie w ciemnościach, widzenie w słabym świetle, ślepozmysł, ślepowidzenie, szybkie\nleczenie, regeneracja, węch i tak dalej.\nNie zyskujesz żadnych nadnaturalnych ataków specjalnych ani cech czy zdolności czaropodobnych\nnowej formy. Twój typ i podtyp (jeśli jakiś posiadasz) nie ulegają zmianie, bez względu na nową\npostać. Nie możesz przybrać kształtów żadnej istoty posiadającej szablon, nawet jeśli ten nie zmienia\njej typu ani podtypu.\nMasz prawo swobodnie decydować o pomniejszych fizycznych właściwościach nowej formy (takich\njak kolor włosów i ich wygląd czy barwa skóry), ale w granicach dostępnych istocie danego gatunku.\nKontrolujesz również bardziej istotne cechy nowej formy (takie jak wzrost, waga i płeć), lecz one\nrównież muszą pozostać w granicach stosownych do gatunku. Jesteś efektywnie przebrany za\nprzeciętnego przedstawiciela danej rasy. Jeśli używasz niniejszego zaklęcia właśnie do przebrania,\notrzymujesz premię +10 do testu Przebierania.\nPo przemianie w nową formę nadal masz na sobie lub trzymasz swoje wyposażenie, jeśli jakieś\nposiadasz i jeżeli przybrany kształt na to pozwala. W innym przypadku ekwipunek zlewa się z nową\npostacią i staje się niefunkcjonalny. Kiedy powrócisz do normalnej formy, wszystkie przedmioty,\nktóre zlały się z nowym kształtem, pojawiają się w tym samym miejscu twojego ciała, w jakim się\nuprzednio znajdowały, i znów działają. Wszystkie nowe przedmioty, które miałeś w przybranym\nkształcie i których nie możesz używać w normalnej postaci, spoczywają u twoich stóp. Te, które\nmożesz mieć na sobie lub używać w obu formach po powrotnej przemianie pozostają na miejscu.\nKażda część ciała lub element wyposażenia oddzielony od reszty powraca do swych prawdziwych\nkształtów."
+  },
+  {
+    "name": "Siła byka",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "dotknięta istota",
+    "duration": "1min / lvl",
+    "defense": "will",
+    "shortDescription": "Podmiot staje się silniejszy. Czar zapewnia premię z usprawnienia +4 do Siły, co korzystnie wpływa\nna testy ataków wręcz, testy obrażeń wręcz oraz wszystkie zastosowania modyfikatora z Siły.\nMaterialny komponent wtajemniczeń: Kilka włosów byka lub kawałek gnoju tego zwierzęcia."
+  },
+  {
+    "name": "Splendor orła",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "dotknięta istota",
+    "duration": "1 min / lvl",
+    "defense": "will",
+    "shortDescription": "Istota, na którą rzucisz ten czar, staje się bardziej pewna siebie, elokwentna i bardziej przekonująca.\nZaklęcie zapewnia premię z usprawnienia +4 do Charyzmy, z której należy korzystać w przypadku\nwszystkich umiejętności opartych na tym atrybucie oraz we wszystkich innych wypadkach, gdy używa\nsię modyfikatora z niego. Zaklinacze i bardowie (oraz inne klasy rzucające czary wykorzystując\nCharyzmę), którzy znajdą się pod działaniem splendoru orła, nie zyskują dodatkowych czarów, ale\nwzrasta ST rzutów obronnych na ich zaklęcia.\nMaterialny komponent wtajemniczeń: Kilka piór lub szczypta odchodów orła."
+  },
+  {
+    "name": "Spryt lista",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "dotknięta istota",
+    "duration": "1 min / lvl",
+    "defense": "will",
+    "shortDescription": "Istota, na którą rzucisz ten czar, zyskuje większy spryt. Zaklęcie zapewnia premię z usprawnienia +4\ndo Intelektu, z której należy korzystać w przypadku wszystkich umiejętności opartych na tym\natrybucie oraz we wszystkich innych wypadkach, gdy używa się modyfikatora z Intelektu. Czarodzieje\n(oraz inne klasy rzucające zaklęcia wykorzystujące Intelekt), którzy znajdą się pod działaniem sprytu\nlisa, nie zyskują dodatkowych czarów, ale wzrasta ST rzutów obronnych na ich zaklęcia. Niniejszy\nczar nie zapewnia dodatkowych punktów umiejętności.\nMaterialny komponent wtajemniczeń: Kilka włosów z sierści lisa lub szczypta jego odchodów."
+  },
+  {
+    "name": "Szepczący wiatr",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "1.5km / lvl",
+    "target": "fala o promieniu 3m",
+    "duration": "maksymalnie 1h / lvl lub do wyładowania",
+    "defense": "none",
+    "shortDescription": "Za pomocą wiatru wysyłasz do wybranego miejsca wiadomość lub dźwięk. Szepczący wiatr dociera do\nwskazanego znanego ci punktu, jeśli znajduje się on w zasięgu i jeżeli zdoła znaleźć drogę do tego\ncelu. Powstała za sprawą tego zaklęcia bryza jest delikatna i niezauważalna – przynajmniej dopóki nie\ndotrze do celu. Wówczas bowiem szeptem “wypowiada” wiadomość lub wydaje inny dźwięk. Warto\npamiętać, że informacja zostaje przekazana bez względu na to, czy w danym miejscu przebywa ktoś,\nkto może ją usłyszeć. Dostarczywszy wiadomość, wiar się rozwiewa.\nMasz prawo za pomocą tego czaru przekazać wiadomość liczącą maksymalnie 25 słów lub inne\ndźwięki trwające 1 rundę. Możesz też sprawić, że szepczący wiatr spowoduje tylko delikatne drgania\npowietrza. Zależnie od twojej decyzji wiatr będzie się poruszał z prędkością od 1,5 kilometra na\ngodzinę do 1,5 kilometra na 10 minut.\nDotarłszy do celu, wiatr zawiruje i pozostanie w miejscu, dopóki nie dostarczy wiadomości. Podobnie\njak magiczne usta, nie potrafi posługiwać się komponentami werbalnymi, używać słów rozkazu ani\naktywować efektów magicznych."
+  },
+  {
+    "name": "Sztuczka z liną",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "jeden dotknięty kawałek liny długości od 1.5m do 9m",
+    "duration": "1h / lvl",
+    "defense": "none",
+    "shortDescription": "Kiedy rzucisz ten czar na linę długości od 1,5 do 9 metrów, jeden jej koniec będzie się wznosił\nw powietrze, dopóki sznur nie zawiśnie pionowo, tak jakby przywiązano go od góry. Tak naprawdę\nkoniec liny zaklęcie przymocowuje do pozawymiarowej przestrzeni, która znajduje się poza\nmultiwersum pozawymiarowych przestrzeni (czyli tzw. planów). Istoty, które przebywają w takiej\npozawymiarowej przestrzeni, ukrywają się poza zasięgiem zaklęć (również czarów poznania) –\nz wyjątkiem tych działających pomiędzy planami.\nNiniejszego czaru nie można rzucić poprzez pozawymiarowe przejście czy połączenie; jego obszar nie\nmoże również przekroczyć granic planarnych.\nW pozawymiarowej przestrzeni, do której prowadzi lina (utrzyma ona ciężar 8 ton – większy\npowoduje zerwanie), zmieści się maksymalnie osiem istot dowolnego rozmiaru. Mogą one wciągnąć\nza sobą sznur, przez co ten “zniknie”. W takim przypadku linę należy traktować jak jedną z ośmiu\nistot, które pomieści pozawymiarowa przestrzeń (zatem zmieści się w niej tylko siedem stworzeń).\nStworzenia przebywające w przestrzeni pozawymiarowej mogą obserwować okolicę, patrząc przez\nokno wielkości 90 centymetrów na 1,5 metra, którego środek stanowi lina. Okno znajduje się na Planie\nMaterialnym, ale jest niewidzialne. Ponadto nawet te istoty, które je widzą, nie są w stanie przez nie\nzajrzeć.\nKiedy niniejszy czar dobiegnie końca, wszystko, co znajduje się w przestrzeni pozawymiarowej,\nwylatuje na zewnątrz. Po linie może się wspinać tylko jedna osoba. Używając sznura, nie trzeba\njednakże koniecznie wchodzić w przestrzeń pozawymiarową. Da się po nim wspiąć do miejsca\nznajdującego się w normalnym wymiarze poniżej przestrzeni pozawymiarowej.\nUwaga: Tworzenie przestrzeni pozawymiarowej w innej, już istniejącej przestrzeni pozawymiarowej\nlub też umieszczanie jednej z tych przestrzeni w drugiej jest niezwykle ryzykowne.\nKomponent materialny: Sproszkowany rdzeń kukurydzy i zwinięty pergamin."
+  },
+  {
+    "name": "Widzenie w ciemnościach",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "dotknięta istota",
+    "duration": "1h / lvl",
+    "defense": "will",
+    "shortDescription": "Podmiot zyskuje zdolność widzenia nawet w całkowitej ciemności (w zasięgu 18 metrów). Widzenie\nw ciemnościach działa jak zwykły wzrok, ale pozwala postrzegać świat tylko w czerni i bieli i nie\numożliwia widzenia w magicznej ciemności.\nWidzeniu w ciemnościach można nadać charakter permanentny za pomocą zaklęcia utrwalenie.\nKomponent materialny: Szczypta wysuszonej marchewki lub agat."
+  },
+  {
+    "name": "Wytrzymałość niedźwiedzia",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "transmutation",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "touch",
+    "target": "dotknięta istota",
+    "duration": "1 min / lvl",
+    "defense": "will",
+    "shortDescription": "Istota, na którą wypłynie to zaklęcie, staje się bardziej witalna i żywotniejsza. Czar ten zapewnia jej\npremię z usprawnienia +4 do Budowy, z czego wynikają zwyczajowe korzyści dotyczące punktów\nwytrzymałości, rzutów obronnych na Wytrwałość, testów Budowy i tak dalej.\nZyskane za sprawą zwiększenia Budowy punkty wytrzymałości nie są tymczasowe i rozwiewają się,\ngdy atrybut podmiotu powróci do normalnej wartości. Nie traci się ich najpierw, jak tymczasowych\npunktów wytrzymałości."
+  },
+  {
+    "name": "Chmura mgły",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "conjuration",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "medium",
+    "target": "mgła w falii o promieniu 6m, wysoka na 6m",
+    "duration": "10 min / lvl",
+    "defense": "none",
+    "shortDescription": "Z punktu, który wyznaczasz, zaczyna kłębić się chmura mgły. Opary uniemożliwiają korzystanie\nz wszelkiego typu wzroku, włącznie z widzeniem w ciemnościach, poza zasięg 1,5 metra. Istoty\nw odległości 1,5 metra posiadają ukrycie (ataki podlegają ryzyku chybienia 20%). Stworzenia\nznajdujące się dalej korzystają z całkowitego ukrycia (ryzyko chybienia 50%, a ponadto atakujący nie\nmoże zlokalizować celu za pomocą zmysłu wzroku).\nŚredni wiatr (16,5+ km/h) rozwiewa mgłę w 4 rundy, a silny (31,5+ km/h) w 1 rundę.\nCzar ten nie działa pod wodą."
+  },
+  {
+    "name": "Kwasowa strzała Melfa",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "conjuration",
+    "components": [
+      "verbal",
+      "somatic",
+      "material",
+      "focus"
+    ],
+    "range": "far",
+    "target": "jedna kwasowa strzała",
+    "duration": "1 runda + 1 runda / 3 lvl",
+    "defense": "touch_ranged",
+    "shortDescription": "Z twojej ręki wystrzeliwuje magiczna kwasowa strzała, która leci w kierunku celu. Trafienie go\nwymaga udanego ataku dotykowego dystansowego. Strzała powoduje 2k4 rany od kwasu i żadnych\nobrażeń od rozprysku. Na każde trzy poziomy czarującego (maksymalnie do 18.) kwas – jeżeli nie\nzostanie w jakiś sposób zneutralizowany – działa przez dodatkową rundę, zadając w niej kolejne 2k4\nobrażenia.\nKomponent materialny: Sproszkowany liść rabarbaru i żołądek żmii.\nKoncentrator: Strzałka."
+  },
+  {
+    "name": "Pajęczyna",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "conjuration",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "medium",
+    "target": "pajęczyna w fali o promieniu 6m",
+    "duration": "10 min / lvl",
+    "defense": "refleks",
+    "shortDescription": "Czar ten tworzy wielowarstwową plątaninę wytrzymałych, lepkich pasm, które więżą każdego, kto\nznajdzie się na ich obszarze. Powstałe za sprawą zaklęcia nici przypominają pajęczą sieć, są jednak\ngrubsze oraz twardsze. Pajęczyna musi być przyczepiona do co najmniej dwóch przeciwległych\nobiektów – w innym wypadku pajęczyna zapadnie się w siebie i zniknie. Istoty pochwycone w sieć\nzostają oplątane przez lepkie nici. Atakowanie takich stworzeń nie powoduje oplątania.\nWszystkie istoty znajdujące się na obszarze niniejszego zaklęcia muszą wykonać rzut obronny na\nRefleks. Udany oznacza, że stworzenie jest oplątane, ale może się poruszać, choć będzie to trudniejsze\nniż normalnie w takiej sytuacji (patrz dalej). Porażka w rzucie obronnym świadczy o tym, że istota nie\ntylko została oplątana, ale ponadto nie może opuścić zajmowanej przestrzeni. Uda się jej uwolnić, jeśli\npoświęci jedną rundę i wykona udany test Siły o ST 20 lub test Wyzwalania się o ST 25. Istota, która\nmoże się poruszać (wykonała udany rzut obronny na Refleks bądź test Siły lub Wyzwalania się),\npozostaje oplątana, ale ma prawo bardzo powoli przedzierać się przez pajęczynę. W każdej rundzie,\nktórą poświęci na ruch, musi wykonać nowy test Siły lub Wyzwalania się – pokona 1,5 metra na każdą\nwielokrotność 5 punktów, o które rezultat testu przekroczy 10.\nJuż 1,5 metra pajęczyny pomiędzy atakującym a atakowanym zapewnia osłonę. Jeżeli dzieli ich\nprzynajmniej 6 metrów, drugi z wymienionych ma całkowitą osłonę.\nPasma pajęczyny są łatwopalne. Magiczny ognisty miecz przecina je równie łatwo, jak ręka pajęcze\nsieci. Dowolny ogień podpala pajęczynę i w rundę wypala jeden kwadrat o boku 1,5 metra. Wszelkie\nstworzenia na obszarze płomieni otrzymują 2k4 obrażenia od ognia.\nPajęczynie można nadać charakter permanentny za pomocą zaklęcia utrwalenie. W takim przypadku,\njeśli ktoś ją uszkodzi (lecz nie zniszczy), odrasta w 10 minut.\nKomponent materialny: Kawałek pajęczej sieci."
+  },
+  {
+    "name": "Przyzwanie potwora II",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "conjuration",
+    "components": [
+      "verbal",
+      "somatic",
+      "focus"
+    ],
+    "range": "close",
+    "target": "jedna lub więcej przyzwanych istot, z których żadne dwie nie mogą się znajdować w odległości\nwiększej niż 9 m od siebie",
+    "duration": "1 runda / lvl",
+    "defense": "none",
+    "shortDescription": "Czar ten działa jak przyzwanie potwora I, ale przyzywasz jedną istotę z listy dla 2. poziomu lub 1k3\nistoty tego samego rodzaju z listy dla 1. poziomu."
+  },
+  {
+    "name": "Przywanie roju",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "conjuration",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "close",
+    "target": "jeden rój nietoperzy, szczurów lub pająków",
+    "duration": "koncentracja + 2 rundy",
+    "defense": "none",
+    "shortDescription": "Przyzywasz rój nietoperzy, szczurów lub pająków (ty decydujesz), który atakuje wszystkie istoty\nznajdujące się na jego obszarze (możesz go przyzwać tak, by znajdował się w tej samej przestrzeni co\ninne istoty). Jeżeli na obszarze działania roju nie ma żyjących stworzeń, rój atakuje i najlepiej jak\npotrafi ściga najbliższą istotę. Nie masz nad nim żadnej kontroli – nie wybierasz ani celu jego ataku,\nani kierunku, w jakim się udaje.\nMaterialny komponent wtajemniczeń: Kawałek czerwonego płótna."
+  },
+  {
+    "name": "Skrzący pył",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "conjuration",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "medium",
+    "target": "przedmioty i istoty w fali o promieniu 3m",
+    "duration": "1 runda / lvl",
+    "defense": "will",
+    "shortDescription": "Wszystkich i wszystko na obszarze działania tego zaklęcia pokrywa obłok złotych cząsteczek,\nw efekcie czego istoty znajdujące się na owym obszarze zostają oślepione. Pyłki przylegają również\ndo przedmiotów niewidzialnych, na czas działania zaklęcia obrysowując ich kształty. Cały obszar\nzostaje pokryty złotym kurzem, którego nie można usunąć i który skrzy się, dopóki nie zgaśnie.\nIstota pokryta skrzącym pyłem podlega karze –40 do testów Ukrywania się.\nKomponent materialny: Zmielona mika."
+  },
+  {
+    "name": "Ciemność",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "evocation",
+    "components": [
+      "verbal",
+      "material"
+    ],
+    "range": "touch",
+    "target": "dotknięty przedmiot",
+    "duration": "10 min / lvl",
+    "defense": "none",
+    "shortDescription": "Czar ten sprawia, że wokół przedmiotu w promieniu 6 metrów panuje półmrok. Wszystkie istoty na\ntym obszarze korzystają z ukrycia (ryzyko chybienia 20%). Nawet stworzenia, które normalnie widzą\nw takich warunkach (za pomocą widzenia w ciemnościach czy widzenia w słabym świetle) podlegają\nna terenie działania magicznej ciemności ryzyku chybienia.\nNormalne źródła światła (takie jak pochodnie, świeczki i latarnie) nie rozświetlą obszaru ciemności.\nTo samo dotyczy zaklęć światła niższego poziomu. Ciemność jednakże nie wpływa na czary światła\nwyższego poziomu.\nJeżeli rzucisz ciemność na niewielki przedmiot, który następnie schowasz pod nieprzepuszczające\nświatła przykrycie, jej efekt ulegnie zablokowaniu aż do momentu wyjęcia przedmiotu.\nCiemność kontruje i rozprasza zaklęcia światła tego samego i niższego poziomu.\nMaterialny komponent wtajemniczeń: Kłębek sierści nietoperza oraz kropla smoły lub grudka węgla."
+  },
+  {
+    "name": "Nieustający płomień",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "evocation",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "touch",
+    "target": "dotknięty przedmiot",
+    "duration": "pernamentny",
+    "defense": "none",
+    "shortDescription": "Z przedmiotu, którego dotykasz, wystrzeliwuje płomień dający tyle światła, co pochodnia. Ogień\nwygląda jak zwykły, ale nie wydziela ciepła i nie spala tlenu. Nieustający płomień można zakryć\ni schować, lecz nie da się go zdusić czy ugasić.\nCzary światła kontrują i rozpraszają zaklęcia ciemności tego samego i niższego poziomu.\nKomponent materialny: Przedmiot, z którego ma wystrzelić płomień, posypujesz rubinowym pyłem\n(wartości 50 sz)."
+  },
+  {
+    "name": "Płomienny promień",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "evocation",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "close",
+    "target": "jeden lub więcej promieni",
+    "duration": "instant",
+    "defense": "touch_ranged",
+    "shortDescription": "Uderzasz w przeciwników ognistymi promieniami. Możesz wystrzelić jeden promień plus jeden\ndodatkowy na każde cztery poziomy powyżej 3. (maksymalnie trzy na 11. poziomie). Trafienie\nkażdym z nich wymaga oddzielnego ataku dotykowego dystansowego, a każdy powoduje 4k6 obrażeń\nod ognia. Promienie możesz wystrzelić w tę samą istotę lub w kilka różnych, ale cele muszą\nznajdować się odległości maksymalnie 9 metrów od siebie. Ponadto strzelasz wszystkimi promieniami\njednocześnie."
+  },
+  {
+    "name": "Płonąca sfera",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "evocation",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "medium",
+    "target": "kula o średnicy 1.5m",
+    "duration": "1 runda / lvl",
+    "defense": "reflex",
+    "shortDescription": "Za sprawą tego czaru powołujesz do istnienia kulę ognia, która toczy się (z prędkością 9 metrów na\nrundę) we wskazane przez ciebie miejsce i zapala wszystko, w co uderzy. Częścią jej ruchu może być\nobniżenie się lub podskok na wysokość do 9 metrów, dzięki czemu może sięgnąć jakiegoś celu. Jeśli\nznajdzie się w tej samej przestrzeni co istota, przestaje się na rundę poruszać i zadaje danemu\nstworzeniu 2k6 obrażeń od ognia (udany rzut obronny na Refleks neguje te rany). Płonąca sfera\nprzetacza się przez przeszkody o wysokości do 1,2 metra. Podpala materiały łatwopalne, których\ndotknie. Oświetla taki sam obszar jak pochodnia.\nKula porusza się, dopóki aktywnie nią kierujesz (poświęcając na to akcję ruchu) – w przeciwnym razie\npozostaje w miejscu i po prostu się pali. Można ją zgasić jak zwykły ogień tej samej wielkości.\nPowierzchnia kuli jest gąbczasta i elastyczna, przez co nie zadaje obrażeń innych jak od ognia.\nPłonąca sfera znika, jeżeli opuści zasięg zaklęcia.\nMaterialny komponent wtajemniczeń: Odrobina sadła, szczypta siarki i pył ze sproszkowanego żelaza."
+  },
+  {
+    "name": "Podmuch wiatru",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "evocation",
+    "components": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "18m",
+    "target": "podmuch potężnego wiatru w linii biegnącej od ciebie do granicy zasięgu",
+    "duration": "1 runda",
+    "defense": "endurance",
+    "shortDescription": "Czar ten tworzy potężny podmuch wiatru (około 75 km/h), który biegnie od ciebie i wpływa na\nwszystko, co znajduje się na jego drodze.\nMalutkie i mniejsze istoty przebywające na ziemi zostają przewrócone, po czym turlają się przez 1k4 x\n3 metry (za każde 3 metry otrzymują 1k4 stłuczenia). Latające stworzenia takiego rozmiaru zostają\nzdmuchnięte na dystans 2k6 x 3 metrów (otrzymują 2k6 stłuczeń w wyniku uderzeń powiewów\nwiatru).\nWiatr przewraca małe istoty, a jeśli latają, zdmuchuje je na odległość 1k6 x 3 metrów.\nŚrednie stworzenia nie mogą poruszać się wbrew kierunkowi, w jakim wieje wiatr, a jeżeli unoszą się\nw powietrzu, zostają zdmuchnięte na dystans 1k6 x 1,5 metra.\nDuże i większe istoty mogą normalnie poruszać się na obszarze działania podmuchu wiatru.\nPodmuch wiatru nie może przenieść istoty poza zasięg, w jakim działa.\nKażda istota w obszarze działania niniejszego zaklęcia, bez względu na rozmiar, podlega karze –4 do\ntestów ataków dystansowych i testów Nasłuchiwania.\nPodmuch wiatru automatycznie gasi świeczki, pochodnie i podobne niechronione płomienie. Sprawia\nteż, że chronione – jak choćby latarnie – zaczynają się chwiać i gasną z szansą 50%.\nPoza wspomnianymi efektami podmuch wiatru wywołuje takie same efekty jak zwykły wiatr. Może\nporuszyć piasek czy pył, który będzie kłuł w oczy; rozdmuchać duży płomień; przewrócić delikatne\npłócienne daszki i zerwać draperie; wywrócić łódkę; zdmuchnąć gazy czy opary do granic zasięgu.\nPodmuchowi wiatru można nadać charakter permanentny za pomocą zaklęcia utrwalenie."
+  },
+  {
+    "name": "Roztrzaskanie",
+    "level": 2,
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "school": "evocation",
+    "components": [
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "close",
+    "target": "fala o promieniu 1,5 m; bądź jeden materialny przedmiot lub jedna kryształowa istota",
+    "duration": "instant",
+    "defense": "will",
+    "shortDescription": "Czar ten tworzy głośny, dzwoniący dźwięk, który niszczy kruche przedmioty niemagiczne,\nroztrzaskuje jeden materialny przedmiot niemagiczny albo też rani istoty kryształowe.\nJeżeli używasz roztrzaskania jako ataku obszarowego, niszczy ono wszystkie kryształowe, szklane,\nceramiczne i porcelanowe przedmioty. Wszelkie takie obiekty w promieniu 1,5 metra od punktu\npoczątkowego zaklęcia ulegają rozbiciu na dziesiątki kawałeczków. Czar nie wpływa na przedmioty\nważące więcej niż 0,5 kilograma na twój poziom. Jednakże wszystkie inne, które wykonano z jednego\nz wymienionych materiałów, ulegają zniszczeniu.\nZamiast tego możesz wycelować roztrzaskanie w jeden przedmiot materialny z dowolnej substancji,\nważący maksymalnie 5 kilogramów na poziom czarującego.\nJeśli rzucisz niniejsze zaklęcie na istotę kryształową (o dowolnym ciężarze), zadaje ono 1k6 obrażeń\nod dźwięku na poziom czarującego (maksymalnie 10k6). Ofiara ma prawo do rzutu obronnego na\nWytrwałość – udany oznacza, że otrzymuje połowę ran.\nMaterialny komponent wtajemniczeń: Odłamek miki."
+  }
+]
