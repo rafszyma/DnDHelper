@@ -42,7 +42,7 @@ public class Spellbook {
     public boolean learnSpell(Spell spell) throws SpellException {
 
         if (this.forbiddenSchools.contains(spell.getSchool())) {
-            throw new SpellException("Spell school is forbidden");
+            throw new SpellException("Ta szkoła jest zakazana!");
         }
 
         spellLevels[spell.getLevel()].learnSpell(spell);
@@ -51,16 +51,21 @@ public class Spellbook {
 
     public boolean prepareSpell(Spell spell) throws SpellException {
         if (this.forbiddenSchools.contains(spell.getSchool())) {
-            throw new SpellException("Spell school is forbidden");
+            throw new SpellException("Ta szkoła jest zakazana!");
         }
 
         spellLevels[spell.getLevel()].prepareSpell(spell);
         return true;
     }
 
+    public boolean changeSpell(Spell spell) throws SpellException {
+        spellLevels[spell.getLevel()].changeSpell(spell);
+        return true;
+    }
+
     public boolean castSpell(Spell spell) throws SpellException {
         if (this.forbiddenSchools.contains(spell.getSchool())) {
-            throw new SpellException("Spell school is forbidden");
+            throw new SpellException("Ta szkoła jest zakazana!");
         }
 
         spellLevels[spell.getLevel()].castSpell(spell);

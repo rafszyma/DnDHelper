@@ -17,6 +17,10 @@ public enum SpellRange {
     m18,
     @SerializedName("3m")
     m3,
-    @SerializedName("m4.5")
-    m4point5
+    @SerializedName("4.5m")
+    m4point5,
+    @SerializedName("6m")
+    m6,
+    @SerializedName("1.5kmlvl")
+    km1point5
 }

@@ -26,9 +26,9 @@ public class LearnSpellListAdapter extends GenericSpellListAdapter {
 
     @Override
     protected View fillCurrentView(View listItem, final Spell currentSpell) {
-        TextView textView = listItem.findViewById(R.id.spellNameView);
-        textView.setText(currentSpell.getName());
-        textView.setOnClickListener(new View.OnClickListener() {
+        TextView spellNameView = listItem.findViewById(R.id.spellNameView);
+        spellNameView.setText(currentSpell.getName());
+        spellNameView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(sContext, SpellInfoActivity.class);
@@ -36,6 +36,10 @@ public class LearnSpellListAdapter extends GenericSpellListAdapter {
                 sContext.startActivity(intent);
             }
         });
+
+        TextView spellSchoolView = listItem.findViewById(R.id.spellSchoolView);
+        spellSchoolView.setText(currentSpell.getSchool().getValue());
+        spellSchoolView.setBackgroundColor(currentSpell.getSchool().getColor());
 
         Button learnSpellButton = listItem.findViewById(R.id.spellActionButton);
         learnSpellButton.setText(R.string.learn);

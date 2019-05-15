@@ -644,7 +644,7 @@
       "verbal",
       "somatic"
     ],
-    "range": "1.5km / lvl",
+    "range": "1.5kmlvl",
     "target": "fala o promieniu 3m",
     "duration": "maksymalnie 1h / lvl lub do wyładowania",
     "defense": "none",
@@ -760,7 +760,7 @@
     "range": "medium",
     "target": "pajęczyna w fali o promieniu 6m",
     "duration": "10 min / lvl",
-    "defense": "refleks",
+    "defense": "reflex",
     "shortDescription": "Czar ten tworzy wielowarstwową plątaninę wytrzymałych, lepkich pasm, które więżą każdego, kto\nznajdzie się na ich obszarze. Powstałe za sprawą zaklęcia nici przypominają pajęczą sieć, są jednak\ngrubsze oraz twardsze. Pajęczyna musi być przyczepiona do co najmniej dwóch przeciwległych\nobiektów – w innym wypadku pajęczyna zapadnie się w siebie i zniknie. Istoty pochwycone w sieć\nzostają oplątane przez lepkie nici. Atakowanie takich stworzeń nie powoduje oplątania.\nWszystkie istoty znajdujące się na obszarze niniejszego zaklęcia muszą wykonać rzut obronny na\nRefleks. Udany oznacza, że stworzenie jest oplątane, ale może się poruszać, choć będzie to trudniejsze\nniż normalnie w takiej sytuacji (patrz dalej). Porażka w rzucie obronnym świadczy o tym, że istota nie\ntylko została oplątana, ale ponadto nie może opuścić zajmowanej przestrzeni. Uda się jej uwolnić, jeśli\npoświęci jedną rundę i wykona udany test Siły o ST 20 lub test Wyzwalania się o ST 25. Istota, która\nmoże się poruszać (wykonała udany rzut obronny na Refleks bądź test Siły lub Wyzwalania się),\npozostaje oplątana, ale ma prawo bardzo powoli przedzierać się przez pajęczynę. W każdej rundzie,\nktórą poświęci na ruch, musi wykonać nowy test Siły lub Wyzwalania się – pokona 1,5 metra na każdą\nwielokrotność 5 punktów, o które rezultat testu przekroczy 10.\nJuż 1,5 metra pajęczyny pomiędzy atakującym a atakowanym zapewnia osłonę. Jeżeli dzieli ich\nprzynajmniej 6 metrów, drugi z wymienionych ma całkowitą osłonę.\nPasma pajęczyny są łatwopalne. Magiczny ognisty miecz przecina je równie łatwo, jak ręka pajęcze\nsieci. Dowolny ogień podpala pajęczynę i w rundę wypala jeden kwadrat o boku 1,5 metra. Wszelkie\nstworzenia na obszarze płomieni otrzymują 2k4 obrażenia od ognia.\nPajęczynie można nadać charakter permanentny za pomocą zaklęcia utrwalenie. W takim przypadku,\njeśli ktoś ją uszkodzi (lecz nie zniszczy), odrasta w 10 minut.\nKomponent materialny: Kawałek pajęczej sieci."
   },
   {

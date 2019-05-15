@@ -105,8 +105,8 @@
       "verbal",
       "somatic"
     ],
-    "range": "osobisty",
-    "target": "ja",
+    "range": "self",
+    "target": "osobisty",
     "duration": "10 min / lvl",
     "defense": "none",
     "shortDescription": "Czar ten sprawia, że wygladasz inaczej – dotyczy to również stroju, zbroi, broni i wyposażenia.\nMożesz wydawac sie o 30 centymetrów wyższy lub niższy, grubszy albo chudszy. Nie masz jednakże\nprawa zmienic typu swego ciała. W pozostałych aspektach zmiany zależa tylko od ciebie. Możesz\ndodac lub ukryc pomniejsza ceche charakterystyczna lub też wygladac jak ktos zupełnie inny.\nNiniejszy czar nie obdarza zdolnosciami ani manierami wybranej formy oraz nie zmienia namacalnych\n(dotyk) i słyszalnych (dzwiek) własciwosci ciebie i twojego wyposażenia.\nJesli użyjesz tego zaklecia do stworzenia przebrania, otrzymujesz premie +10 do testów Przebierania.\nIstota wchodzaca w interakcje ze zwidem ma prawo do rzutu obronnego na Wole – udany pozwala\nrozpoznac iluzje."
@@ -274,7 +274,7 @@
     "target": "dotknięta istota",
     "duration": "24h",
     "defense": "will",
-    "shortDescription": "Istota chroniona za pomoca odpornosci na \u0006ywioły nie cierpi w goracym lub mroznym otoczeniu. Nie\nodnosi obrażen w srodowisku o temperaturze od –45 do 60 stopni Celsjusza; nie musi nawet\nwykonywac rzutów obronnych na Wytrwałosc. W podobny sposób chroniony jest ekwipunek\npodmiotu niniejszego zaklecia.\nOdpornosc na \u0006ywioły nie chroni przed obrażeniami od ognia i zimna. Nie pomaga również\nw zetknieciu z innymi niebezpieczenstwami srodowiskowymi, takimi jak dym, brak powietrza i tym\npodobne."
+    "shortDescription": "Istota chroniona za pomoca odpornosci na żywioły nie cierpi w goracym lub mroznym otoczeniu. Nie\nodnosi obrażen w srodowisku o temperaturze od –45 do 60 stopni Celsjusza; nie musi nawet\nwykonywac rzutów obronnych na Wytrwałosc. W podobny sposób chroniony jest ekwipunek\npodmiotu niniejszego zaklecia.\nOdpornosc na żywioły nie chroni przed obrażeniami od ognia i zimna. Nie pomaga również\nw zetknieciu z innymi niebezpieczenstwami srodowiskowymi, takimi jak dym, brak powietrza i tym\npodobne."
   },
   {
     "name": "Tarcza",
@@ -402,7 +402,7 @@
     "target": "emanacja w kształcie stożka",
     "duration": "koncentacja, 1min / lvl",
     "defense": "none",
-    "shortDescription": "Potrafisz wykryc sekretne drzwi, pomieszczenia, skrytki i tak dalej. Czar ten pozwala odnalezc tylko\nprzejscia, drzwi i otwory skonstruowane tak, by nie dało sie ich znalezc. Ilosc informacji, jakie\nuzyskasz, zależy od tego, ile czasu poswiecisz przeszukiwaniu danego obszaru i jak długo skupisz sie\nna konkretnym terenie lub podmiocie.\nPierwsza runda: Obecnosc lub brak obecnosci sekretnych drzwi.\nDruga runda: Liczba sekretnych drzwi w obszarze oraz położenie wszystkich. Jesli sekretne drzwi\nznajduja sie poza twoim polem widzenia, poznajesz kierunek, w jakim sie znajduja, a nie dokładna\nlokalizacje.\nKa\u0006da kolejna runda: Mechanizm lub sposób otwarcia jednego konkretnego sekretnego przejscia,\nktóre uważnie zbadałes.\nW każdej rundzie możesz sie obrócic i wykrywac sekretne drzwi na nowym obszarze. Niniejsze\nzaklecie przenika bariery, ale jego działanie blokuje 30 centymetrów kamienia, 2,5 centymetra\nzwykłego metalu, cienka warstwa ołowiu i 0,9 metra drewna lub ziemi."
+    "shortDescription": "Potrafisz wykryc sekretne drzwi, pomieszczenia, skrytki i tak dalej. Czar ten pozwala odnalezc tylko\nprzejscia, drzwi i otwory skonstruowane tak, by nie dało sie ich znalezc. Ilosc informacji, jakie\nuzyskasz, zależy od tego, ile czasu poswiecisz przeszukiwaniu danego obszaru i jak długo skupisz sie\nna konkretnym terenie lub podmiocie.\nPierwsza runda: Obecnosc lub brak obecnosci sekretnych drzwi.\nDruga runda: Liczba sekretnych drzwi w obszarze oraz położenie wszystkich. Jesli sekretne drzwi\nznajduja sie poza twoim polem widzenia, poznajesz kierunek, w jakim sie znajduja, a nie dokładna\nlokalizacje.\nKażda kolejna runda: Mechanizm lub sposób otwarcia jednego konkretnego sekretnego przejscia,\nktóre uważnie zbadałes.\nW każdej rundzie możesz sie obrócic i wykrywac sekretne drzwi na nowym obszarze. Niniejsze\nzaklecie przenika bariery, ale jego działanie blokuje 30 centymetrów kamienia, 2,5 centymetra\nzwykłego metalu, cienka warstwa ołowiu i 0,9 metra drewna lub ziemi."
   },
   {
     "name": "Magiczna broń",
@@ -547,8 +547,8 @@
     "range": "close",
     "target": "jeden zwój lub dwie strony",
     "duration": "instant",
-    "defense": "opis",
-    "shortDescription": "Wymazywanie usuwa zapiski magicznej i zwykłej natury ze zwoju, jednej lub dwóch stron papieru,\npergaminu badz podobnej powierzchni. Za pomoca niniejszego zaklecia możesz sie pozbyc glifu\nstra\u0006niczego, mistycznego znaku, wybuchajacych run czy zygzaku atramentowego we\u0006a, ale nie\niluzorycznego pisma oraz symbolu. Niemagiczne pismo automatycznie ulega wymazaniu, jesli go\ndotkniesz i jeżeli nikt inny nie trzyma w dłoniach kartki, na której zostało spisane. W przeciwnym\nrazie szansa usuniecia niemagicznych zapisków wynosi 90%.\nWymazanie magicznego pisma wymaga dotkniecia go i udanego testu poziomu czarujacego (1k20 +\npoziom czarujacego) o ST 15 (naturalne 1 lub 2 zawsze oznacza porażke w tym tescie). Jeżeli nie uda\nci sie usunac glifu stra\u0006niczego, wybuchajacych run lub zygzaku atramentowego we\u0006a, przypadkowo\nuruchomisz dane zapiski."
+    "defense": "none",
+    "shortDescription": "Wymazywanie usuwa zapiski magicznej i zwykłej natury ze zwoju, jednej lub dwóch stron papieru,\npergaminu badz podobnej powierzchni. Za pomoca niniejszego zaklecia możesz sie pozbyc glifu\nstrażniczego, mistycznego znaku, wybuchajacych run czy zygzaku atramentowego weża, ale nie\niluzorycznego pisma oraz symbolu. Niemagiczne pismo automatycznie ulega wymazaniu, jesli go\ndotkniesz i jeżeli nikt inny nie trzyma w dłoniach kartki, na której zostało spisane. W przeciwnym\nrazie szansa usuniecia niemagicznych zapisków wynosi 90%.\nWymazanie magicznego pisma wymaga dotkniecia go i udanego testu poziomu czarujacego (1k20 +\npoziom czarujacego) o ST 15 (naturalne 1 lub 2 zawsze oznacza porażke w tym tescie). Jeżeli nie uda\nci sie usunac glifu strażniczego, wybuchajacych run lub zygzaku atramentowego weża, przypadkowo\nuruchomisz dane zapiski."
   },
   {
     "name": "Nieprzenikniona mgła",
@@ -622,7 +622,7 @@
     "range": "close",
     "target": "jeden przedmiot lub kwadrat o boku 3m",
     "duration": "1 runda / lvl",
-    "defense": "opis",
+    "defense": "reflex",
     "shortDescription": "Niniejszy czar pokrywa powierzchnie materialna warstwa sliskiego tłuszczu. Każda istota na obszarze\ndziałania zaklecia w chwili jego rzucenia musi wykonac rzut obronny na Refleks – nieudany oznacza\nupadek. Wspomniany rzut obronny stworzenie przebywajace na terenie funkcjonowania czaru\npowtarza w każdej rundzie, w twojej turze. Istota może chodzic po obszarze działania tłuszczu\ni przechodzic przezen z 1/2 normalnej predkosci po wykonaniu udanego testu Zachowania równowagi\no ST 10. Porażka oznacza, iż w danej rundzie nie ma ona prawa sie poruszyc (i musi wykonac rzut\nobronny na Refleks – nieudany oznacza upadek), a porażka o 5 i wiecej swiadczy o upadku (wiecej\ninformacji znajdziesz w opisie umiejetnosci Zachowanie równowagi).\nCzar ten pozwala również pokryc przedmiot warstwa sliskiego tłuszczu. Zawsze działa on na\nmaterialne obiekty, których nikt nie używa. Jesli zas chodzi o przedmiot, który jakas istota trzyma\nw dłoniach lub którego używa, to ma on prawo do rzutu obronnego na Refleks – udany oznacza\nunikniecie efektu. Jeżeli jednak ów pierwszy rzut obronny sie nie powiedzie, stworzenie natychmiast\nupuszcza dany obiekt. Ponadto musi ono wykonywac rzut obronny w każdej rundzie, w której chce\npodniesc lub używac natłuszczonego przedmiotu. Istota majaca na sobie zbroje lub ubranie poddane\ndziałaniu niniejszego czaru otrzymuje premie z okolicznosci +10 do testów Wyzwalania sie i testów\nzwarcia wykonywanych w celu unikniecia lub ucieczki ze zwarcia oraz przyszpilenia.\nKomponent materialny: Kawałek wieprzowej skórki lub masła."
   },
   {

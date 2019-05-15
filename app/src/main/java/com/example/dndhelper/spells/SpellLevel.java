@@ -41,7 +41,7 @@ public class SpellLevel {
 
     boolean learnSpell(Spell spell) throws SpellException {
         if (spell.getLevel() != tierNumber) {
-            throw new SpellException("Incorrect spell level");
+            throw new SpellException("Nie tem poziom czaru!");
         }
 
         return learnedSpells.add(spell);
@@ -49,7 +49,7 @@ public class SpellLevel {
 
     boolean prepareSpell(Spell spell) throws SpellException {
         if (spell.getLevel() != tierNumber) {
-            throw new SpellException("Incorrect spell level");
+            throw new SpellException("Nie tem poziom czaru!");
         }
 
         if (currentDailyCharges > 0) {
@@ -57,7 +57,23 @@ public class SpellLevel {
             return activeSpells.add(spell);
         }
 
-        throw new SpellException("Full on charges!");
+        throw new SpellException("Nie ma już ładunków!");
+    }
+
+    boolean changeSpell(Spell spell) throws SpellException {
+        if (spell.getLevel() != tierNumber) {
+            throw new SpellException("Nie tem poziom czaru!");
+        }
+
+
+        if (currentDailyCharges > 0) {
+            currentDailyCharges--;
+            boolean result = activeSpells.remove(spell);
+            result &= activeSpells.add(spell);
+            return result;
+        }
+
+        throw new SpellException("Nie ma już ładunków!");
     }
 
     int getMaxDailyCharges() {
@@ -71,7 +87,7 @@ public class SpellLevel {
 
     boolean castSpell(Spell spell) throws SpellException {
         if (!activeSpells.remove(spell)) {
-            throw new SpellException("Spell is not present");
+            throw new SpellException("Nie ma tego czaru!");
         }
 
         return true;

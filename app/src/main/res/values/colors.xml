@@ -3,4 +3,14 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="abjuration">#999999</color>
+    <color name="conjuration">#66ffff</color>
+    <color name="divination">#ffff99</color>
+    <color name="enchantment">#ff00ff</color>
+    <color name="evocation">#ff3300</color>
+    <color name="illusion">#339933</color>
+    <color name="necromancy">#666699</color>
+    <color name="transmutation">#009999</color>
+    <color name="universal">#ffffff</color>
 </resources>

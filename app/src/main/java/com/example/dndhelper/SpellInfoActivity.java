@@ -80,6 +80,11 @@ public class SpellInfoActivity extends AppCompatActivity {
                 return "3m";
             case m4point5:
                 return "4.5m";
+            case m6:
+                return "6m";
+            case km1point5:
+                rangeValue = (Character.getInstance().getSpellbook().getSpellClassLevel() * 1.5);
+                return String.format("%skm", rangeValue);
         }
 
         throw new TypeNotPresentException(range.toString(), new Exception());

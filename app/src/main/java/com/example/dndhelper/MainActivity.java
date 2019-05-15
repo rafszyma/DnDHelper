@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setEnumStrings();
+        setEnumColors();
         AllSpells.getInstance().readFromJSON(getResources().openRawResource(R.raw.spells0));
         AllSpells.getInstance().readFromJSON(getResources().openRawResource(R.raw.spells1));
         AllSpells.getInstance().readFromJSON(getResources().openRawResource(R.raw.spells2));
@@ -61,6 +62,18 @@ public class MainActivity extends AppCompatActivity {
         SpellSchool.Necromancy.setValue(getResources().getString(R.string.necromancy_school));
         SpellSchool.Transmutation.setValue(getResources().getString(R.string.transmutation_school));
         SpellSchool.Universal.setValue(getResources().getString(R.string.universal_school));
+    }
+
+    private void setEnumColors() {
+        SpellSchool.Abjuration.setColor(getResources().getColor(R.color.abjuration, null));
+        SpellSchool.Conjuration.setColor(getResources().getColor(R.color.conjuration, null));
+        SpellSchool.Divination.setColor(getResources().getColor(R.color.divination, null));
+        SpellSchool.Enchantment.setColor(getResources().getColor(R.color.enchantment, null));
+        SpellSchool.Evocation.setColor(getResources().getColor(R.color.evocation, null));
+        SpellSchool.Illusion.setColor(getResources().getColor(R.color.illusion, null));
+        SpellSchool.Necromancy.setColor(getResources().getColor(R.color.necromancy, null));
+        SpellSchool.Transmutation.setColor(getResources().getColor(R.color.transmutation, null));
+        SpellSchool.Universal.setColor(getResources().getColor(R.color.universal, null));
     }
 
     private void updateHealthText() {

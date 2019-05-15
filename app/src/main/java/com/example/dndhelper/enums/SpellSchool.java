@@ -33,4 +33,14 @@ public enum SpellSchool {
     public void setValue(final String value) {
         this.value = value;
     }
+
+    private int color;
+
+    public int getColor() {
+        return color;
+    }
+
+    public void setColor(final int value) {
+        this.color = value;
+    }
 }

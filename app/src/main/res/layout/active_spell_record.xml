@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -13,7 +14,7 @@
         android:layout_marginEnd="8dp"
         android:layout_weight="1"
         app:layout_constraintBottom_toBottomOf="@+id/castSpellButton"
-        app:layout_constraintEnd_toStartOf="@+id/castSpellButton"
+        app:layout_constraintEnd_toStartOf="@+id/spellSchoolView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,5 +36,14 @@
         android:layout_marginEnd="@dimen/list_view_horizontal_margin"
         android:text="@string/change_spell"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/spellSchoolView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/list_view_vertical_margin"
+        android:layout_marginEnd="@dimen/list_view_horizontal_margin"
+        app:layout_constraintEnd_toStartOf="@+id/castSpellButton"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

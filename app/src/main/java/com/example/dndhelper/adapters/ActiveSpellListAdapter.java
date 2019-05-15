@@ -27,9 +27,9 @@ public class ActiveSpellListAdapter extends GenericSpellListAdapter {
 
     @Override
     protected View fillCurrentView(View listItem, final Spell currentSpell) {
-        TextView textView = listItem.findViewById(R.id.spellNameView);
-        textView.setText(currentSpell.getName());
-        textView.setOnClickListener(new View.OnClickListener() {
+        TextView spellNameView = listItem.findViewById(R.id.spellNameView);
+        spellNameView.setText(currentSpell.getName());
+        spellNameView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(sContext, SpellInfoActivity.class);
@@ -37,6 +37,10 @@ public class ActiveSpellListAdapter extends GenericSpellListAdapter {
                 sContext.startActivity(intent);
             }
         });
+
+        TextView spellSchoolView = listItem.findViewById(R.id.spellSchoolView);
+        spellSchoolView.setText(currentSpell.getSchool().getValue());
+        spellSchoolView.setBackgroundColor(currentSpell.getSchool().getColor());
 
         Button castSpellButton = listItem.findViewById(R.id.castSpellButton);
         castSpellButton.setOnClickListener(new View.OnClickListener() {
@@ -71,11 +75,12 @@ public class ActiveSpellListAdapter extends GenericSpellListAdapter {
             @Override
             public void onClick(View v) {
                 try {
-                    Character.getInstance().getSpellbook().castSpell(currentSpell);
+                    Character.getInstance().getSpellbook().changeSpell(currentSpell);
+                    ((MainActivity) sContext).prepareSpells(null);
                 } catch (SpellException e) {
                     makeToast(e.getMessage(), Toast.LENGTH_SHORT);
                 }
-                ((MainActivity) sContext).prepareSpells(null);
+
             }
         });
 
