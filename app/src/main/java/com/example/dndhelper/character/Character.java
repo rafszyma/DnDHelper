@@ -16,13 +16,7 @@ public class Character {
     private Health health;
     private Money money;
     private Spellbook spellbook;
-
-    public int getAttributeModificator() {
-        return attributeModificator;
-    }
-
     private int attributeModificator;
-
 
     private Character(int maxHealth, SpellSchool extraSpellSchool, List<SpellSchool> forbiddenedSchools, int attrModificator) {
 
@@ -86,6 +80,10 @@ public class Character {
         }
 
         QurritoCreator.createQurrito();
+    }
+
+    public int getAttributeModificator() {
+        return attributeModificator;
     }
 
     public Health getHealth() {

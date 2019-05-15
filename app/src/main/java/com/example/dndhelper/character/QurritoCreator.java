@@ -1,14 +1,8 @@
 package com.example.dndhelper.character;
 
-import com.example.dndhelper.enums.Class;
-import com.example.dndhelper.enums.SpellComponent;
-import com.example.dndhelper.enums.SpellDefense;
-import com.example.dndhelper.enums.SpellRange;
 import com.example.dndhelper.enums.SpellSchool;
-import com.example.dndhelper.spells.Spell;
 
 import java.util.Arrays;
-import java.util.HashSet;
 
 public class QurritoCreator {
     public static void createQurrito() {

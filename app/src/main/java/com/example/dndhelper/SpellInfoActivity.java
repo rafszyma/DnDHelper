@@ -7,16 +7,17 @@ import android.widget.TextView;
 
 import com.example.dndhelper.character.Character;
 import com.example.dndhelper.enums.SpellComponent;
-import com.example.dndhelper.enums.SpellDefense;
 import com.example.dndhelper.enums.SpellRange;
-import com.example.dndhelper.enums.SpellSchool;
 import com.example.dndhelper.spells.Spell;
 
 import java.util.HashSet;
 
 public class SpellInfoActivity extends AppCompatActivity {
 
+    public static int PREPARED_SPELL = 1;
+    public static int LEARNED_SPELL = 2;
     public static String SPELL_PARCEL_KEY = "spell_parcel_key";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,13 +63,13 @@ public class SpellInfoActivity extends AppCompatActivity {
         switch (range) {
             case Close:
                 rangeValue = 7.5 + ((Character.getInstance().getSpellbook().getSpellClassLevel() >> 1) * 1.5);
-                return String.format("%sm", (int)rangeValue);
+                return String.format("%sm", (int) rangeValue);
             case Medium:
                 rangeValue = 30 + (Character.getInstance().getSpellbook().getSpellClassLevel() * 3);
-                return String.format("%sm", (int)rangeValue);
+                return String.format("%sm", (int) rangeValue);
             case Far:
                 rangeValue = 120 + (Character.getInstance().getSpellbook().getSpellClassLevel() * 12);
-                return String.format("%sm", (int)rangeValue);
+                return String.format("%sm", (int) rangeValue);
             case Touch:
                 return getResources().getString(R.string.touch);
             case Self:

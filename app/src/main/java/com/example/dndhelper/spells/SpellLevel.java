@@ -10,27 +10,36 @@ public class SpellLevel {
     private int tierNumber;
 
     private int maxDailyCharges;
-    private int currentCharges;
+    private int currentDailyCharges;
+
     private HashSet<Spell> learnedSpells;
     private ArrayList<Spell> activeSpells;
 
-    public SpellLevel(int tierNumber) {
+    SpellLevel(int tierNumber) {
         this.tierNumber = tierNumber;
         this.maxDailyCharges = 0;
-        this.currentCharges = this.maxDailyCharges;
+        this.currentDailyCharges = this.maxDailyCharges;
         this.learnedSpells = new HashSet<>();
         this.activeSpells = new ArrayList<>();
     }
 
-    public HashSet<Spell> getLearnedSpells() {
+    void resetDailyCharges() {
+        this.currentDailyCharges = maxDailyCharges;
+    }
+
+    int getCurrentDailyCharges() {
+        return currentDailyCharges;
+    }
+
+    HashSet<Spell> getLearnedSpells() {
         return learnedSpells;
     }
 
-    public ArrayList<Spell> getActiveSpells() {
+    ArrayList<Spell> getActiveSpells() {
         return activeSpells;
     }
 
-    public boolean learnSpell(Spell spell) throws SpellException {
+    boolean learnSpell(Spell spell) throws SpellException {
         if (spell.getLevel() != tierNumber) {
             throw new SpellException("Incorrect spell level");
         }
@@ -38,40 +47,33 @@ public class SpellLevel {
         return learnedSpells.add(spell);
     }
 
-    public boolean prepareSpell(Spell spell) throws SpellException {
+    boolean prepareSpell(Spell spell) throws SpellException {
         if (spell.getLevel() != tierNumber) {
             throw new SpellException("Incorrect spell level");
         }
 
-        if (activeSpells.size() < maxDailyCharges) {
+        if (currentDailyCharges > 0) {
+            currentDailyCharges--;
             return activeSpells.add(spell);
         }
 
         throw new SpellException("Full on charges!");
     }
 
-    public int getTierNumber() {
-        return tierNumber;
-    }
-
-    public int getMaxDailyCharges() {
+    int getMaxDailyCharges() {
         return maxDailyCharges;
     }
 
-    public void modifyDailyCharges(int modificator) {
+    void modifyDailyCharges(int modificator) {
         maxDailyCharges = Math.max(0, maxDailyCharges + modificator);
+        currentDailyCharges = maxDailyCharges;
     }
 
-    public boolean castSpell(Spell spell) throws SpellException {
+    boolean castSpell(Spell spell) throws SpellException {
         if (!activeSpells.remove(spell)) {
             throw new SpellException("Spell is not present");
         }
 
-        currentCharges--;
         return true;
-    }
-
-    public int getCurrentCharges() {
-        return currentCharges;
     }
 }

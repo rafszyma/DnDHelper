@@ -13,6 +13,10 @@ public class Health {
         this.currentHitPoints = maxHitPoints;
     }
 
+    public int getMaxHitPoints() {
+        return maxHitPoints;
+    }
+
     public int getHitPoints() {
         return currentHitPoints;
     }

@@ -129,6 +129,19 @@
         app:layout_constraintStart_toEndOf="@+id/addMoneyButton"
         app:layout_constraintTop_toBottomOf="@+id/moneyModificationsText" />
 
+    <Button
+        android:id="@+id/restButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/new_line"
+        android:layout_marginEnd="0dp"
+        android:onClick="longRest"
+        android:text="@string/rest"
+        app:layout_constraintEnd_toEndOf="@+id/subMoneyButton"
+        app:layout_constraintStart_toStartOf="@+id/addMoneyButton"
+        app:layout_constraintTop_toBottomOf="@+id/addMoneyButton" />
+
     <android.support.design.widget.TabLayout
         android:id="@+id/spellLayout"
         android:layout_width="0dp"

@@ -3,11 +3,7 @@ package com.example.dndhelper.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,7 +17,6 @@ import com.example.dndhelper.enums.SpellDefense;
 import com.example.dndhelper.spells.Spell;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ActiveSpellListAdapter extends GenericSpellListAdapter {
 
@@ -67,7 +62,7 @@ public class ActiveSpellListAdapter extends GenericSpellListAdapter {
                 } catch (SpellException e) {
                     makeToast(e.getMessage(), Toast.LENGTH_SHORT);
                 }
-                ((MainActivity) sContext).notifyFragment();
+                ((MainActivity) sContext).notifySpellCasted();
             }
         });
 

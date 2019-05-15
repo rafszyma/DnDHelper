@@ -11,15 +11,8 @@ public class Spellbook {
     public int spellClassLevel;
     private SpellLevel[] spellLevels;
     private Spell extraSpell;
-
-    public SpellSchool getExtraSpellSchool() {
-        return extraSpellSchool;
-    }
-
     private SpellSchool extraSpellSchool;
     private ArrayList<SpellSchool> forbiddenSchools;
-
-
     public Spellbook(int classLevel, SpellSchool extraSpellSchool, List<SpellSchool> forbiddenSchools) {
         spellClassLevel = classLevel;
         if (extraSpellSchool != SpellSchool.None && forbiddenSchools != null & forbiddenSchools.size() > 0) {
@@ -32,6 +25,18 @@ public class Spellbook {
         for (int i = 0; i < SPELL_LEVELS; i++) {
             spellLevels[i] = new SpellLevel(i);
         }
+    }
+
+    public SpellSchool getExtraSpellSchool() {
+        return extraSpellSchool;
+    }
+
+    public int getMaxSpellLevelCharges(int level) {
+        return spellLevels[level].getMaxDailyCharges();
+    }
+
+    public int getCurrentSpellLevelCharges(int level) {
+        return spellLevels[level].getCurrentDailyCharges();
     }
 
     public boolean learnSpell(Spell spell) throws SpellException {
@@ -64,6 +69,12 @@ public class Spellbook {
 
     public void increaseDailyCharges(int spellLevel, int charges) {
         spellLevels[spellLevel].modifyDailyCharges(charges);
+    }
+
+    public void resetDailyCharges() {
+        for (SpellLevel spellLevel : spellLevels) {
+            spellLevel.resetDailyCharges();
+        }
     }
 
     public boolean setExtraSpell(Spell spell) {

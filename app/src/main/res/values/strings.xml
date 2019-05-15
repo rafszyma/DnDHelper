@@ -2,6 +2,7 @@
     <string name="app_name">DnDHelper</string>
     <string name="add">Dodaj</string>
     <string name="sub">Odejmij</string>
+    <string name="rest">Odpoczynek</string>
 
     <string name="hit_points">Punkty Trafień</string>
     <string name="contusion">Stłuczenia</string>

@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateHealthText() {
         TextView healthTextView = findViewById(R.id.healthStatusTextView);
-        healthTextView.setText(String.format("%s / %s", Character.getInstance().getHealth().getHitPoints(), Character.getInstance().getHealth().getContusion()));
+        healthTextView.setText(String.format("%s / %s / (%s)", Character.getInstance().getHealth().getHitPoints(), Character.getInstance().getHealth().getContusion(), Character.getInstance().getHealth().getMaxHitPoints()));
     }
 
     private void updateMoneyText() {
@@ -87,10 +87,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        notifyFragment();
+        if (resultCode == SpellInfoActivity.LEARNED_SPELL) {
+
+        } else if (resultCode == SpellInfoActivity.PREPARED_SPELL) {
+            fragment.notifySpellChanged();
+            fragment.notifyChargesChanged();
+        }
     }
 
-    public void notifyFragment() {
+    public void notifySpellCasted() {
         fragment.notifySpellChanged();
     }
 
@@ -165,5 +170,13 @@ public class MainActivity extends AppCompatActivity {
     public void learnSpell(View view) {
         TabLayout layout = findViewById(R.id.spellLayout);
         startActivityForResult(SpellListActivity.getIntent(getBaseContext(), layout.getSelectedTabPosition(), SpellListIntent.Learn), 0);
+    }
+
+    public void longRest(View view) {
+        Character.getInstance().getHealth().healDamage(2);
+        Character.getInstance().getSpellbook().resetDailyCharges();
+        updateHealthText();
+        fragment.notifyChargesChanged();
+
     }
 }
