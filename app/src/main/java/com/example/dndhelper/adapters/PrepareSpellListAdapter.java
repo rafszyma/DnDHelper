@@ -11,7 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.dndhelper.PrepareSpellActivity;
+import com.example.dndhelper.SpellListActivity;
 import com.example.dndhelper.R;
 import com.example.dndhelper.SpellInfoActivity;
 import com.example.dndhelper.character.Character;
@@ -21,26 +21,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class PrepareSpellListAdapter extends ArrayAdapter<Spell> {
-
-    private Context sContext;
-    private List<Spell> spellList;
+public class PrepareSpellListAdapter extends GenericSpellListAdapter {
 
     public PrepareSpellListAdapter(@NonNull Context context, ArrayList<Spell> list) {
-        super(context, 0, list);
-        sContext = context;
-        spellList = list;
+        super(context, list);
+        this.layoutId = R.layout.spell_action_record;
     }
 
-    @NonNull
+
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View listItem = convertView;
-        if (listItem == null)
-            listItem = LayoutInflater.from(sContext).inflate(R.layout.learned_spell_record, parent, false);
-
-        final Spell currentSpell = spellList.get(position);
-
+    protected View fillCurrentView(View listItem, final Spell currentSpell) {
         TextView textView = listItem.findViewById(R.id.spellNameView);
         textView.setText(currentSpell.getName());
         textView.setOnClickListener(new View.OnClickListener() {
@@ -52,12 +42,12 @@ public class PrepareSpellListAdapter extends ArrayAdapter<Spell> {
             }
         });
 
-        Button prepareSpellButton = listItem.findViewById(R.id.changeSpellButton);
+        Button prepareSpellButton = listItem.findViewById(R.id.spellActionButton);
         prepareSpellButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Character.getInstance().getSpellbook().prepareSpell(currentSpell);
-                ((PrepareSpellActivity) sContext).finish();
+                ((SpellListActivity) sContext).finish();
             }
         });
 

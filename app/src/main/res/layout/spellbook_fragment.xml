@@ -12,13 +12,13 @@
         android:layout_height="0dp"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/addSpellButton"
+        app:layout_constraintBottom_toTopOf="@+id/prepareSpellButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/addSpellButton"
+        android:id="@+id/prepareSpellButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="0dp"
@@ -26,7 +26,17 @@
         android:onClick="prepareSpells"
         android:text="@string/prepare_spell"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/activeSpellList"
         app:layout_constraintStart_toStartOf="@+id/activeSpellList" />
+
+    <Button
+        android:id="@+id/learnSpellButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:onClick="learnSpell"
+        android:text="@string/learn_spell"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/activeSpellList"
+        app:layout_constraintStart_toEndOf="@+id/prepareSpellButton" />
 
 </android.support.constraint.ConstraintLayout>

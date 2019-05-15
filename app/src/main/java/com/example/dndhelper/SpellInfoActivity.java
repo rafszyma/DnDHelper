@@ -90,13 +90,13 @@ public class SpellInfoActivity extends AppCompatActivity {
         switch (range) {
             case Close:
                 rangeValue = 7.5 + ((Character.getInstance().getSpellbook().getSpellClassLevel() >> 1) * 1.5);
-                return Double.toString(rangeValue);
+                return String.format("%sm", (int)rangeValue);
             case Medium:
                 rangeValue = 30 + (Character.getInstance().getSpellbook().getSpellClassLevel() * 3);
-                return Double.toString(rangeValue);
+                return String.format("%sm", (int)rangeValue);
             case Far:
                 rangeValue = 120 + (Character.getInstance().getSpellbook().getSpellClassLevel() * 12);
-                return Double.toString(rangeValue);
+                return String.format("%sm", (int)rangeValue);
             case Touch:
                 return getResources().getString(R.string.touch);
             case Self:

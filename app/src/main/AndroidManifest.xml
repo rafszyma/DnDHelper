@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SpellInfoActivity"></activity>
-        <activity android:name=".PrepareSpellActivity" />
+        <activity android:name=".SpellListActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

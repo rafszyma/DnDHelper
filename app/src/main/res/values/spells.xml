@@ -11,9 +11,11 @@
     <string name="transmutation_school">Przemiany</string>
     <string name="universal_school">Czary Uniwersalne</string>
 
-    <string name="cast_spell">Rzuć Czar</string>
-    <string name="change_spell">Zmień Czar</string>
-    <string name="prepare_spell">Przygotuj Czar</string>
+    <string name="cast_spell">Rzuć czar</string>
+    <string name="change_spell">Zmień czar</string>
+    <string name="prepare_spell">Przygotuj czar</string>
+    <string name="learn">Naucz się</string>
+    <string name="learn_spell">Naucz się czaru</string>
 
     <string name="somatic">Somatyczny</string>
     <string name="verbal">Werbalny</string>

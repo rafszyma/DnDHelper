@@ -20,26 +20,15 @@ import com.example.dndhelper.spells.Spell;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActiveSpellListAdapter extends ArrayAdapter<Spell> {
-
-    private Context sContext;
-    private List<Spell> spellList;
+public class ActiveSpellListAdapter extends GenericSpellListAdapter {
 
     public ActiveSpellListAdapter(@NonNull Context context, ArrayList<Spell> list) {
-        super(context, 0, list);
-        sContext = context;
-        spellList = list;
+        super(context, list);
+        this.layoutId = R.layout.active_spell_record;
     }
 
-    @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View listItem = convertView;
-        if (listItem == null)
-            listItem = LayoutInflater.from(sContext).inflate(R.layout.active_spell_record, parent, false);
-
-        final Spell currentSpell = spellList.get(position);
-
+    protected View fillCurrentView(View listItem, final Spell currentSpell) {
         TextView textView = listItem.findViewById(R.id.spellNameView);
         textView.setText(currentSpell.getName());
         textView.setOnClickListener(new View.OnClickListener() {
@@ -68,6 +57,7 @@ public class ActiveSpellListAdapter extends ArrayAdapter<Spell> {
                 ((MainActivity) sContext).prepareSpells(null);
             }
         });
+
         return listItem;
     }
 }

@@ -10,13 +10,12 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.dndhelper.character.Character;
+import com.example.dndhelper.enums.SpellListIntent;
 import com.example.dndhelper.spells.AllSpells;
 
 import java.io.FileNotFoundException;
 
 public class MainActivity extends AppCompatActivity {
-    public static String SPELL_KEY = "learnedSpells";
-
     public static String FILENAME = "character";
     // This have to be changed
 
@@ -131,9 +130,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void prepareSpells(View view) {
-        Intent intent = new Intent(getBaseContext(), PrepareSpellActivity.class);
         TabLayout layout = findViewById(R.id.spellLayout);
-        intent.putExtra(SPELL_KEY, layout.getSelectedTabPosition());
-        startActivityForResult(intent, 0);
+        startActivityForResult(SpellListActivity.getIntent(getBaseContext(), layout.getSelectedTabPosition(), SpellListIntent.Prepare), 0);
+    }
+
+    public void learnSpell(View view) {
+        TabLayout layout = findViewById(R.id.spellLayout);
+        startActivityForResult(SpellListActivity.getIntent(getBaseContext(), layout.getSelectedTabPosition(), SpellListIntent.Learn), 0);
     }
 }
