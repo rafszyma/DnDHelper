@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.dndhelper.R;
 import com.example.dndhelper.SpellInfoActivity;
@@ -49,5 +50,10 @@ public abstract class GenericSpellListAdapter extends ArrayAdapter<Spell> {
 
     protected View fillCurrentView(View listItem, Spell currentSpell) {
         return listItem;
+    }
+
+    protected void makeToast(String message, int duration) {
+        Toast toast = Toast.makeText(sContext, message, duration);
+        toast.show();
     }
 }

@@ -1,5 +1,7 @@
 package com.example.dndhelper.spells;
 
+import com.example.dndhelper.SpellException;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 
@@ -28,24 +30,24 @@ public class SpellLevel {
         return activeSpells;
     }
 
-    public boolean learnSpell(Spell spell) {
+    public boolean learnSpell(Spell spell) throws SpellException {
         if (spell.getLevel() != tierNumber) {
-            return false;
+            throw new SpellException("Incorrect spell level");
         }
 
         return learnedSpells.add(spell);
     }
 
-    public boolean prepareSpell(Spell spell) {
+    public boolean prepareSpell(Spell spell) throws SpellException {
         if (spell.getLevel() != tierNumber) {
-            return false;
+            throw new SpellException("Incorrect spell level");
         }
 
         if (activeSpells.size() < maxDailyCharges) {
             return activeSpells.add(spell);
         }
 
-        return false;
+        throw new SpellException("Full on charges!");
     }
 
     public int getTierNumber() {
@@ -60,9 +62,9 @@ public class SpellLevel {
         maxDailyCharges = Math.max(0, maxDailyCharges + modificator);
     }
 
-    public boolean castSpell(Spell spell) {
+    public boolean castSpell(Spell spell) throws SpellException {
         if (!activeSpells.remove(spell)) {
-            return false;
+            throw new SpellException("Spell is not present");
         }
 
         currentCharges--;

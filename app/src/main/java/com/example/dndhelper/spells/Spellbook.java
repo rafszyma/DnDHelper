@@ -1,5 +1,6 @@
 package com.example.dndhelper.spells;
 
+import com.example.dndhelper.SpellException;
 import com.example.dndhelper.enums.SpellSchool;
 
 import java.util.ArrayList;
@@ -10,15 +11,20 @@ public class Spellbook {
     public int spellClassLevel;
     private SpellLevel[] spellLevels;
     private Spell extraSpell;
+
+    public SpellSchool getExtraSpellSchool() {
+        return extraSpellSchool;
+    }
+
     private SpellSchool extraSpellSchool;
-    private ArrayList<SpellSchool> forbiddenedSchools;
+    private ArrayList<SpellSchool> forbiddenSchools;
 
 
     public Spellbook(int classLevel, SpellSchool extraSpellSchool, List<SpellSchool> forbiddenSchools) {
         spellClassLevel = classLevel;
         if (extraSpellSchool != SpellSchool.None && forbiddenSchools != null & forbiddenSchools.size() > 0) {
             this.extraSpellSchool = extraSpellSchool;
-            this.forbiddenedSchools = new ArrayList<>(forbiddenSchools);
+            this.forbiddenSchools = new ArrayList<>(forbiddenSchools);
         }
 
         spellLevels = new SpellLevel[SPELL_LEVELS];
@@ -28,28 +34,28 @@ public class Spellbook {
         }
     }
 
-    public boolean learnSpell(Spell spell) {
+    public boolean learnSpell(Spell spell) throws SpellException {
 
-        if (this.forbiddenedSchools.contains(spell.getSchool())) {
-            return false;
+        if (this.forbiddenSchools.contains(spell.getSchool())) {
+            throw new SpellException("Spell school is forbidden");
         }
 
         spellLevels[spell.getLevel()].learnSpell(spell);
         return true;
     }
 
-    public boolean prepareSpell(Spell spell) {
-        if (this.forbiddenedSchools.contains(spell.getSchool())) {
-            return false;
+    public boolean prepareSpell(Spell spell) throws SpellException {
+        if (this.forbiddenSchools.contains(spell.getSchool())) {
+            throw new SpellException("Spell school is forbidden");
         }
 
         spellLevels[spell.getLevel()].prepareSpell(spell);
         return true;
     }
 
-    public boolean castSpell(Spell spell) {
-        if (this.forbiddenedSchools.contains(spell.getSchool())) {
-            return false;
+    public boolean castSpell(Spell spell) throws SpellException {
+        if (this.forbiddenSchools.contains(spell.getSchool())) {
+            throw new SpellException("Spell school is forbidden");
         }
 
         spellLevels[spell.getLevel()].castSpell(spell);

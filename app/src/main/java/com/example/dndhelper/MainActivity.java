@@ -10,7 +10,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.dndhelper.character.Character;
+import com.example.dndhelper.enums.SpellComponent;
+import com.example.dndhelper.enums.SpellDefense;
 import com.example.dndhelper.enums.SpellListIntent;
+import com.example.dndhelper.enums.SpellSchool;
 import com.example.dndhelper.spells.AllSpells;
 
 import java.io.FileNotFoundException;
@@ -24,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setEnumStrings();
         AllSpells.getInstance().readFromJSON(getResources().openRawResource(R.raw.spells0));
         AllSpells.getInstance().readFromJSON(getResources().openRawResource(R.raw.spells1));
         AllSpells.getInstance().readFromJSON(getResources().openRawResource(R.raw.spells2));
@@ -33,6 +37,30 @@ public class MainActivity extends AppCompatActivity {
         updateHealthText();
         createSpellbook();
 
+    }
+
+    private void setEnumStrings() {
+        SpellDefense.Endurance.setValue(getResources().getString(R.string.endurance));
+        SpellDefense.Reflex.setValue(getResources().getString(R.string.reflex));
+        SpellDefense.Will.setValue(getResources().getString(R.string.will));
+        SpellDefense.None.setValue("-");
+        SpellDefense.TouchAttackMelee.setValue(getResources().getString(R.string.touch_attack_melee));
+        SpellDefense.TouchAttackRanged.setValue(getResources().getString(R.string.touch_attack_range));
+
+        SpellComponent.Focus.setValue(getResources().getString(R.string.focus));
+        SpellComponent.Material.setValue(getResources().getString(R.string.material));
+        SpellComponent.Verbal.setValue(getResources().getString(R.string.verbal));
+        SpellComponent.Somatic.setValue(getResources().getString(R.string.somatic));
+
+        SpellSchool.Abjuration.setValue(getResources().getString(R.string.abjuration_school));
+        SpellSchool.Conjuration.setValue(getResources().getString(R.string.conjuration_school));
+        SpellSchool.Divination.setValue(getResources().getString(R.string.divination_school));
+        SpellSchool.Enchantment.setValue(getResources().getString(R.string.enchantment_school));
+        SpellSchool.Evocation.setValue(getResources().getString(R.string.evocation_school));
+        SpellSchool.Illusion.setValue(getResources().getString(R.string.illusion_school));
+        SpellSchool.Necromancy.setValue(getResources().getString(R.string.necromancy_school));
+        SpellSchool.Transmutation.setValue(getResources().getString(R.string.transmutation_school));
+        SpellSchool.Universal.setValue(getResources().getString(R.string.universal_school));
     }
 
     private void updateHealthText() {

@@ -10,8 +10,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.dndhelper.R;
+import com.example.dndhelper.SpellException;
 import com.example.dndhelper.SpellInfoActivity;
 import com.example.dndhelper.SpellListActivity;
 import com.example.dndhelper.character.Character;
@@ -44,7 +46,11 @@ public class LearnSpellListAdapter extends GenericSpellListAdapter {
         learnSpellButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Character.getInstance().getSpellbook().learnSpell(currentSpell);
+                try {
+                    Character.getInstance().getSpellbook().learnSpell(currentSpell);
+                } catch (SpellException e) {
+                    makeToast(e.getMessage(), Toast.LENGTH_SHORT);
+                }
                 ((SpellListActivity) sContext).finish();
             }
         });

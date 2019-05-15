@@ -688,7 +688,7 @@
       "sorcerer",
       "wizard"
     ],
-    "school": "conjuration",
+    "school": "evocation",
     "components": [
       "verbal",
       "somatic"
@@ -706,7 +706,7 @@
       "sorcerer",
       "wizard"
     ],
-    "school": "conjuration",
+    "school": "evocation",
     "components": [
       "verbal",
       "somatic"
@@ -724,7 +724,7 @@
       "sorcerer",
       "wizard"
     ],
-    "school": "conjuration",
+    "school": "evocation",
     "components": [
       "verbal",
       "somatic",

@@ -10,11 +10,14 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.dndhelper.MainActivity;
 import com.example.dndhelper.R;
+import com.example.dndhelper.SpellException;
 import com.example.dndhelper.SpellInfoActivity;
 import com.example.dndhelper.character.Character;
+import com.example.dndhelper.enums.SpellDefense;
 import com.example.dndhelper.spells.Spell;
 
 import java.util.ArrayList;
@@ -44,7 +47,26 @@ public class ActiveSpellListAdapter extends GenericSpellListAdapter {
         castSpellButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Character.getInstance().getSpellbook().castSpell(currentSpell);
+                try {
+                    Character.getInstance().getSpellbook().castSpell(currentSpell);
+                    SpellDefense currentDefense = currentSpell.getDefense();
+                    if (currentDefense != SpellDefense.None) {
+                        if (currentDefense == SpellDefense.Reflex || currentDefense == SpellDefense.Endurance || currentDefense == SpellDefense.Will) {
+                            int dc = 10 + currentSpell.getLevel() + Character.getInstance().getAttributeModificator();
+                            if (currentSpell.getSchool() == Character.getInstance().getSpellbook().getExtraSpellSchool()) {
+                                dc += 2;
+                            }
+
+                            makeToast(String.format("Rzuciłeś czar z ST %s na %s", dc, currentDefense.getValue()), Toast.LENGTH_LONG);
+                        } else {
+                            makeToast(String.format("Rzuciłeś czar dotykowy, bez KP ze zbroi / tarczy / naturalnego"), Toast.LENGTH_LONG);
+                        }
+                    } else {
+                        makeToast(String.format("Rzuciłeś czar bez obrony"), Toast.LENGTH_LONG);
+                    }
+                } catch (SpellException e) {
+                    makeToast(e.getMessage(), Toast.LENGTH_SHORT);
+                }
                 ((MainActivity) sContext).notifyFragment();
             }
         });
@@ -53,7 +75,11 @@ public class ActiveSpellListAdapter extends GenericSpellListAdapter {
         changeSpellButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Character.getInstance().getSpellbook().castSpell(currentSpell);
+                try {
+                    Character.getInstance().getSpellbook().castSpell(currentSpell);
+                } catch (SpellException e) {
+                    makeToast(e.getMessage(), Toast.LENGTH_SHORT);
+                }
                 ((MainActivity) sContext).prepareSpells(null);
             }
         });

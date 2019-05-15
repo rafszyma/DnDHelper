@@ -22,5 +22,13 @@ public enum SpellSchool {
     @SerializedName("transmutation")
     Transmutation,
     @SerializedName("universal")
-    Universal
+    Universal;
+
+    private String value;
+
+    public void setValue(final String value) {
+        this.value = value;
+    }
+
+    public String getValue() { return value; }
 }

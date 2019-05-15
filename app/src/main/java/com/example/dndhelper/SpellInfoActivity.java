@@ -36,7 +36,7 @@ public class SpellInfoActivity extends AppCompatActivity {
         levelView.setText(Integer.toString(spell.getLevel()));
 
         TextView schoolView = findViewById(R.id.schoolValueSpellView);
-        schoolView.setText(getSpellSchoolString(spell.getSchool()));
+        schoolView.setText(spell.getSchool().getValue());
 
         TextView componentsView = findViewById(R.id.componentsValueSpellView);
         componentsView.setText(getSpellComponentsString(spell.getComponents()));
@@ -51,38 +51,10 @@ public class SpellInfoActivity extends AppCompatActivity {
         durationView.setText(spell.getDuration());
 
         TextView defenseView = findViewById(R.id.defenseValueSpellView);
-        defenseView.setText(getDefenseString(spell.getDefense()));
+        defenseView.setText(spell.getDefense().getValue());
 
         TextView descriptionView = findViewById(R.id.descriptionValueSpellView);
         descriptionView.setText(spell.getShortDescription());
-    }
-
-    private String getSpellSchoolString(SpellSchool school) {
-        switch (school) {
-
-            case None:
-                throw new IllegalArgumentException("Spell have to have school assigned");
-            case Abjuration:
-                return getResources().getString(R.string.abjuration_school);
-            case Conjuration:
-                return getResources().getString(R.string.conjuration_school);
-            case Divination:
-                return getResources().getString(R.string.divination_school);
-            case Enchantment:
-                return getResources().getString(R.string.enchantment_school);
-            case Evocation:
-                return getResources().getString(R.string.evocation_school);
-            case Illusion:
-                return getResources().getString(R.string.illusion_school);
-            case Necromancy:
-                return getResources().getString(R.string.necromancy_school);
-            case Transmutation:
-                return getResources().getString(R.string.transmutation_school);
-            case Universal:
-                return getResources().getString(R.string.universal_school);
-        }
-
-        throw new TypeNotPresentException(school.toString(), new Exception());
     }
 
     private String getSpellRangeString(SpellRange range) {
@@ -112,60 +84,13 @@ public class SpellInfoActivity extends AppCompatActivity {
         throw new TypeNotPresentException(range.toString(), new Exception());
     }
 
-    private String getDefenseString(SpellDefense defense) {
-        switch (defense) {
-            case None:
-                return "-";
-            case Will:
-                return getResources().getString(R.string.will);
-            case Reflex:
-                return getResources().getString(R.string.reflex);
-            case Endurance:
-                return getResources().getString(R.string.endurance);
-            case TouchAttackMelee:
-                return getResources().getString(R.string.touch_attack_melee);
-            case TouchAttackRanged:
-                return getResources().getString(R.string.touch_attack_range);
-        }
-
-        throw new TypeNotPresentException(defense.toString(), new Exception());
-    }
-
     private String getSpellComponentsString(HashSet<SpellComponent> components) {
         String componentString = "";
         for (SpellComponent component : components) {
-            switch (component) {
-
-                case Verbal:
-                    if (componentString.isEmpty()) {
-                        componentString = getResources().getString(R.string.verbal);
-                    } else {
-                        componentString = componentString.concat(", " + getResources().getString(R.string.verbal));
-                    }
-                    break;
-                case Somatic:
-                    if (componentString.isEmpty()) {
-                        componentString = getResources().getString(R.string.somatic);
-                    } else {
-                        componentString = componentString.concat(", " + getResources().getString(R.string.somatic));
-                    }
-                    break;
-                case Material:
-                    if (componentString.isEmpty()) {
-                        componentString = getResources().getString(R.string.material);
-                    } else {
-                        componentString = componentString.concat(", " + getResources().getString(R.string.material));
-                    }
-                    break;
-                case Focus:
-                    if (componentString.isEmpty()) {
-                        componentString = getResources().getString(R.string.focus);
-                    } else {
-                        componentString = componentString.concat(", " + getResources().getString(R.string.focus));
-                    }
-                    break;
-                default:
-                    throw new TypeNotPresentException(component.toString(), new Exception());
+            if (componentString.isEmpty()) {
+                componentString = component.getValue();
+            } else {
+                componentString = componentString.concat(", " + component.getValue());
             }
         }
 

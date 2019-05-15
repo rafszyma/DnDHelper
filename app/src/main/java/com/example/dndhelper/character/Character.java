@@ -17,12 +17,19 @@ public class Character {
     private Money money;
     private Spellbook spellbook;
 
+    public int getAttributeModificator() {
+        return attributeModificator;
+    }
 
-    private Character(int maxHealth, SpellSchool extraSpellSchool, List<SpellSchool> forbiddenedSchools) {
+    private int attributeModificator;
+
+
+    private Character(int maxHealth, SpellSchool extraSpellSchool, List<SpellSchool> forbiddenedSchools, int attrModificator) {
 
         health = new Health(maxHealth);
         money = new Money(0);
         spellbook = new Spellbook(1, extraSpellSchool, forbiddenedSchools);
+        attributeModificator = attrModificator;
     }
 
     public static Character getInstance() {
@@ -33,8 +40,8 @@ public class Character {
         loadCharacter(readFrom);
     }
 
-    public static void createNewCharacter(int maxHealth, SpellSchool extraSpellSchool, List<SpellSchool> forbiddenedSchools) {
-        ourInstance = new Character(maxHealth, extraSpellSchool, forbiddenedSchools);
+    public static void createNewCharacter(int maxHealth, SpellSchool extraSpellSchool, List<SpellSchool> forbiddenedSchools, int attrModif) {
+        ourInstance = new Character(maxHealth, extraSpellSchool, forbiddenedSchools, attrModif);
     }
 
     public static CharacterState getState(int hp) {
