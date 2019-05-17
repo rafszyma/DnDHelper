@@ -14,6 +14,8 @@ import com.example.dndhelper.enums.SpellListIntent;
 import com.example.dndhelper.spells.AllSpells;
 import com.example.dndhelper.spells.Spell;
 
+import java.util.ArrayList;
+
 public class SpellListActivity extends AppCompatActivity {
 
     private static String LEVEL_KEY = "spell_level";
@@ -34,12 +36,15 @@ public class SpellListActivity extends AppCompatActivity {
         Intent intent = getIntent();
         ListView spellList = findViewById(R.id.spellList);
         SpellListIntent listIntent = (SpellListIntent) intent.getSerializableExtra(INTENT_KEY);
-
+        int spellLevel = intent.getIntExtra(LEVEL_KEY, 0);
         ArrayAdapter<Spell> adapter;
         if (listIntent == SpellListIntent.Prepare) {
-            adapter = new PrepareSpellListAdapter(this, Character.getInstance().getSpellbook().getLearnedSpells(intent.getIntExtra(LEVEL_KEY, 0)));
+            adapter = new PrepareSpellListAdapter(this, Character.getInstance().getSpellbook().getLearnedSpells(spellLevel));
         } else {
-            adapter = new LearnSpellListAdapter(this, AllSpells.getInstance().getSpells(intent.getIntExtra(LEVEL_KEY, 0)));
+            ArrayList<Spell> spellsToLearn = AllSpells.getInstance().getSpells(spellLevel);
+            ArrayList<Spell> alreadyKnownSpells = Character.getInstance().getSpellbook().getLearnedSpells(spellLevel);
+            spellsToLearn.removeAll(alreadyKnownSpells);
+            adapter = new LearnSpellListAdapter(this, spellsToLearn);
         }
 
         spellList.setAdapter(adapter);

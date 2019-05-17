@@ -2,6 +2,7 @@ package com.example.dndhelper.spells;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.annotation.NonNull;
 
 import com.example.dndhelper.enums.Class;
 import com.example.dndhelper.enums.SpellComponent;
@@ -118,5 +119,11 @@ public class Spell implements Parcelable {
         dest.writeString(duration);
         dest.writeString(defense.toString());
         dest.writeString(shortDescription);
+    }
+
+    @Override
+    public boolean equals(@NonNull Object obj) {
+        return ((Spell) obj).name.equals(this.name);
+
     }
 }
