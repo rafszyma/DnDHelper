@@ -3,8 +3,6 @@ package com.example.dndhelper.enums;
 import com.google.gson.annotations.SerializedName;
 
 public enum SpellSchool {
-    @SerializedName("none")
-    None,
     @SerializedName("abjuration")
     Abjuration,
     @SerializedName("conjuration")
@@ -22,7 +20,9 @@ public enum SpellSchool {
     @SerializedName("transmutation")
     Transmutation,
     @SerializedName("universal")
-    Universal;
+    Universal,
+    @SerializedName("none")
+    None;
 
     private String value;
 

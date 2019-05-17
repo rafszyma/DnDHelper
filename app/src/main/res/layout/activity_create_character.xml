@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/characterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginTop="0dp"
+        android:text="@string/character_name"
+        app:layout_constraintBottom_toBottomOf="@+id/nameTextInputEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nameTextInputEditText" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/nameTextInputEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vertical_margin"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/characterName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/classTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:text="@string/class_type"
+        app:layout_constraintBottom_toBottomOf="@+id/classSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/classSpinner" />
+
+    <Spinner
+        android:id="@+id/classSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginTop="@dimen/new_line"
+        app:layout_constraintEnd_toEndOf="@+id/nameTextInputEditText"
+        app:layout_constraintStart_toEndOf="@+id/classTextView"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextInputEditText" />
+
+    <TextView
+        android:id="@+id/attributeModifierTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:text="@string/main_attribute_modifier"
+        app:layout_constraintBottom_toBottomOf="@+id/attributeTextInputEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/attributeTextInputEditText" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/attributeTextInputEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginTop="@dimen/new_line"
+        app:layout_constraintEnd_toEndOf="@+id/classSpinner"
+        app:layout_constraintStart_toEndOf="@+id/attributeModifierTextView"
+        app:layout_constraintTop_toBottomOf="@+id/classSpinner" />
+
+    <TextView
+        android:id="@+id/extraSpellSchoolTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:text="@string/extra_school"
+        app:layout_constraintBottom_toBottomOf="@+id/extraSpellSchoolSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/extraSpellSchoolSpinner" />
+
+    <Spinner
+        android:id="@+id/extraSpellSchoolSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginTop="@dimen/new_line"
+        app:layout_constraintEnd_toEndOf="@+id/attributeTextInputEditText"
+        app:layout_constraintStart_toEndOf="@+id/extraSpellSchoolTextView"
+        app:layout_constraintTop_toBottomOf="@+id/attributeTextInputEditText" />
+
+    <TextView
+        android:id="@+id/forbiddenSpellSchool1TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:text="@string/forbidden_school1"
+        app:layout_constraintBottom_toBottomOf="@+id/forbiddenSpellSchool1Spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/forbiddenSpellSchool1Spinner" />
+
+    <Spinner
+        android:id="@+id/forbiddenSpellSchool1Spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginTop="@dimen/new_line"
+        app:layout_constraintEnd_toEndOf="@+id/extraSpellSchoolSpinner"
+        app:layout_constraintStart_toEndOf="@+id/forbiddenSpellSchool1TextView"
+        app:layout_constraintTop_toBottomOf="@+id/extraSpellSchoolSpinner" />
+
+    <TextView
+        android:id="@+id/forbiddenSpellSchool2TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:text="@string/forbidden_school2"
+        app:layout_constraintBottom_toBottomOf="@+id/forbiddenSpellSchool2Spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/forbiddenSpellSchool2Spinner" />
+
+    <Spinner
+        android:id="@+id/forbiddenSpellSchool2Spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginTop="@dimen/new_line"
+        app:layout_constraintEnd_toEndOf="@+id/forbiddenSpellSchool1Spinner"
+        app:layout_constraintStart_toEndOf="@+id/forbiddenSpellSchool2TextView"
+        app:layout_constraintTop_toBottomOf="@+id/forbiddenSpellSchool1Spinner" />
+
+    <Button
+        android:id="@+id/finishButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginTop="@dimen/new_line"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        android:text="@string/create"
+        android:onClick="finishCreating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forbiddenSpellSchool2Spinner" />
+
+
+</android.support.constraint.ConstraintLayout>

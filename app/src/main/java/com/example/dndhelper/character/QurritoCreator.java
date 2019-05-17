@@ -1,12 +1,13 @@
 package com.example.dndhelper.character;
 
+import com.example.dndhelper.enums.Class;
 import com.example.dndhelper.enums.SpellSchool;
 
 import java.util.Arrays;
 
 public class QurritoCreator {
     public static void createQurrito() {
-        Character.createNewCharacter(25, SpellSchool.Evocation, Arrays.asList(SpellSchool.Necromancy, SpellSchool.Conjuration), 4);
+        Character.createNewCharacter("Qurrito", Class.Sorcerer, 25, SpellSchool.Evocation, Arrays.asList(SpellSchool.Necromancy, SpellSchool.Conjuration), 4);
         Character.getInstance().getMoney().addCopper(9409);
         Character.getInstance().getHealth().dealDamage(5);
         Character.getInstance().getSpellbook().increaseDailyCharges(0, 4);

@@ -4,15 +4,58 @@ import com.google.gson.annotations.SerializedName;
 
 public enum Class {
     @SerializedName("bard")
-    Bard,
+    Bard {
+        @Override
+        public int getHitDice() {
+            return 6;
+        }
+    },
+
     @SerializedName("cleric")
-    Cleric,
+    Cleric {
+        @Override
+        public int getHitDice() {
+            return 8;
+        }
+    },
     @SerializedName("druid")
-    Druid,
+    Druid {
+        @Override
+        public int getHitDice() {
+            return 8;
+        }
+    },
     @SerializedName("paladin")
-    Paladin,
+    Paladin {
+        @Override
+        public int getHitDice() {
+            return 10;
+        }
+    },
     @SerializedName("sorcerer")
-    Sorcerer,
+    Sorcerer {
+        @Override
+        public int getHitDice() {
+            return 4;
+        }
+    },
     @SerializedName("wizard")
-    Wizard
+    Wizard {
+        @Override
+        public int getHitDice() {
+            return 4;
+        }
+    };
+
+    private String value;
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(final String value) {
+        this.value = value;
+    }
+
+    public abstract int getHitDice();
 }

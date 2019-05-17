@@ -3,6 +3,7 @@
     <string name="add">Dodaj</string>
     <string name="sub">Odejmij</string>
     <string name="rest">Odpoczynek</string>
+    <string name="create_character">Stwórz nową postać</string>
 
     <string name="hit_points">Punkty Trafień</string>
     <string name="contusion">Stłuczenia</string>
@@ -26,4 +27,19 @@
 
     <string name="touch">Dotyk</string>
     <string name="self">Rzucający</string>
+
+    <string name="character_name">Imię postaci:</string>
+    <string name="class_type">Klasa:</string>
+    <string name="extra_school">Szkoła specjalna:</string>
+    <string name="forbidden_school1">Szkoła zabroniona 1:</string>
+    <string name="forbidden_school2">Szkoła zabroniona 2:</string>
+    <string name="main_attribute_modifier">Modyfikator z atrybutu:</string>
+    <string name="create">Stwórz</string>
+
+    <string name="bard">Bard</string>
+    <string name="cleric">Kapłan</string>
+    <string name="druid">Druid</string>
+    <string name="paladin">Paladyn</string>
+    <string name="sorcerer">Czarodziej</string>
+    <string name="wizard">Zaklinacz</string>
 </resources>
