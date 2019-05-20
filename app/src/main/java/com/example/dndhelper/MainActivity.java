@@ -10,11 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.dndhelper.character.Character;
-import com.example.dndhelper.enums.Class;
-import com.example.dndhelper.enums.SpellComponent;
-import com.example.dndhelper.enums.SpellDefense;
 import com.example.dndhelper.enums.SpellListIntent;
-import com.example.dndhelper.enums.SpellSchool;
 import com.example.dndhelper.spells.AllSpells;
 
 import java.io.FileNotFoundException;
@@ -160,6 +156,10 @@ public class MainActivity extends AppCompatActivity {
         Character.getInstance().getSpellbook().resetDailyCharges();
         updateHealthText();
         fragment.notifyChargesChanged();
+    }
 
+    public void levelUp(View view) {
+        Intent intent = new Intent(this, LevelUpActivity.class);
+        startActivity(intent);
     }
 }

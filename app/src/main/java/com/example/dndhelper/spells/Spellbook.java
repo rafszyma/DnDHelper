@@ -13,6 +13,7 @@ public class Spellbook {
     private Spell extraSpell;
     private SpellSchool extraSpellSchool;
     private ArrayList<SpellSchool> forbiddenSchools;
+
     public Spellbook(int classLevel, SpellSchool extraSpellSchool, List<SpellSchool> forbiddenSchools) {
         spellClassLevel = classLevel;
         if (extraSpellSchool != SpellSchool.None && forbiddenSchools != null & forbiddenSchools.size() > 0) {

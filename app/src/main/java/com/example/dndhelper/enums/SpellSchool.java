@@ -25,6 +25,7 @@ public enum SpellSchool {
     None;
 
     private String value;
+    private int color;
 
     public String getValue() {
         return value;
@@ -33,8 +34,6 @@ public enum SpellSchool {
     public void setValue(final String value) {
         this.value = value;
     }
-
-    private int color;
 
     public int getColor() {
         return color;

@@ -40,6 +40,13 @@
     <string name="cleric">Kapłan</string>
     <string name="druid">Druid</string>
     <string name="paladin">Paladyn</string>
-    <string name="sorcerer">Czarodziej</string>
-    <string name="wizard">Zaklinacz</string>
+    <string name="sorcerer">Zaklinacz</string>
+    <string name="wizard">Czarodziej</string>
+
+    <string name="strength">Siła</string>
+    <string name="dexterity">Zręczność</string>
+    <string name="constitution">Budowa</string>
+    <string name="intelligence">Inteligencja</string>
+    <string name="wisdom">Roztropność</string>
+    <string name="charisma">Charyzma</string>
 </resources>

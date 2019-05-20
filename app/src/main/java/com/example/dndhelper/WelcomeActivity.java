@@ -1,10 +1,9 @@
 package com.example.dndhelper;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.dndhelper.adapters.CharacterListAdapter;
@@ -39,8 +38,8 @@ public class WelcomeActivity extends AppCompatActivity {
 
     public ArrayList<String> getAllCharacters() {
         ArrayList<String> characters = new ArrayList<>();
-        File[] files  = getFilesDir().listFiles();
-        for (File file : files)  {
+        File[] files = getFilesDir().listFiles();
+        for (File file : files) {
             String[] charFile = file.getName().split("_");
             if (charFile.length > 1) {
                 characters.add(charFile[0]);

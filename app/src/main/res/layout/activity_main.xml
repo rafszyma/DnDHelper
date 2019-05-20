@@ -1,182 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/hpTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="@dimen/vertical_margin"
-        android:text="@string/hit_points"
-        app:layout_constraintStart_toStartOf="@+id/healthModificationsText"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/healthStatusTextView"
+    <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="@dimen/between_button_space"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/hpTextView"
-        app:layout_constraintEnd_toEndOf="@+id/healthModificationsText"
-        app:layout_constraintStart_toEndOf="@+id/hpTextView"
-        app:layout_constraintTop_toTopOf="@+id/hpTextView" />
-
-    <EditText
-        android:id="@+id/healthModificationsText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/new_line"
-        android:layout_marginTop="@dimen/horizontal_margin"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/divider"
-        app:layout_constraintStart_toStartOf="@+id/divider"
-        app:layout_constraintTop_toBottomOf="@+id/hpTextView" />
-
-    <Button
-        android:id="@+id/dealDamageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="@dimen/new_line"
-        android:onClick="dealDamage"
-        android:text="@string/damage"
-        app:layout_constraintStart_toStartOf="@+id/healthModificationsText"
-        app:layout_constraintTop_toBottomOf="@+id/healthModificationsText" />
-
-    <Button
-        android:id="@+id/dealContusionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="@dimen/new_line"
-        android:onClick="dealContusion"
-        android:text="@string/contusion"
-        app:layout_constraintStart_toEndOf="@+id/dealDamageButton"
-        app:layout_constraintTop_toBottomOf="@+id/healthModificationsText" />
-
-    <Button
-        android:id="@+id/healButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="@dimen/new_line"
-        android:onClick="healDamage"
-        android:text="@string/heal"
-        app:layout_constraintStart_toEndOf="@+id/dealContusionButton"
-        app:layout_constraintTop_toBottomOf="@+id/healthModificationsText" />
-
-
-    <TextView
-        android:id="@+id/moneyTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/vertical_margin"
-        android:text="@string/money"
-        app:layout_constraintStart_toStartOf="@+id/moneyModificationsText"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
-
-    <TextView
-        android:id="@+id/moneyStatusTextView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/moneyTextView"
-        app:layout_constraintEnd_toEndOf="@+id/moneyModificationsText"
-        app:layout_constraintStart_toEndOf="@+id/moneyTextView"
-        app:layout_constraintTop_toTopOf="@+id/moneyTextView" />
-
-    <EditText
-        android:id="@+id/moneyModificationsText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/new_line"
-        android:layout_marginTop="@dimen/new_line"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/divider"
-        app:layout_constraintStart_toStartOf="@+id/divider"
-        app:layout_constraintTop_toBottomOf="@+id/moneyTextView" />
-
-    <Button
-        android:id="@+id/addMoneyButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="@dimen/new_line"
-        android:onClick="addMoney"
-        android:text="@string/add"
-        app:layout_constraintStart_toStartOf="@+id/moneyModificationsText"
-        app:layout_constraintTop_toBottomOf="@+id/moneyModificationsText" />
-
-    <Button
-        android:id="@+id/subMoneyButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="@dimen/new_line"
-        android:layout_marginEnd="0dp"
-        android:onClick="subMoney"
-        android:text="@string/sub"
-        app:layout_constraintEnd_toEndOf="@+id/moneyModificationsText"
-        app:layout_constraintStart_toEndOf="@+id/addMoneyButton"
-        app:layout_constraintTop_toBottomOf="@+id/moneyModificationsText" />
-
-    <Button
-        android:id="@+id/restButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="@dimen/new_line"
-        android:layout_marginEnd="0dp"
-        android:onClick="longRest"
-        android:text="@string/rest"
-        app:layout_constraintEnd_toEndOf="@+id/subMoneyButton"
-        app:layout_constraintStart_toStartOf="@+id/addMoneyButton"
-        app:layout_constraintTop_toBottomOf="@+id/addMoneyButton" />
-
-    <android.support.design.widget.TabLayout
-        android:id="@+id/spellLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="@dimen/new_row"
-        android:layout_marginTop="@dimen/vertical_margin"
-        android:layout_marginEnd="@dimen/horizontal_margin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/divider"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <fragment
-        android:id="@+id/fragment"
-        android:name="com.example.dndhelper.SpellbookFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="@dimen/new_row"
-        android:layout_marginEnd="@dimen/horizontal_margin"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/spellLayout"
-        app:layout_constraintStart_toEndOf="@+id/healButton"
-        app:layout_constraintTop_toBottomOf="@+id/spellLayout" />
-
-    <View
-        android:id="@+id/divider"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintEnd_toStartOf="@+id/fragment"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dealContusionButton" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/hpTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:text="@string/hit_points"
+                app:layout_constraintStart_toStartOf="@+id/healthModificationsText"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/healthStatusTextView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/between_button_space"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/hpTextView"
+                app:layout_constraintEnd_toEndOf="@+id/healthModificationsText"
+                app:layout_constraintStart_toEndOf="@+id/hpTextView"
+                app:layout_constraintTop_toTopOf="@+id/hpTextView" />
+
+            <EditText
+                android:id="@+id/healthModificationsText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/new_line"
+                android:layout_marginTop="@dimen/horizontal_margin"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="@+id/divider"
+                app:layout_constraintStart_toStartOf="@+id/divider"
+                app:layout_constraintTop_toBottomOf="@+id/hpTextView" />
+
+            <Button
+                android:id="@+id/dealDamageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="@dimen/new_line"
+                android:onClick="dealDamage"
+                android:text="@string/damage"
+                app:layout_constraintStart_toStartOf="@+id/healthModificationsText"
+                app:layout_constraintTop_toBottomOf="@+id/healthModificationsText" />
+
+            <Button
+                android:id="@+id/dealContusionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="@dimen/new_line"
+                android:onClick="dealContusion"
+                android:text="@string/contusion"
+                app:layout_constraintStart_toEndOf="@+id/dealDamageButton"
+                app:layout_constraintTop_toBottomOf="@+id/healthModificationsText" />
+
+            <Button
+                android:id="@+id/healButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="@dimen/new_line"
+                android:onClick="healDamage"
+                android:text="@string/heal"
+                app:layout_constraintStart_toEndOf="@+id/dealContusionButton"
+                app:layout_constraintTop_toBottomOf="@+id/healthModificationsText" />
+
+
+            <TextView
+                android:id="@+id/moneyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:text="@string/money"
+                app:layout_constraintStart_toStartOf="@+id/moneyModificationsText"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <TextView
+                android:id="@+id/moneyStatusTextView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/moneyTextView"
+                app:layout_constraintEnd_toEndOf="@+id/moneyModificationsText"
+                app:layout_constraintStart_toEndOf="@+id/moneyTextView"
+                app:layout_constraintTop_toTopOf="@+id/moneyTextView" />
+
+            <EditText
+                android:id="@+id/moneyModificationsText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/new_line"
+                android:layout_marginTop="@dimen/new_line"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="@+id/divider"
+                app:layout_constraintStart_toStartOf="@+id/divider"
+                app:layout_constraintTop_toBottomOf="@+id/moneyTextView" />
+
+            <Button
+                android:id="@+id/addMoneyButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="@dimen/new_line"
+                android:onClick="addMoney"
+                android:text="@string/add"
+                app:layout_constraintStart_toStartOf="@+id/moneyModificationsText"
+                app:layout_constraintTop_toBottomOf="@+id/moneyModificationsText" />
+
+            <Button
+                android:id="@+id/subMoneyButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="@dimen/new_line"
+                android:layout_marginEnd="0dp"
+                android:onClick="subMoney"
+                android:text="@string/sub"
+                app:layout_constraintEnd_toEndOf="@+id/moneyModificationsText"
+                app:layout_constraintStart_toEndOf="@+id/addMoneyButton"
+                app:layout_constraintTop_toBottomOf="@+id/moneyModificationsText" />
+
+            <Button
+                android:id="@+id/restButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="@dimen/new_line"
+                android:layout_marginEnd="0dp"
+                android:onClick="longRest"
+                android:text="@string/rest"
+                app:layout_constraintEnd_toEndOf="@+id/subMoneyButton"
+                app:layout_constraintStart_toStartOf="@+id/addMoneyButton"
+                app:layout_constraintTop_toBottomOf="@+id/addMoneyButton" />
+
+            <Button
+                android:id="@+id/levelUpButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="@dimen/new_line"
+                android:layout_marginEnd="0dp"
+                android:onClick="levelUp"
+                android:text="@string/rest"
+                app:layout_constraintEnd_toEndOf="@+id/restButton"
+                app:layout_constraintStart_toStartOf="@+id/restButton"
+                app:layout_constraintTop_toBottomOf="@+id/restButton" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/spellLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/new_row"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/divider"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <fragment
+                android:id="@+id/fragment"
+                android:name="com.example.dndhelper.SpellbookFragment"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/new_row"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/spellLayout"
+                app:layout_constraintStart_toEndOf="@+id/healButton"
+                app:layout_constraintTop_toBottomOf="@+id/spellLayout" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toStartOf="@+id/fragment"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dealContusionButton" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
 
 </android.support.constraint.ConstraintLayout>

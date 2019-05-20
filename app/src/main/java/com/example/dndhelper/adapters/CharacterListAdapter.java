@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import com.example.dndhelper.R;
 import com.example.dndhelper.WelcomeActivity;
-import com.example.dndhelper.spells.Spell;
 
 import java.util.ArrayList;
 
@@ -39,7 +38,7 @@ public class CharacterListAdapter extends ArrayAdapter<String> {
         characterTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((WelcomeActivity)sContext).openCharacter(currentCharacter);
+                ((WelcomeActivity) sContext).openCharacter(currentCharacter);
             }
         });
 

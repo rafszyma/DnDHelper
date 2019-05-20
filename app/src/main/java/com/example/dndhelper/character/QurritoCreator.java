@@ -7,7 +7,8 @@ import java.util.Arrays;
 
 public class QurritoCreator {
     public static void createQurrito() {
-        Character.createNewCharacter("Qurrito", Class.Sorcerer, 25, SpellSchool.Evocation, Arrays.asList(SpellSchool.Necromancy, SpellSchool.Conjuration), 4);
+        // 25 hp
+        Character.createNewCharacter("Qurrito", Class.Wizard, SpellSchool.Evocation, Arrays.asList(SpellSchool.Necromancy, SpellSchool.Conjuration), new Attributes(10, 18, 12, 18, 12, 7));
         Character.getInstance().getMoney().addCopper(9409);
         Character.getInstance().getHealth().dealDamage(5);
         Character.getInstance().getSpellbook().increaseDailyCharges(0, 4);

@@ -13,21 +13,20 @@ import java.io.FileReader;
 import java.util.List;
 
 public class Character {
+    private static Character ourInstance;
     private String characterName;
     private CharacterClasses classes;
-    private static Character ourInstance;
     private Health health;
     private Money money;
     private Spellbook spellbook;
-    private int attributeModificator;
-
-    private Character(String name, Class characterClass, int maxHealth, SpellSchool extraSpellSchool, List<SpellSchool> forbiddenedSchools, int attrModificator) {
+    private Attributes attributes;
+    private Character(String name, Class characterClass, SpellSchool extraSpellSchool, List<SpellSchool> forbiddenedSchools, Attributes attr) {
         classes = new CharacterClasses(characterClass);
         characterName = name;
-        health = new Health(maxHealth);
+        health = new Health(characterClass.getHitDice() + attr.getConstitutionModifier());
         money = new Money(0);
         spellbook = new Spellbook(1, extraSpellSchool, forbiddenedSchools);
-        attributeModificator = attrModificator;
+        attributes = attr;
     }
 
     public static Character getInstance() {
@@ -38,16 +37,8 @@ public class Character {
         loadCharacter(readFrom);
     }
 
-    public String getCharacterFileName() {
-        return String.format("%s_character", characterName);
-    }
-
-    public String getCharacterName() {
-        return characterName;
-    }
-
-    public static void createNewCharacter(String name, Class characterClass, int maxHealth, SpellSchool extraSpellSchool, List<SpellSchool> forbiddenedSchools, int attrModif) {
-        ourInstance = new Character(name, characterClass, maxHealth, extraSpellSchool, forbiddenedSchools, attrModif);
+    public static void createNewCharacter(String name, Class characterClass, SpellSchool extraSpellSchool, List<SpellSchool> forbiddenedSchools, Attributes attr) {
+        ourInstance = new Character(name, characterClass, extraSpellSchool, forbiddenedSchools, attr);
     }
 
     public static CharacterState getState(int hp) {
@@ -95,8 +86,20 @@ public class Character {
         QurritoCreator.createQurrito();
     }
 
-    public int getAttributeModificator() {
-        return attributeModificator;
+    public Class getSpellClass() {
+        return classes.getSpellingClass();
+    }
+
+    public Attributes getAttributes() {
+        return attributes;
+    }
+
+    public String getCharacterFileName() {
+        return String.format("%s_character", characterName);
+    }
+
+    public String getCharacterName() {
+        return characterName;
     }
 
     public Health getHealth() {

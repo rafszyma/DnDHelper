@@ -51,7 +51,7 @@ public class ActiveSpellListAdapter extends GenericSpellListAdapter {
                     SpellDefense currentDefense = currentSpell.getDefense();
                     if (currentDefense != SpellDefense.None) {
                         if (currentDefense == SpellDefense.Reflex || currentDefense == SpellDefense.Endurance || currentDefense == SpellDefense.Will) {
-                            int dc = 10 + currentSpell.getLevel() + Character.getInstance().getAttributeModificator();
+                            int dc = 10 + currentSpell.getLevel() + Character.getInstance().getSpellClass().getAttributeModificator();
                             if (currentSpell.getSchool() == Character.getInstance().getSpellbook().getExtraSpellSchool()) {
                                 dc += 2;
                             }
