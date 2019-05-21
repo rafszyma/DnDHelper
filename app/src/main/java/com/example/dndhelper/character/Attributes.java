@@ -70,4 +70,8 @@ public class Attributes {
     public int getCharismaModifier() {
         return (Charisma - 10) / 2;
     }
+
+    public static int getExtraChargesForSpellLevel(int spellLevel, int modifier) {
+
+    }
 }

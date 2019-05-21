@@ -1,6 +1,7 @@
 package com.example.dndhelper.spells;
 
 import com.example.dndhelper.SpellException;
+import com.example.dndhelper.enums.Class;
 import com.example.dndhelper.enums.SpellSchool;
 
 import java.util.ArrayList;
@@ -73,8 +74,8 @@ public class Spellbook {
         return true;
     }
 
-    public void increaseDailyCharges(int spellLevel, int charges) {
-        spellLevels[spellLevel].modifyDailyCharges(charges);
+    public void modifyClassCharges(int spellLevel, int charges) {
+
     }
 
     public void resetDailyCharges() {

@@ -29,6 +29,10 @@ public class Character {
         attributes = attr;
     }
 
+    public CharacterClasses getClasses() {
+        return classes;
+    }
+
     public static Character getInstance() {
         return ourInstance;
     }
@@ -121,5 +125,11 @@ public class Character {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void levelUp(int hitDice, Class classToLevel) {
+        this.health.levelUp(hitDice + this.attributes.getConstitutionModifier());
+        int newClassLevel = this.classes.levelUpClass(classToLevel);
+        this.getSpellbook().modifyClassCharges(classToLevel, newClassLevel, classToLevel.getAttributeModificator());
     }
 }

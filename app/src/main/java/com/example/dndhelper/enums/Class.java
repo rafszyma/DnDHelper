@@ -3,6 +3,8 @@ package com.example.dndhelper.enums;
 import com.example.dndhelper.character.Character;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
+
 public enum Class {
     @SerializedName("bard")
     Bard {
@@ -93,6 +95,23 @@ public enum Class {
     @SerializedName("wizard")
     Wizard {
         @Override
+        public void levelUpClass(int newLevel) throws Exception {
+            if (newLevel >= 19) {
+                throw new Exception("does not support those levels yet");
+            }
+
+            int initialCharges = 1;
+            // TODO check this magic
+            int spellLevels = (newLevel + 1) / 2 + 1;
+            for (int i = spellLevels; i > 0 ; i--) {
+                Character.getInstance().getSpellbook().modifyClassCharges(i, initialCharges);
+                if (initialCharges <= 4) {
+                    initialCharges++;
+                }
+            }
+        }
+
+        @Override
         public int getHitDice() {
             return 4;
         }
@@ -110,6 +129,8 @@ public enum Class {
 
     private String value;
 
+    private static final int SPELL_LEVELS = 10;
+
     public String getValue() {
         return value;
     }
@@ -118,9 +139,20 @@ public enum Class {
         this.value = value;
     }
 
+    public abstract void levelUpClass(int newLevel) throws Exception;
+
     public abstract int getHitDice();
 
     public abstract int getAttributeModificator();
 
     public abstract boolean isSpellingClass();
+
+    public static ArrayList<String> getClassNames() {
+        ArrayList<String> classNames = new ArrayList<>();
+        for (Class myClass : Class.values()) {
+            classNames.add(myClass.getValue());
+        }
+
+        return classNames;
+    }
 }

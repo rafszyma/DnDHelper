@@ -17,6 +17,11 @@ public class Health {
         return maxHitPoints;
     }
 
+    void levelUp(int newMaxHitPoints) {
+        this.maxHitPoints = this.maxHitPoints + newMaxHitPoints;
+        this.currentHitPoints = this.currentHitPoints / this.maxHitPoints * newMaxHitPoints + this.currentHitPoints;
+    }
+
     public int getHitPoints() {
         return currentHitPoints;
     }

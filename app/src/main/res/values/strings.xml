@@ -4,6 +4,7 @@
     <string name="sub">Odejmij</string>
     <string name="rest">Odpoczynek</string>
     <string name="create_character">Stwórz nową postać</string>
+    <string name="level_up">Level up!</string>
 
     <string name="hit_points">Punkty Trafień</string>
     <string name="contusion">Stłuczenia</string>

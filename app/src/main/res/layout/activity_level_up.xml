@@ -6,4 +6,69 @@
     android:layout_height="match_parent"
     tools:context=".LevelUpActivity">
 
+    <TextView
+        android:id="@+id/headerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        android:layout_marginTop="@dimen/vertical_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginTop="@dimen/new_line"
+        app:layout_constraintEnd_toEndOf="@+id/headerView"
+        app:layout_constraintStart_toEndOf="@+id/classTextView"
+        app:layout_constraintTop_toBottomOf="@+id/headerView" />
+
+    <TextView
+        android:id="@+id/classTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="@dimen/new_line"
+        android:layout_marginBottom="0dp"
+        android:text="@string/class_type"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner"
+        app:layout_constraintStart_toStartOf="@+id/headerView"
+        app:layout_constraintTop_toBottomOf="@+id/headerView" />
+
+    <TextView
+        android:id="@+id/hitDiceTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/hit_points"
+        app:layout_constraintBottom_toBottomOf="@+id/hitDiceInputEditText"
+        app:layout_constraintStart_toStartOf="@+id/classTextView"
+        app:layout_constraintTop_toTopOf="@+id/hitDiceInputEditText" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/hitDiceInputEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginTop="@dimen/new_line"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintStart_toEndOf="@+id/hitDiceTextView"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <Button
+        android:id="@+id/finishButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="@dimen/new_line"
+        android:layout_marginEnd="0dp"
+        android:text="@string/level_up"
+        android:onClick="finishLeveling"
+        app:layout_constraintEnd_toEndOf="@+id/hitDiceInputEditText"
+        app:layout_constraintStart_toStartOf="@+id/hitDiceTextView"
+        app:layout_constraintTop_toBottomOf="@+id/hitDiceInputEditText" />
 </android.support.constraint.ConstraintLayout>

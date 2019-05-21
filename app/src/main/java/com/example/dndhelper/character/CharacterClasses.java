@@ -17,7 +17,7 @@ public class CharacterClasses {
         }
     }
 
-    public void levelUpClass(Class classToLevelUp) {
+    public int levelUpClass(Class classToLevelUp) {
         if (classToLevelUp.isSpellingClass()) {
             spellingClass = classToLevelUp;
         }
@@ -26,10 +26,11 @@ public class CharacterClasses {
             Integer currentLevel = classMap.get(classToLevelUp);
             currentLevel++;
             classMap.put(classToLevelUp, currentLevel);
-            return;
+            return currentLevel;
         }
 
         classMap.put(classToLevelUp, 1);
+        return 1;
     }
 
     public int getLevelForClass(Class characterClass) {
@@ -38,6 +39,15 @@ public class CharacterClasses {
         }
 
         return -1;
+    }
+
+    public int getOverallLevel() {
+        int overallLevel = 0;
+        for (int classLevel : this.classMap.values()) {
+            overallLevel += classLevel;
+        }
+
+        return overallLevel;
     }
 
     public Class getSpellingClass() {

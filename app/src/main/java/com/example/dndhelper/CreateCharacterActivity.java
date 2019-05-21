@@ -33,7 +33,7 @@ public class CreateCharacterActivity extends AppCompatActivity {
 
     private void setValues() {
         classSpinner = findViewById(R.id.classSpinner);
-        SpinnerAdapter classSpinnerAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, getClassNames());
+        SpinnerAdapter classSpinnerAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, Class.getClassNames());
         classSpinner.setAdapter(classSpinnerAdapter);
 
         extraSpellSchoolSpinner = findViewById(R.id.extraSpellSchoolSpinner);
@@ -47,15 +47,6 @@ public class CreateCharacterActivity extends AppCompatActivity {
         forbiddenSpellSchool2Spinner.setAdapter(spellSchoolAdapter);
 
 
-    }
-
-    private ArrayList<String> getClassNames() {
-        ArrayList<String> classNames = new ArrayList<>();
-        for (Class myClass : Class.values()) {
-            classNames.add(myClass.getValue());
-        }
-
-        return classNames;
     }
 
     private ArrayList<String> getSpellSchools() {
