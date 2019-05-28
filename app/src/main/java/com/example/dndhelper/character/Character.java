@@ -130,6 +130,6 @@ public class Character {
     public void levelUp(int hitDice, Class classToLevel) {
         this.health.levelUp(hitDice + this.attributes.getConstitutionModifier());
         int newClassLevel = this.classes.levelUpClass(classToLevel);
-        this.getSpellbook().modifyClassCharges(classToLevel, newClassLevel, classToLevel.getAttributeModificator());
+        this.getSpellbook().modifyClassCharges(classToLevel.generateSpellChargesList(newClassLevel));
     }
 }

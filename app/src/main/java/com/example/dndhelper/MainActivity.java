@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.dndhelper.character.Character;
+import com.example.dndhelper.enums.Class;
 import com.example.dndhelper.enums.SpellListIntent;
 import com.example.dndhelper.spells.AllSpells;
 
@@ -98,6 +99,12 @@ public class MainActivity extends AppCompatActivity {
             spellbook.addTab(spellbook.newTab().setText(cs));
         }
 
+        if (Character.getInstance().getSpellClass() == Class.Wizard) {
+            CharSequence cs = "EXTRA";
+            spellbook.addTab(spellbook.newTab().setText(cs));
+            // TODO fix it
+        }
+
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         fragment = SpellbookFragment.newInstance(0);
         ft.replace(R.id.fragment, fragment);
@@ -139,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
         if (layout.getSelectedTabPosition() < 0) {
             return;
         }
+
         startActivityForResult(SpellListActivity.getIntent(getBaseContext(), layout.getSelectedTabPosition(), SpellListIntent.Prepare), 0);
     }
 
@@ -149,6 +157,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         startActivityForResult(SpellListActivity.getIntent(getBaseContext(), layout.getSelectedTabPosition(), SpellListIntent.Learn), 0);
+    }
+
+    public void prepareExtra(View view) {
+        TabLayout layout = findViewById(R.id.spellLayout);
+        if (layout.getSelectedTabPosition() < 0) {
+            return;
+        }
+
+        startActivityForResult(SpellListActivity.getIntent(getBaseContext(), layout.getSelectedTabPosition(), SpellListIntent.SetExtra), 0);
     }
 
     public void longRest(View view) {

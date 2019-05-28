@@ -1,5 +1,6 @@
 package com.example.dndhelper.enums;
 
+import com.example.dndhelper.character.Attributes;
 import com.example.dndhelper.character.Character;
 import com.google.gson.annotations.SerializedName;
 
@@ -8,6 +9,11 @@ import java.util.ArrayList;
 public enum Class {
     @SerializedName("bard")
     Bard {
+        @Override
+        public int[] generateSpellChargesList(int newLevel) {
+            return new int[0];
+        }
+
         @Override
         public int getHitDice() {
             return 6;
@@ -27,6 +33,11 @@ public enum Class {
     @SerializedName("cleric")
     Cleric {
         @Override
+        public int[] generateSpellChargesList(int newLevel) {
+            return new int[0];
+        }
+
+        @Override
         public int getHitDice() {
             return 8;
         }
@@ -43,6 +54,11 @@ public enum Class {
     },
     @SerializedName("druid")
     Druid {
+        @Override
+        public int[] generateSpellChargesList(int newLevel) {
+            return new int[0];
+        }
+
         @Override
         public int getHitDice() {
             return 8;
@@ -61,6 +77,43 @@ public enum Class {
     @SerializedName("paladin")
     Paladin {
         @Override
+        public int[] generateSpellChargesList(int newLevel) {
+            int[][]spellMatrix = new int[][] {
+                    {0, 0, 0, 0, 0 },
+                    {0, 0, 0, 0, 0 },
+                    {0, 0, 0, 0, 0 },
+                    {0, 0, 0, 0, 0 },
+                    {0, 0, 0, 0, 0 },
+                    {0, 1, 0, 0, 0 },
+                    {0, 1, 0, 0, 0 },
+                    {0, 1, 0, 0, 0 },
+                    {0, 1, 0, 0, 0 },
+                    {0, 1, 1, 0, 0 },
+                    {0, 1, 1, 0, 0 },
+                    {0, 1, 1, 1, 0 },
+                    {0, 1, 1, 1, 0 },
+                    {0, 2, 1, 1, 0 },
+                    {0, 2, 1, 1, 1 },
+                    {0, 2, 2, 1, 1 },
+                    {0, 2, 2, 2, 1 },
+                    {0, 3, 2, 2, 1 },
+                    {0, 3, 3, 3, 2 },
+                    {0, 3, 3, 3, 3 }
+            };
+
+            int[] spellCharges = spellMatrix[newLevel];
+            for (int i = 1 ; i < SPELL_LEVELS; i++) {
+                if (spellCharges[i] > 0) {
+                    spellCharges[i] = spellCharges[i] + Attributes.getExtraChargesForSpellLevel(i, getAttributeModificator());
+                } else {
+                    break;
+                }
+            }
+
+            return spellCharges;
+        }
+
+        @Override
         public int getHitDice() {
             return 10;
         }
@@ -77,6 +130,43 @@ public enum Class {
     },
     @SerializedName("sorcerer")
     Sorcerer {
+        @Override
+        public int[] generateSpellChargesList(int newLevel) {
+            int[][]spellMatrix = new int[][] {
+                    {5, 3, 0, 0, 0, 0, 0, 0, 0, 0},
+                    {6, 4, 0, 0, 0, 0, 0, 0, 0, 0},
+                    {6, 5, 0, 0, 0, 0, 0, 0, 0, 0},
+                    {6, 6, 3, 0, 0, 0, 0, 0, 0, 0},
+                    {6, 6, 4, 0, 0, 0, 0, 0, 0, 0},
+                    {6, 6, 5, 3, 0, 0, 0, 0, 0, 0},
+                    {6, 6, 6, 4, 0, 0, 0, 0, 0, 0},
+                    {6, 6, 6, 5, 3, 0, 0, 0, 0, 0},
+                    {6, 6, 6, 6, 4, 0, 0, 0, 0, 0},
+                    {6, 6, 6, 6, 5, 3, 0, 0, 0, 0},
+                    {6, 6, 6, 6, 6, 4, 0, 0, 0, 0},
+                    {6, 6, 6, 6, 6, 5, 3, 0, 0, 0},
+                    {6, 6, 6, 6, 6, 6, 4, 0, 0, 0},
+                    {6, 6, 6, 6, 6, 6, 5, 3, 0, 0},
+                    {6, 6, 6, 6, 6, 6, 6, 4, 0, 0},
+                    {6, 6, 6, 6, 6, 6, 6, 5, 3, 0},
+                    {6, 6, 6, 6, 6, 6, 6, 6, 4, 0},
+                    {6, 6, 6, 6, 6, 6, 6, 6, 5, 3},
+                    {6, 6, 6, 6, 6, 6, 6, 6, 6, 4},
+                    {6, 6, 6, 6, 6, 6, 6, 6, 6, 6}
+            };
+
+            int[] spellCharges = spellMatrix[newLevel];
+            for (int i = 1 ; i < SPELL_LEVELS; i++) {
+                if (spellCharges[i] > 0) {
+                    spellCharges[i] = spellCharges[i] + Attributes.getExtraChargesForSpellLevel(i, getAttributeModificator());
+                } else {
+                    break;
+                }
+            }
+
+            return spellCharges;
+        }
+
         @Override
         public int getHitDice() {
             return 4;
@@ -95,20 +185,41 @@ public enum Class {
     @SerializedName("wizard")
     Wizard {
         @Override
-        public void levelUpClass(int newLevel) throws Exception {
-            if (newLevel >= 19) {
-                throw new Exception("does not support those levels yet");
-            }
+        public int[] generateSpellChargesList(int newLevel) {
+            int[][]spellMatrix = new int[][] {
+                    {3, 1, 0, 0, 0, 0, 0, 0, 0, 0},
+                    {4, 2, 0, 0, 0, 0, 0, 0, 0, 0},
+                    {4, 2, 1, 0, 0, 0, 0, 0, 0, 0},
+                    {4, 3, 2, 0, 0, 0, 0, 0, 0, 0},
+                    {4, 3, 2, 1, 0, 0, 0, 0, 0, 0},
+                    {4, 3, 3, 2, 0, 0, 0, 0, 0, 0},
+                    {4, 4, 3, 2, 1, 0, 0, 0, 0, 0},
+                    {4, 4, 3, 3, 2, 0, 0, 0, 0, 0},
+                    {4, 4, 4, 3, 2, 1, 0, 0, 0, 0},
+                    {4, 4, 4, 3, 3, 2, 0, 0, 0, 0},
+                    {4, 4, 4, 4, 3, 2, 1, 0, 0, 0},
+                    {4, 4, 4, 4, 3, 3, 2, 0, 0, 0},
+                    {4, 4, 4, 4, 4, 3, 2, 1, 0, 0},
+                    {4, 4, 4, 4, 4, 3, 3, 2, 0, 0},
+                    {4, 4, 4, 4, 4, 4, 3, 2, 1, 0},
+                    {4, 4, 4, 4, 4, 4, 3, 3, 2, 0},
+                    {4, 4, 4, 4, 4, 4, 4, 3, 2, 1},
+                    {4, 4, 4, 4, 4, 4, 4, 3, 3, 2},
+                    {4, 4, 4, 4, 4, 4, 4, 4, 3, 3},
+                    {4, 4, 4, 4, 4, 4, 4, 4, 4, 4},
 
-            int initialCharges = 1;
-            // TODO check this magic
-            int spellLevels = (newLevel + 1) / 2 + 1;
-            for (int i = spellLevels; i > 0 ; i--) {
-                Character.getInstance().getSpellbook().modifyClassCharges(i, initialCharges);
-                if (initialCharges <= 4) {
-                    initialCharges++;
+            };
+
+            int[] spellCharges = spellMatrix[newLevel];
+            for (int i = 1 ; i < SPELL_LEVELS; i++) {
+                if (spellCharges[i] > 0) {
+                    spellCharges[i] = spellCharges[i] + Attributes.getExtraChargesForSpellLevel(i, getAttributeModificator());
+                } else {
+                    break;
                 }
             }
+
+            return spellCharges;
         }
 
         @Override
@@ -139,7 +250,7 @@ public enum Class {
         this.value = value;
     }
 
-    public abstract void levelUpClass(int newLevel) throws Exception;
+    public abstract int[] generateSpellChargesList(int newLevel);
 
     public abstract int getHitDice();
 

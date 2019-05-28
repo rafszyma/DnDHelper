@@ -1,7 +1,6 @@
 package com.example.dndhelper.spells;
 
 import com.example.dndhelper.SpellException;
-import com.example.dndhelper.enums.Class;
 import com.example.dndhelper.enums.SpellSchool;
 
 import java.util.ArrayList;
@@ -74,8 +73,15 @@ public class Spellbook {
         return true;
     }
 
-    public void modifyClassCharges(int spellLevel, int charges) {
-
+    public void modifyClassCharges(int[] spellCharges) {
+        for(int i = 0; i < spellCharges.length; i++) {
+            if (spellCharges[i] > 0){
+                this.spellLevels[i].setDailyCharges(spellCharges[i]);
+            }
+            else {
+                return;
+            }
+        }
     }
 
     public void resetDailyCharges() {
@@ -129,5 +135,15 @@ public class Spellbook {
         }
 
         return new ArrayList<>(this.spellLevels[level].getLearnedSpells());
+    }
+
+    public ArrayList<Spell> getExtraSpells() {
+        ArrayList<Spell> extraSpells = new ArrayList<>();
+
+        for (int i = SPELL_LEVELS - 1; i >= 0; i--) {
+            extraSpells.addAll(this.spellLevels[i].getExtraSpells(this.extraSpellSchool));
+        }
+
+        return extraSpells;
     }
 }

@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.dndhelper.adapters.ExtraSpellListAdapter;
 import com.example.dndhelper.adapters.LearnSpellListAdapter;
 import com.example.dndhelper.adapters.PrepareSpellListAdapter;
 import com.example.dndhelper.character.Character;
@@ -37,14 +38,17 @@ public class SpellListActivity extends AppCompatActivity {
         ListView spellList = findViewById(R.id.spellList);
         SpellListIntent listIntent = (SpellListIntent) intent.getSerializableExtra(INTENT_KEY);
         int spellLevel = intent.getIntExtra(LEVEL_KEY, 0);
-        ArrayAdapter<Spell> adapter;
+        ArrayAdapter<Spell> adapter = null;
         if (listIntent == SpellListIntent.Prepare) {
             adapter = new PrepareSpellListAdapter(this, Character.getInstance().getSpellbook().getLearnedSpells(spellLevel));
-        } else {
+        } else if (listIntent == SpellListIntent.Learn){
             ArrayList<Spell> spellsToLearn = AllSpells.getInstance().getSpells(spellLevel);
             ArrayList<Spell> alreadyKnownSpells = Character.getInstance().getSpellbook().getLearnedSpells(spellLevel);
             spellsToLearn.removeAll(alreadyKnownSpells);
             adapter = new LearnSpellListAdapter(this, spellsToLearn);
+        } else if (listIntent == SpellListIntent.SetExtra){
+            ArrayList<Spell> spellsToChoose = Character.getInstance().getSpellbook().getExtraSpells();
+            adapter = new ExtraSpellListAdapter(this, spellsToChoose);
         }
 
         spellList.setAdapter(adapter);

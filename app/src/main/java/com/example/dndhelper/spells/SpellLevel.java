@@ -1,8 +1,10 @@
 package com.example.dndhelper.spells;
 
 import com.example.dndhelper.SpellException;
+import com.example.dndhelper.enums.SpellSchool;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashSet;
 
 public class SpellLevel {
@@ -65,24 +67,18 @@ public class SpellLevel {
             throw new SpellException("Nie tem poziom czaru!");
         }
 
+        boolean result = activeSpells.remove(spell);
+        result &= activeSpells.add(spell);
+        return result;
 
-        if (currentDailyCharges > 0) {
-            currentDailyCharges--;
-            boolean result = activeSpells.remove(spell);
-            result &= activeSpells.add(spell);
-            return result;
-        }
-
-        throw new SpellException("Nie ma już ładunków!");
     }
 
     int getMaxDailyCharges() {
         return maxDailyCharges;
     }
 
-    void modifyDailyCharges(int modificator) {
-        maxDailyCharges = Math.max(0, maxDailyCharges + modificator);
-        currentDailyCharges = maxDailyCharges;
+    void setDailyCharges(int dailyCharges) {
+        currentDailyCharges = dailyCharges;
     }
 
     boolean castSpell(Spell spell) throws SpellException {
@@ -91,5 +87,17 @@ public class SpellLevel {
         }
 
         return true;
+    }
+
+    ArrayList<Spell> getExtraSpells(SpellSchool extraSpellSchool) {
+        ArrayList<Spell> extraSpells = new ArrayList<>();
+        for (Spell learnedSpell:
+             this.learnedSpells) {
+            if (learnedSpell.getSchool() == extraSpellSchool){
+                extraSpells.add(learnedSpell);
+            }
+        }
+
+        return extraSpells;
     }
 }
