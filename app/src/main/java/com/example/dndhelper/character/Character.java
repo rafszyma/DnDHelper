@@ -25,8 +25,8 @@ public class Character {
         characterName = name;
         health = new Health(characterClass.getHitDice() + attr.getConstitutionModifier());
         money = new Money(0);
-        spellbook = new Spellbook(1, extraSpellSchool, forbiddenedSchools);
         attributes = attr;
+        spellbook = new Spellbook(1, extraSpellSchool, forbiddenedSchools, characterClass, attr);
     }
 
     public CharacterClasses getClasses() {
@@ -86,8 +86,6 @@ public class Character {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        QurritoCreator.createQurrito();
     }
 
     public Class getSpellClass() {
@@ -130,6 +128,6 @@ public class Character {
     public void levelUp(int hitDice, Class classToLevel) {
         this.health.levelUp(hitDice + this.attributes.getConstitutionModifier());
         int newClassLevel = this.classes.levelUpClass(classToLevel);
-        this.getSpellbook().modifyClassCharges(classToLevel.generateSpellChargesList(newClassLevel));
+        this.getSpellbook().modifyClassCharges(classToLevel.generateSpellChargesList(newClassLevel, Character.getInstance().getAttributes()));
     }
 }

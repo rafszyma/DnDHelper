@@ -25,7 +25,6 @@ public class PrepareSpellListAdapter extends GenericSpellListAdapter {
         this.layoutId = R.layout.spell_action_record;
     }
 
-
     @Override
     protected View fillCurrentView(View listItem, final Spell currentSpell) {
         TextView spellNameView = listItem.findViewById(R.id.spellNameView);

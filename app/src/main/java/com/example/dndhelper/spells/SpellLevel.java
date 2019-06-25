@@ -4,7 +4,6 @@ import com.example.dndhelper.SpellException;
 import com.example.dndhelper.enums.SpellSchool;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashSet;
 
 public class SpellLevel {
@@ -78,6 +77,7 @@ public class SpellLevel {
     }
 
     void setDailyCharges(int dailyCharges) {
+        maxDailyCharges = dailyCharges;
         currentDailyCharges = dailyCharges;
     }
 

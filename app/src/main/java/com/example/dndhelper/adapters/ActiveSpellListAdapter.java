@@ -20,8 +20,11 @@ import java.util.ArrayList;
 
 public class ActiveSpellListAdapter extends GenericSpellListAdapter {
 
-    public ActiveSpellListAdapter(@NonNull Context context, ArrayList<Spell> list) {
+    private boolean isExtraSpellTab;
+
+    public ActiveSpellListAdapter(@NonNull Context context, ArrayList<Spell> list, boolean isExtraSpellTab) {
         super(context, list);
+        this.isExtraSpellTab = isExtraSpellTab;
         this.layoutId = R.layout.active_spell_record;
     }
 
@@ -47,11 +50,15 @@ public class ActiveSpellListAdapter extends GenericSpellListAdapter {
             @Override
             public void onClick(View v) {
                 try {
-                    Character.getInstance().getSpellbook().castSpell(currentSpell);
+                    if (isExtraSpellTab) {
+                        Character.getInstance().getSpellbook().castExtraSpell(currentSpell);
+                    } else {
+                        Character.getInstance().getSpellbook().castSpell(currentSpell);
+                    }
                     SpellDefense currentDefense = currentSpell.getDefense();
                     if (currentDefense != SpellDefense.None) {
                         if (currentDefense == SpellDefense.Reflex || currentDefense == SpellDefense.Endurance || currentDefense == SpellDefense.Will) {
-                            int dc = 10 + currentSpell.getLevel() + Character.getInstance().getSpellClass().getAttributeModificator();
+                            int dc = 10 + currentSpell.getLevel() + Character.getInstance().getSpellClass().getAttributeModificator(Character.getInstance().getAttributes());
                             if (currentSpell.getSchool() == Character.getInstance().getSpellbook().getExtraSpellSchool()) {
                                 dc += 2;
                             }

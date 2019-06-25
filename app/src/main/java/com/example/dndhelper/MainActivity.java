@@ -12,6 +12,9 @@ import android.widget.TextView;
 import com.example.dndhelper.character.Character;
 import com.example.dndhelper.enums.Class;
 import com.example.dndhelper.enums.SpellListIntent;
+import com.example.dndhelper.fragments.SpellLevelSpellbookFragment;
+import com.example.dndhelper.fragments.SpellSchoolSpellbookFragment;
+import com.example.dndhelper.fragments.SpellbookFragment;
 import com.example.dndhelper.spells.AllSpells;
 
 import java.io.FileNotFoundException;
@@ -65,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
         } else if (resultCode == SpellInfoActivity.PREPARED_SPELL) {
             fragment.notifySpellChanged();
             fragment.notifyChargesChanged();
+        } else if (resultCode == SpellInfoActivity.PREPARED_EXTRA){
+            fragment.notifySpellChanged();
+            fragment.notifyChargesChanged();
         }
     }
 
@@ -77,11 +83,18 @@ public class MainActivity extends AppCompatActivity {
         spellbook.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                int level = Integer.parseInt(tab.getText().toString());
-                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                fragment = SpellbookFragment.newInstance(level);
-                ft.replace(R.id.fragment, fragment);
-                ft.commit();
+                if (tab.getText().equals("EXTRA")) {
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    fragment = SpellSchoolSpellbookFragment.newInstance();
+                    ft.replace(R.id.fragment, fragment);
+                    ft.commit();
+                } else {
+                    int level = Integer.parseInt(tab.getText().toString());
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    fragment = SpellLevelSpellbookFragment.newInstance(level);
+                    ft.replace(R.id.fragment, fragment);
+                    ft.commit();
+                }
             }
 
             @Override
@@ -99,14 +112,14 @@ public class MainActivity extends AppCompatActivity {
             spellbook.addTab(spellbook.newTab().setText(cs));
         }
 
+        // TODO this is very bad, should be moved to Class fragment
         if (Character.getInstance().getSpellClass() == Class.Wizard) {
             CharSequence cs = "EXTRA";
             spellbook.addTab(spellbook.newTab().setText(cs));
-            // TODO fix it
         }
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        fragment = SpellbookFragment.newInstance(0);
+        fragment = SpellLevelSpellbookFragment.newInstance(0);
         ft.replace(R.id.fragment, fragment);
         ft.commit();
     }
@@ -147,25 +160,21 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        if (isExtraTab(layout)) {
+            startActivityForResult(SpellListActivity.getIntent(getBaseContext(), layout.getSelectedTabPosition(), SpellListIntent.SetExtra), 0);
+            return;
+        }
+
         startActivityForResult(SpellListActivity.getIntent(getBaseContext(), layout.getSelectedTabPosition(), SpellListIntent.Prepare), 0);
     }
 
     public void learnSpell(View view) {
         TabLayout layout = findViewById(R.id.spellLayout);
-        if (layout.getSelectedTabPosition() < 0) {
+        if (layout.getSelectedTabPosition() < 0 || isExtraTab(layout)) {
             return;
         }
 
         startActivityForResult(SpellListActivity.getIntent(getBaseContext(), layout.getSelectedTabPosition(), SpellListIntent.Learn), 0);
-    }
-
-    public void prepareExtra(View view) {
-        TabLayout layout = findViewById(R.id.spellLayout);
-        if (layout.getSelectedTabPosition() < 0) {
-            return;
-        }
-
-        startActivityForResult(SpellListActivity.getIntent(getBaseContext(), layout.getSelectedTabPosition(), SpellListIntent.SetExtra), 0);
     }
 
     public void longRest(View view) {
@@ -178,5 +187,9 @@ public class MainActivity extends AppCompatActivity {
     public void levelUp(View view) {
         Intent intent = new Intent(this, LevelUpActivity.class);
         startActivity(intent);
+    }
+
+    private boolean isExtraTab(TabLayout layout) {
+        return layout.getTabAt(layout.getSelectedTabPosition()) != null && layout.getTabAt(layout.getSelectedTabPosition()).getText() != null && layout.getTabAt(layout.getSelectedTabPosition()).getText().equals("EXTRA");
     }
 }

@@ -1,6 +1,9 @@
 package com.example.dndhelper.spells;
 
 import com.example.dndhelper.SpellException;
+import com.example.dndhelper.character.Attributes;
+import com.example.dndhelper.character.CharacterClasses;
+import com.example.dndhelper.enums.Class;
 import com.example.dndhelper.enums.SpellSchool;
 
 import java.util.ArrayList;
@@ -11,10 +14,17 @@ public class Spellbook {
     public int spellClassLevel;
     private SpellLevel[] spellLevels;
     private Spell extraSpell;
+    private CharacterClasses spellClass;
+
+    public boolean isAvailableExtraSpell() {
+        return availableExtraSpell;
+    }
+
+    private boolean availableExtraSpell;
     private SpellSchool extraSpellSchool;
     private ArrayList<SpellSchool> forbiddenSchools;
 
-    public Spellbook(int classLevel, SpellSchool extraSpellSchool, List<SpellSchool> forbiddenSchools) {
+    public Spellbook(int classLevel, SpellSchool extraSpellSchool, List<SpellSchool> forbiddenSchools, Class spellClass, Attributes attr) {
         spellClassLevel = classLevel;
         if (extraSpellSchool != SpellSchool.None && forbiddenSchools != null & forbiddenSchools.size() > 0) {
             this.extraSpellSchool = extraSpellSchool;
@@ -26,6 +36,8 @@ public class Spellbook {
         for (int i = 0; i < SPELL_LEVELS; i++) {
             spellLevels[i] = new SpellLevel(i);
         }
+
+        modifyClassCharges(spellClass.generateSpellChargesList(spellClassLevel, attr));
     }
 
     public SpellSchool getExtraSpellSchool() {
@@ -73,6 +85,15 @@ public class Spellbook {
         return true;
     }
 
+    public boolean castExtraSpell(Spell spell) {
+        if (this.extraSpell == spell) {
+            this.extraSpell = null;
+            return true;
+        }
+
+        return false;
+    }
+
     public void modifyClassCharges(int[] spellCharges) {
         for(int i = 0; i < spellCharges.length; i++) {
             if (spellCharges[i] > 0){
@@ -88,12 +109,18 @@ public class Spellbook {
         for (SpellLevel spellLevel : spellLevels) {
             spellLevel.resetDailyCharges();
         }
+        this.availableExtraSpell = true;
     }
 
-    public boolean setExtraSpell(Spell spell) {
-        if (spell.getSchool() != this.extraSpellSchool) {
-            return false;
+    public boolean setExtraSpell(Spell spell) throws SpellException {
+        if (!this.availableExtraSpell) {
+            throw new SpellException("Don't have available spells");
         }
+        if (spell.getSchool() != this.extraSpellSchool) {
+            throw new SpellException("This spell don't have correct school");
+        }
+
+        this.availableExtraSpell = false;
 
         extraSpell = spell;
         return true;
@@ -145,5 +172,9 @@ public class Spellbook {
         }
 
         return extraSpells;
+    }
+
+    public Spell getExtraSpell() {
+        return extraSpell;
     }
 }

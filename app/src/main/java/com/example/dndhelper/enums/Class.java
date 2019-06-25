@@ -4,13 +4,15 @@ import com.example.dndhelper.character.Attributes;
 import com.example.dndhelper.character.Character;
 import com.google.gson.annotations.SerializedName;
 
+import org.w3c.dom.Attr;
+
 import java.util.ArrayList;
 
 public enum Class {
     @SerializedName("bard")
     Bard {
         @Override
-        public int[] generateSpellChargesList(int newLevel) {
+        public int[] generateSpellChargesList(int newLevel, Attributes attr) {
             return new int[0];
         }
 
@@ -20,8 +22,8 @@ public enum Class {
         }
 
         @Override
-        public int getAttributeModificator() {
-            return Character.getInstance().getAttributes().getCharismaModifier();
+        public int getAttributeModificator(Attributes attr) {
+            return attr.getCharismaModifier();
         }
 
         @Override
@@ -33,7 +35,7 @@ public enum Class {
     @SerializedName("cleric")
     Cleric {
         @Override
-        public int[] generateSpellChargesList(int newLevel) {
+        public int[] generateSpellChargesList(int newLevel, Attributes attr) {
             return new int[0];
         }
 
@@ -43,8 +45,8 @@ public enum Class {
         }
 
         @Override
-        public int getAttributeModificator() {
-            return Character.getInstance().getAttributes().getWisdomModifier();
+        public int getAttributeModificator(Attributes attr) {
+            return attr.getWisdomModifier();
         }
 
         @Override
@@ -55,7 +57,7 @@ public enum Class {
     @SerializedName("druid")
     Druid {
         @Override
-        public int[] generateSpellChargesList(int newLevel) {
+        public int[] generateSpellChargesList(int newLevel, Attributes attr) {
             return new int[0];
         }
 
@@ -65,8 +67,8 @@ public enum Class {
         }
 
         @Override
-        public int getAttributeModificator() {
-            return Character.getInstance().getAttributes().getWisdomModifier();
+        public int getAttributeModificator(Attributes attr) {
+            return attr.getWisdomModifier();
         }
 
         @Override
@@ -77,7 +79,7 @@ public enum Class {
     @SerializedName("paladin")
     Paladin {
         @Override
-        public int[] generateSpellChargesList(int newLevel) {
+        public int[] generateSpellChargesList(int newLevel, Attributes attr) {
             int[][]spellMatrix = new int[][] {
                     {0, 0, 0, 0, 0 },
                     {0, 0, 0, 0, 0 },
@@ -104,7 +106,7 @@ public enum Class {
             int[] spellCharges = spellMatrix[newLevel];
             for (int i = 1 ; i < SPELL_LEVELS; i++) {
                 if (spellCharges[i] > 0) {
-                    spellCharges[i] = spellCharges[i] + Attributes.getExtraChargesForSpellLevel(i, getAttributeModificator());
+                    spellCharges[i] = spellCharges[i] + Attributes.getExtraChargesForSpellLevel(i, getAttributeModificator(attr));
                 } else {
                     break;
                 }
@@ -119,8 +121,8 @@ public enum Class {
         }
 
         @Override
-        public int getAttributeModificator() {
-            return Character.getInstance().getAttributes().getCharismaModifier();
+        public int getAttributeModificator(Attributes attr) {
+            return attr.getCharismaModifier();
         }
 
         @Override
@@ -131,7 +133,7 @@ public enum Class {
     @SerializedName("sorcerer")
     Sorcerer {
         @Override
-        public int[] generateSpellChargesList(int newLevel) {
+        public int[] generateSpellChargesList(int newLevel, Attributes attr) {
             int[][]spellMatrix = new int[][] {
                     {5, 3, 0, 0, 0, 0, 0, 0, 0, 0},
                     {6, 4, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -158,7 +160,7 @@ public enum Class {
             int[] spellCharges = spellMatrix[newLevel];
             for (int i = 1 ; i < SPELL_LEVELS; i++) {
                 if (spellCharges[i] > 0) {
-                    spellCharges[i] = spellCharges[i] + Attributes.getExtraChargesForSpellLevel(i, getAttributeModificator());
+                    spellCharges[i] = spellCharges[i] + Attributes.getExtraChargesForSpellLevel(i, getAttributeModificator(attr));
                 } else {
                     break;
                 }
@@ -173,8 +175,8 @@ public enum Class {
         }
 
         @Override
-        public int getAttributeModificator() {
-            return Character.getInstance().getAttributes().getCharismaModifier();
+        public int getAttributeModificator(Attributes attr) {
+            return attr.getCharismaModifier();
         }
 
         @Override
@@ -185,7 +187,7 @@ public enum Class {
     @SerializedName("wizard")
     Wizard {
         @Override
-        public int[] generateSpellChargesList(int newLevel) {
+        public int[] generateSpellChargesList(int newLevel, Attributes attr) {
             int[][]spellMatrix = new int[][] {
                     {3, 1, 0, 0, 0, 0, 0, 0, 0, 0},
                     {4, 2, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -213,7 +215,7 @@ public enum Class {
             int[] spellCharges = spellMatrix[newLevel];
             for (int i = 1 ; i < SPELL_LEVELS; i++) {
                 if (spellCharges[i] > 0) {
-                    spellCharges[i] = spellCharges[i] + Attributes.getExtraChargesForSpellLevel(i, getAttributeModificator());
+                    spellCharges[i] = spellCharges[i] + Attributes.getExtraChargesForSpellLevel(i, getAttributeModificator(attr));
                 } else {
                     break;
                 }
@@ -228,8 +230,8 @@ public enum Class {
         }
 
         @Override
-        public int getAttributeModificator() {
-            return Character.getInstance().getAttributes().getIntelligenceModifier();
+        public int getAttributeModificator(Attributes attr) {
+            return attr.getIntelligenceModifier();
         }
 
         @Override
@@ -250,11 +252,11 @@ public enum Class {
         this.value = value;
     }
 
-    public abstract int[] generateSpellChargesList(int newLevel);
+    public abstract int[] generateSpellChargesList(int newLevel, Attributes attr);
 
     public abstract int getHitDice();
 
-    public abstract int getAttributeModificator();
+    public abstract int getAttributeModificator(Attributes attr);
 
     public abstract boolean isSpellingClass();
 

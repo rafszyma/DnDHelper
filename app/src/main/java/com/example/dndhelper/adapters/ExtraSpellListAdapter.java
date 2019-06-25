@@ -46,8 +46,12 @@ public class ExtraSpellListAdapter extends GenericSpellListAdapter {
         prepareSpellButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Character.getInstance().getSpellbook().setExtraSpell(currentSpell);
-                ((SpellListActivity) sContext).setResult(SpellInfoActivity.LEARNED_SPELL);
+                try {
+                    Character.getInstance().getSpellbook().setExtraSpell(currentSpell);
+                } catch (SpellException e) {
+                    makeToast(e.getMessage(), Toast.LENGTH_SHORT);
+                }
+                ((SpellListActivity) sContext).setResult(SpellInfoActivity.PREPARED_EXTRA);
                 ((SpellListActivity) sContext).finish();
             }
         });
