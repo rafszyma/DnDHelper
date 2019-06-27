@@ -13,7 +13,7 @@ public class Spellbook {
     private static final int SPELL_LEVELS = 10;
     public int spellClassLevel;
     private SpellLevel[] spellLevels;
-    private Spell extraSpell;
+    private ArrayList<Spell> extraSpell;
     private CharacterClasses spellClass;
 
     public boolean isAvailableExtraSpell() {
@@ -36,6 +36,8 @@ public class Spellbook {
         for (int i = 0; i < SPELL_LEVELS; i++) {
             spellLevels[i] = new SpellLevel(i);
         }
+
+        this.extraSpell = new ArrayList<>();
 
         modifyClassCharges(spellClass.generateSpellChargesList(spellClassLevel, attr));
     }
@@ -86,9 +88,8 @@ public class Spellbook {
     }
 
     public boolean castExtraSpell(Spell spell) {
-        if (this.extraSpell == spell) {
-            this.extraSpell = null;
-            return true;
+        if (this.extraSpell.contains(spell)) {
+            return this.extraSpell.remove(spell);
         }
 
         return false;
@@ -122,7 +123,7 @@ public class Spellbook {
 
         this.availableExtraSpell = false;
 
-        extraSpell = spell;
+        this.extraSpell.add(spell);
         return true;
     }
 
@@ -174,7 +175,7 @@ public class Spellbook {
         return extraSpells;
     }
 
-    public Spell getExtraSpell() {
-        return extraSpell;
+    public ArrayList<Spell> getExtraSpell() {
+        return this.extraSpell;
     }
 }
