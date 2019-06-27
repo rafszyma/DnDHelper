@@ -46,6 +46,7 @@
     <string name="sorcerer">Zaklinacz</string>
     <string name="wizard">Czarodziej</string>
 
+    <string name="attribute">Atrybut:</string>
     <string name="strength">Siła</string>
     <string name="dexterity">Zręczność</string>
     <string name="constitution">Budowa</string>

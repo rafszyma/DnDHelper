@@ -8,6 +8,7 @@ import android.widget.ListView;
 
 import com.example.dndhelper.adapters.CharacterListAdapter;
 import com.example.dndhelper.character.Character;
+import com.example.dndhelper.enums.Attribute;
 import com.example.dndhelper.enums.Class;
 import com.example.dndhelper.enums.SpellComponent;
 import com.example.dndhelper.enums.SpellDefense;
@@ -95,6 +96,13 @@ public class WelcomeActivity extends AppCompatActivity {
         Class.Paladin.setValue(getResources().getString(R.string.paladin));
         Class.Sorcerer.setValue(getResources().getString(R.string.sorcerer));
         Class.Wizard.setValue(getResources().getString(R.string.wizard));
+
+        Attribute.Strength.setValue(getResources().getString(R.string.strength));
+        Attribute.Dexterity.setValue(getResources().getString(R.string.dexterity));
+        Attribute.Constitution.setValue(getResources().getString(R.string.constitution));
+        Attribute.Wisdom.setValue(getResources().getString(R.string.wisdom));
+        Attribute.Charisma.setValue(getResources().getString(R.string.charisma));
+        Attribute.Intelligence.setValue(getResources().getString(R.string.intelligence));
     }
 
     private void setEnumColors() {

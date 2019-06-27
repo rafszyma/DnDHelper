@@ -1,5 +1,7 @@
 package com.example.dndhelper.character;
 
+import com.example.dndhelper.enums.Attribute;
+
 public class Attributes {
     private int Strength;
 
@@ -22,40 +24,58 @@ public class Attributes {
         Charisma = charisma;
     }
 
-    public void increaseStrength() {
+    public void increaseAttribute(int i) {
+        Attribute[] values = Attribute.values();
+
+        if (i < values.length) {
+            switch (values[i]){
+                case Strength:
+                    increaseStrength();
+                    break;
+                case Wisdom:
+                    increaseWisdom();
+                    break;
+                case Charisma:
+                    increaseCharisma();
+                    break;
+                case Dexterity:
+                    increaseDexterity();
+                    break;
+                case Constitution:
+                    increaseConstitution();
+                    break;
+                case Intelligence:
+                    increaseIntelligence();
+                    break;
+            }
+        }
+    }
+
+    private void increaseStrength() {
         this.Strength = this.Strength + 1;
     }
 
-    public void increaseDexterity() {
+    private void increaseDexterity() {
         this.Dexterity = this.Dexterity + 1;
     }
 
-    public void increaseConstitution() {
+    private void increaseConstitution() {
         this.Constitution = this.Constitution + 1;
     }
 
-    public void increaseIntelligence() {
+    private void increaseIntelligence() {
         this.Intelligence = this.Intelligence + 1;
     }
 
-    public void increaseWisdom() {
+    private void increaseWisdom() {
         this.Wisdom = this.Wisdom + 1;
     }
 
-    public void increaseCharisma() {
+    private void increaseCharisma() {
         this.Charisma = this.Charisma + 1;
     }
 
-    public int getStrengthModifier() {
-
-        return (Strength - 10) / 2;
-    }
-
-    public int getDexterityModifier() {
-        return (Dexterity - 10) / 2;
-    }
-
-    public int getConstitutionModifier() {
+    int getConstitutionModifier() {
         return (Constitution - 10) / 2;
     }
 
