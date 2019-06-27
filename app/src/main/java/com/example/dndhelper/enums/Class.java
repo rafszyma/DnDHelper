@@ -188,6 +188,7 @@ public enum Class {
     Wizard {
         @Override
         public int[] generateSpellChargesList(int newLevel, Attributes attr) {
+            newLevel--;
             int[][]spellMatrix = new int[][] {
                     {3, 1, 0, 0, 0, 0, 0, 0, 0, 0},
                     {4, 2, 0, 0, 0, 0, 0, 0, 0, 0},

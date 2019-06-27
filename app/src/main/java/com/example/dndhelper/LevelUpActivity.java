@@ -27,8 +27,6 @@ public class LevelUpActivity extends AppCompatActivity {
 
         TextView headerTextView = findViewById(R.id.headerView);
         headerTextView.setText(String.format("Gratulacje, awansowałeś na %s poziom!", Character.getInstance().getClasses().getOverallLevel() + 1));
-
-
     }
 
     public void finishLeveling(View view) {
@@ -36,7 +34,7 @@ public class LevelUpActivity extends AppCompatActivity {
         TextInputEditText hitDiceView = findViewById(R.id.hitDiceInputEditText);
         int hitDiceValue = Integer.parseInt(hitDiceView.getText().toString());
         Character.getInstance().levelUp(hitDiceValue, characterClass);
+        setResult(ReturnCodes.LEVEL_UP);
+        finish();
     }
-
-
 }

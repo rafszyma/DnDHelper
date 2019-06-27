@@ -20,8 +20,6 @@ import com.example.dndhelper.spells.AllSpells;
 import java.io.FileNotFoundException;
 
 public class MainActivity extends AppCompatActivity {
-    public static String FILENAME = "character";
-    // This have to be changed
 
     private SpellbookFragment fragment;
 
@@ -63,14 +61,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == SpellInfoActivity.LEARNED_SPELL) {
+        if (resultCode == ReturnCodes.LEARNED_SPELL) {
 
-        } else if (resultCode == SpellInfoActivity.PREPARED_SPELL) {
+        } else if (resultCode == ReturnCodes.PREPARED_SPELL) {
             fragment.notifySpellChanged();
             fragment.notifyChargesChanged();
-        } else if (resultCode == SpellInfoActivity.PREPARED_EXTRA){
+        } else if (resultCode == ReturnCodes.PREPARED_EXTRA){
             fragment.notifySpellChanged();
             fragment.notifyChargesChanged();
+        } else if (resultCode == ReturnCodes.LEVEL_UP) {
+            createSpellbook();
+            updateHealthText();
         }
     }
 
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void createSpellbook() {
         TabLayout spellbook = findViewById(R.id.spellLayout);
+        spellbook.removeAllTabs();
         spellbook.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -126,30 +128,45 @@ public class MainActivity extends AppCompatActivity {
 
     public void dealDamage(View view) {
         TextView hpView = findViewById(R.id.healthModificationsText);
+        if (hpView.getText().length() == 0) {
+            return;
+        }
         Character.getInstance().getHealth().dealDamage(Integer.parseInt(hpView.getText().toString()));
         updateHealthText();
     }
 
     public void dealContusion(View view) {
         TextView hpView = findViewById(R.id.healthModificationsText);
+        if (hpView.getText().length() == 0) {
+            return;
+        }
         Character.getInstance().getHealth().dealContusionDamage(Integer.parseInt(hpView.getText().toString()));
         updateHealthText();
     }
 
     public void healDamage(View view) {
         TextView hpView = findViewById(R.id.healthModificationsText);
+        if (hpView.getText().length() == 0) {
+            return;
+        }
         Character.getInstance().getHealth().healDamage(Integer.parseInt(hpView.getText().toString()));
         updateHealthText();
     }
 
     public void addMoney(View view) {
         TextView moneyView = findViewById(R.id.moneyModificationsText);
+        if (moneyView.getText().length() == 0) {
+            return;
+        }
         Character.getInstance().getMoney().addCopper(Integer.parseInt(moneyView.getText().toString()));
         updateMoneyText();
     }
 
     public void subMoney(View view) {
         TextView moneyView = findViewById(R.id.moneyModificationsText);
+        if (moneyView.getText().length() == 0) {
+            return;
+        }
         Character.getInstance().getMoney().subCopper(Integer.parseInt(moneyView.getText().toString()));
         updateMoneyText();
     }
@@ -186,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void levelUp(View view) {
         Intent intent = new Intent(this, LevelUpActivity.class);
-        startActivity(intent);
+        startActivityForResult(intent, 0);
     }
 
     private boolean isExtraTab(TabLayout layout) {

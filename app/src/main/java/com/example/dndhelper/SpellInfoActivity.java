@@ -14,9 +14,6 @@ import java.util.HashSet;
 
 public class SpellInfoActivity extends AppCompatActivity {
 
-    public static int PREPARED_SPELL = 1;
-    public static int LEARNED_SPELL = 2;
-    public static int PREPARED_EXTRA = 3;
     public static String SPELL_PARCEL_KEY = "spell_parcel_key";
 
 

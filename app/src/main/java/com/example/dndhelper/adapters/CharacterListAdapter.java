@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.dndhelper.R;
@@ -29,7 +30,7 @@ public class CharacterListAdapter extends ArrayAdapter<String> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItem = convertView;
         if (listItem == null)
-            listItem = LayoutInflater.from(sContext).inflate(R.layout.character_rectord, parent, false);
+            listItem = LayoutInflater.from(sContext).inflate(R.layout.character_record, parent, false);
 
         final String currentCharacter = characterNames.get(position);
 
@@ -39,6 +40,14 @@ public class CharacterListAdapter extends ArrayAdapter<String> {
             @Override
             public void onClick(View v) {
                 ((WelcomeActivity) sContext).openCharacter(currentCharacter);
+            }
+        });
+
+        Button deleteCharacter = listItem.findViewById(R.id.deleteButton);
+        deleteCharacter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((WelcomeActivity) sContext).deleteCharacter(currentCharacter);
             }
         });
 

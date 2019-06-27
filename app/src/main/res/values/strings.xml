@@ -5,6 +5,8 @@
     <string name="rest">Odpoczynek</string>
     <string name="create_character">Stwórz nową postać</string>
     <string name="level_up">Level up!</string>
+    <string name="hit_dice">Wynik rzutu kością</string>
+    <string name="delete">Usuń</string>
 
     <string name="hit_points">Punkty Trafień</string>
     <string name="contusion">Stłuczenia</string>

@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dndhelper.R;
+import com.example.dndhelper.ReturnCodes;
 import com.example.dndhelper.SpellException;
 import com.example.dndhelper.SpellInfoActivity;
 import com.example.dndhelper.SpellListActivity;
@@ -51,7 +52,7 @@ public class PrepareSpellListAdapter extends GenericSpellListAdapter {
                 } catch (SpellException e) {
                     makeToast(e.getMessage(), Toast.LENGTH_SHORT);
                 }
-                ((SpellListActivity) sContext).setResult(SpellInfoActivity.PREPARED_SPELL);
+                ((SpellListActivity) sContext).setResult(ReturnCodes.PREPARED_SPELL);
                 ((SpellListActivity) sContext).finish();
             }
         });

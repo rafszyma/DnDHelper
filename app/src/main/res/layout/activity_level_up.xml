@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/classSpinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/horizontal_margin"
@@ -35,7 +35,7 @@
         android:layout_marginTop="@dimen/new_line"
         android:layout_marginBottom="0dp"
         android:text="@string/class_type"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner"
+        app:layout_constraintBottom_toBottomOf="@+id/classSpinner"
         app:layout_constraintStart_toStartOf="@+id/headerView"
         app:layout_constraintTop_toBottomOf="@+id/headerView" />
 
@@ -43,7 +43,7 @@
         android:id="@+id/hitDiceTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/hit_points"
+        android:text="@string/hit_dice"
         app:layout_constraintBottom_toBottomOf="@+id/hitDiceInputEditText"
         app:layout_constraintStart_toStartOf="@+id/classTextView"
         app:layout_constraintTop_toTopOf="@+id/hitDiceInputEditText" />
@@ -55,9 +55,9 @@
         android:layout_marginStart="@dimen/horizontal_margin"
         android:layout_marginTop="@dimen/new_line"
         android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="@+id/classSpinner"
         app:layout_constraintStart_toEndOf="@+id/hitDiceTextView"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/classSpinner" />
 
     <Button
         android:id="@+id/finishButton"
