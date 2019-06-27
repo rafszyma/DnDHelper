@@ -19,7 +19,6 @@ import java.util.ArrayList;
 public class WelcomeActivity extends AppCompatActivity {
 
     CharacterListAdapter adapter;
-    ArrayList<String> characterList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +27,7 @@ public class WelcomeActivity extends AppCompatActivity {
         setEnumStrings();
         setEnumColors();
 
-        characterList = getAllCharacters();
-        adapter = new CharacterListAdapter(this, characterList);
+        adapter = new CharacterListAdapter(this, getAllCharacters());
         ListView characterListView = findViewById(R.id.characterList);
         characterListView.setAdapter(adapter);
     }
@@ -44,8 +42,8 @@ public class WelcomeActivity extends AppCompatActivity {
         File file = getFileStreamPath(filename);
         file.delete();
 
-        characterList = getAllCharacters();
-        adapter.notifyDataSetChanged();
+        adapter.clear();
+        adapter.addAll(getAllCharacters());
     }
 
     public ArrayList<String> getAllCharacters() {

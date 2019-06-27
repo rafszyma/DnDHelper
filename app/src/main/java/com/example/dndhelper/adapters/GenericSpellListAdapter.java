@@ -43,7 +43,7 @@ public abstract class GenericSpellListAdapter extends ArrayAdapter<Spell> {
         return listItem;
     }
 
-    protected void makeToast(String message, int duration) {
+    void makeToast(String message, int duration) {
         Toast toast = Toast.makeText(sContext, message, duration);
         toast.show();
     }

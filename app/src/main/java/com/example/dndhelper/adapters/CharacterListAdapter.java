@@ -16,8 +16,9 @@ import com.example.dndhelper.WelcomeActivity;
 import java.util.ArrayList;
 
 public class CharacterListAdapter extends ArrayAdapter<String> {
-    Context sContext;
-    ArrayList<String> characterNames;
+    private Context sContext;
+
+    private ArrayList<String> characterNames;
 
     public CharacterListAdapter(@NonNull Context context, ArrayList<String> list) {
         super(context, 0, list);
