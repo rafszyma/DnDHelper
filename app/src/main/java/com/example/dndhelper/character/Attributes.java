@@ -61,18 +61,24 @@ public class Attributes {
 
     private void increaseConstitution() {
         this.Constitution = this.Constitution + 1;
+        if (this.Constitution % 2 == 0) {
+            Character.getInstance().increaseConstModifier();
+        }
     }
 
     private void increaseIntelligence() {
         this.Intelligence = this.Intelligence + 1;
+        Character.getInstance().increaseSpellAttrModifier(Attribute.Intelligence);
     }
 
     private void increaseWisdom() {
         this.Wisdom = this.Wisdom + 1;
+        Character.getInstance().increaseSpellAttrModifier(Attribute.Wisdom);
     }
 
     private void increaseCharisma() {
         this.Charisma = this.Charisma + 1;
+        Character.getInstance().increaseSpellAttrModifier(Attribute.Charisma);
     }
 
     int getConstitutionModifier() {

@@ -22,6 +22,11 @@ public class Health {
         this.maxHitPoints = this.maxHitPoints + newMaxHitPoints;
     }
 
+    void increaseConstModifier(int levels) {
+        this.maxHitPoints += levels;
+        this.currentHitPoints += levels;
+    }
+
     public int getHitPoints() {
         return currentHitPoints;
     }

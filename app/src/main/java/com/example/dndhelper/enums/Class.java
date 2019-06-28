@@ -1,5 +1,7 @@
 package com.example.dndhelper.enums;
 
+import android.content.res.Resources;
+
 import com.example.dndhelper.character.Attributes;
 import com.example.dndhelper.character.Character;
 import com.google.gson.annotations.SerializedName;
@@ -268,5 +270,24 @@ public enum Class {
         }
 
         return classNames;
+    }
+
+    public static Attribute AttributeForClass(Class characterClass) {
+        switch (characterClass) {
+            case Wizard:
+                return Attribute.Intelligence;
+            case Bard:
+                return Attribute.Charisma;
+            case Druid:
+                return Attribute.Wisdom;
+            case Sorcerer:
+                return Attribute.Charisma;
+            case Cleric:
+                return Attribute.Wisdom;
+            case Paladin:
+                return Attribute.Charisma;
+        }
+
+        throw new Resources.NotFoundException();
     }
 }

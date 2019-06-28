@@ -1,5 +1,6 @@
 package com.example.dndhelper.character;
 
+import com.example.dndhelper.enums.Attribute;
 import com.example.dndhelper.enums.CharacterState;
 import com.example.dndhelper.enums.Class;
 import com.example.dndhelper.enums.SpellSchool;
@@ -20,6 +21,7 @@ public class Character {
     private Money money;
     private Spellbook spellbook;
     private Attributes attributes;
+
     private Character(String name, Class characterClass, SpellSchool extraSpellSchool, List<SpellSchool> forbiddenedSchools, Attributes attr) {
         classes = new CharacterClasses(characterClass);
         characterName = name;
@@ -100,8 +102,16 @@ public class Character {
         return String.format("%s_character", characterName);
     }
 
-    public String getCharacterName() {
-        return characterName;
+    public void increaseConstModifier() {
+        this.health.increaseConstModifier(this.classes.getOverallLevel());
+    }
+
+    public void increaseSpellAttrModifier(Attribute increasedAttribute) {
+        if (Class.AttributeForClass(this.getSpellClass()) == increasedAttribute) {
+            this.getSpellbook().modifyClassCharges(
+                    this.getSpellClass().generateSpellChargesList(this.classes.getLevelForClass(this.classes.getSpellingClass()), this.attributes));
+        }
+
     }
 
     public Health getHealth() {
