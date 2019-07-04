@@ -25,12 +25,35 @@ public enum Class {
 
         @Override
         public int getAttributeModificator(Attributes attr) {
+            return 0;
+        }
+
+        @Override
+        public boolean isSpellingClass() {
+            return false;
+        }
+    },
+
+    @SerializedName("rogue")
+    Rogue {
+        @Override
+        public int[] generateSpellChargesList(int newLevel, Attributes attr) {
+            return new int[0];
+        }
+
+        @Override
+        public int getHitDice() {
+            return 6;
+        }
+
+        @Override
+        public int getAttributeModificator(Attributes attr) {
             return attr.getCharismaModifier();
         }
 
         @Override
         public boolean isSpellingClass() {
-            return true;
+            return false;
         }
     },
 

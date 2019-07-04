@@ -45,6 +45,7 @@
     <string name="paladin">Paladyn</string>
     <string name="sorcerer">Zaklinacz</string>
     <string name="wizard">Czarodziej</string>
+    <string name="rogue">Łotr</string>
 
     <string name="attribute">Atrybut:</string>
     <string name="strength">Siła</string>

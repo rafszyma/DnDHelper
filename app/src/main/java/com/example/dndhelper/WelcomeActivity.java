@@ -96,6 +96,7 @@ public class WelcomeActivity extends AppCompatActivity {
         Class.Paladin.setValue(getResources().getString(R.string.paladin));
         Class.Sorcerer.setValue(getResources().getString(R.string.sorcerer));
         Class.Wizard.setValue(getResources().getString(R.string.wizard));
+        Class.Rogue.setValue(getResources().getString(R.string.rogue));
 
         Attribute.Strength.setValue(getResources().getString(R.string.strength));
         Attribute.Dexterity.setValue(getResources().getString(R.string.dexterity));
