@@ -127,47 +127,59 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void dealDamage(View view) {
+        // https://stackoverflow.com/questions/1109022/close-hide-the-android-soft-keyboard
         TextView hpView = findViewById(R.id.healthModificationsText);
         if (hpView.getText().length() == 0) {
             return;
         }
         Character.getInstance().getHealth().dealDamage(Integer.parseInt(hpView.getText().toString()));
+        hpView.setText("");
         updateHealthText();
+        view.requestFocusFromTouch();
     }
 
     public void dealContusion(View view) {
         TextView hpView = findViewById(R.id.healthModificationsText);
+        hpView.clearFocus();
         if (hpView.getText().length() == 0) {
             return;
         }
         Character.getInstance().getHealth().dealContusionDamage(Integer.parseInt(hpView.getText().toString()));
+        hpView.setText("");
         updateHealthText();
+        view.requestFocusFromTouch();
     }
 
     public void healDamage(View view) {
         TextView hpView = findViewById(R.id.healthModificationsText);
+        hpView.clearFocus();
         if (hpView.getText().length() == 0) {
             return;
         }
         Character.getInstance().getHealth().healDamage(Integer.parseInt(hpView.getText().toString()));
+        hpView.setText("");
         updateHealthText();
     }
 
     public void addMoney(View view) {
         TextView moneyView = findViewById(R.id.moneyModificationsText);
+        moneyView.clearFocus();
         if (moneyView.getText().length() == 0) {
             return;
         }
         Character.getInstance().getMoney().addCopper(Integer.parseInt(moneyView.getText().toString()));
+        moneyView.setText("");
         updateMoneyText();
     }
 
     public void subMoney(View view) {
         TextView moneyView = findViewById(R.id.moneyModificationsText);
+        moneyView.clearFocus();
         if (moneyView.getText().length() == 0) {
             return;
         }
         Character.getInstance().getMoney().subCopper(Integer.parseInt(moneyView.getText().toString()));
+        moneyView.setText("");
         updateMoneyText();
     }
 
