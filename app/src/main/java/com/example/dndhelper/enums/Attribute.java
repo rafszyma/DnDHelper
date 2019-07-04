@@ -1,13 +1,21 @@
 package com.example.dndhelper.enums;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.ArrayList;
 
 public enum Attribute {
+    @SerializedName("strength")
     Strength,
+    @SerializedName("dexterity")
     Dexterity,
+    @SerializedName("constitution")
     Constitution,
+    @SerializedName("intelligence")
     Intelligence,
+    @SerializedName("wisdom")
     Wisdom,
+    @SerializedName("charisma")
     Charisma;
 
     public static ArrayList<String> getAttributeNames() {

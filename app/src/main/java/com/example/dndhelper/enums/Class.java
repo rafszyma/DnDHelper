@@ -30,7 +30,7 @@ public enum Class {
 
         @Override
         public boolean isSpellingClass() {
-            return false;
+            return true;
         }
     },
 
@@ -312,5 +312,10 @@ public enum Class {
         }
 
         throw new Resources.NotFoundException();
+    }
+
+    @Override
+    public String toString() {
+        return this.name().toLowerCase();
     }
 }
